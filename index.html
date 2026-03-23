@@ -278,12 +278,12 @@
 
   <!-- ==================== HERO ==================== -->
   <header class="relative min-h-screen flex items-end overflow-hidden grain" id="hero">
-    <!-- Background - side by side images -->
+    <!-- Background - single image on mobile, side by side on desktop -->
     <div class="absolute inset-0 flex">
-      <div class="w-1/2 h-full relative">
+      <div class="w-full sm:w-1/2 h-full relative">
         <img src="Assets/rubbish-removal.jpg" alt="Apollo Earthworks - excavator rubbish removal in Melbourne" class="w-full h-full object-cover" loading="eager">
       </div>
-      <div class="w-1/2 h-full relative">
+      <div class="hidden sm:block w-1/2 h-full relative">
         <img src="Assets/material-export-cartage.jpg" alt="Apollo Earthworks - material export and cartage in Melbourne" class="w-full h-full object-cover" loading="eager">
       </div>
       <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/30"></div>
