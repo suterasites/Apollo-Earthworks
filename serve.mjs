@@ -1,44 +1,38 @@
-import http from 'http';
-import fs from 'fs';
-import path from 'path';
+import { createServer } from 'http';
+import { readFile } from 'fs/promises';
+import { join, extname } from 'path';
 import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const PORT = 3000;
 
 const mimeTypes = {
   '.html': 'text/html',
   '.css': 'text/css',
   '.js': 'application/javascript',
-  '.json': 'application/json',
-  '.png': 'image/png',
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
-  '.gif': 'image/gif',
+  '.png': 'image/png',
   '.svg': 'image/svg+xml',
+  '.json': 'application/json',
   '.ico': 'image/x-icon',
   '.webp': 'image/webp',
 };
 
-const server = http.createServer((req, res) => {
-  let filePath = path.join(__dirname, decodeURIComponent(req.url === '/' ? '/index.html' : req.url));
-  const ext = path.extname(filePath).toLowerCase();
+const server = createServer(async (req, res) => {
+  let filePath = req.url === '/' ? '/index.html' : decodeURIComponent(req.url);
+  filePath = join(__dirname, filePath);
+  const ext = extname(filePath).toLowerCase();
   const contentType = mimeTypes[ext] || 'application/octet-stream';
 
-  fs.readFile(filePath, (err, content) => {
-    if (err) {
-      if (err.code === 'ENOENT') {
-        res.writeHead(404);
-        res.end('Not found');
-      } else {
-        res.writeHead(500);
-        res.end('Server error');
-      }
-    } else {
-      res.writeHead(200, { 'Content-Type': contentType });
-      res.end(content);
-    }
-  });
+  try {
+    const data = await readFile(filePath);
+    res.writeHead(200, { 'Content-Type': contentType });
+    res.end(data);
+  } catch {
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end('Not Found');
+  }
 });
 
 server.listen(PORT, () => {

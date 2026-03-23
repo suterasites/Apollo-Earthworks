@@ -1,40 +1,37 @@
-# CLAUDE.md - NPD Building Solutions
+# CLAUDE.md - Apollo Earthworks
 
 ## Business Context
 
-**Business Name:** NPD Building Solutions
-**Phone:** 0427 278 285
-**Email:** npdbuildingsolutions@outlook.com
-**Location:** Based in Bairnsdale, VIC - servicing Bairnsdale and surrounding areas
-**Experience:** 10+ years
+**Business Name:** Apollo Earthworks
+**Phone:** 0431 560 908
+**Email:** apolloearthworks@gmail.com
+**Location:** Melbourne, Victoria
+**Tagline:** "Tough work. Done right."
 
 ### About
-- Carpentry and renovations business based in Bairnsdale, VIC, with over 10 years of experience
-- Bairnsdale is the primary service area and home base - use this for local SEO targeting (e.g. "carpenter Bairnsdale", "renovations Bairnsdale VIC")
-- Positions themselves as an all-round building solution with a focus on high-quality renovations and attention to detail
-- Wide service range covering carpentry, tiling, decks, pergolas, custom work, fencing, gates, and bathroom renovations
-- Bathroom renovation work is a standout - completed 16 quality bathrooms in 14 months working alongside Cutting Edge Constructions, showing solid volume and an established builder relationship
-- Strong word-of-mouth reputation built over 10+ years in the area, now building out digital presence
-- Tone is friendly and approachable ("service with a smile") - fits well for a regional trades business where personal connection matters
-- Branding is clean and professional with a black and orange logo
-- Contactable via phone, email, or Facebook Messenger
+- Melbourne-based earthworks company offering excavation and civil services across residential, industrial, commercial, and civil sectors
+- Melbourne is the primary service area - use this for local SEO targeting (e.g. "earthworks Melbourne", "excavation Melbourne VIC", "site cuts Melbourne")
+- Covers the full spectrum of earthworks - from residential site prep through to commercial and civil projects
+- Wet hire offering caters to both DIY/builder clients and larger contractors
+- Positions on hard work, precision, and reliability
+- Branding is clean and professional with a black, white, and blue color scheme featuring an excavator logo
+- No website currently visible - building a professional online presence to match the quality of their branding and social content
+- Contactable via phone, email, or Instagram
 
 ### Services
-- General Carpentry
-- High-Quality Tiling
-- Decks
-- Pergolas
-- Custom Work
-- Pool Fencing
-- Fencing
-- Gates
-- Bathroom Renovations
+- Site Cuts
+- Site Clean
+- Rubbish Removal
+- Compaction
+- Material Export / Cartage
+- Rock Breaking
+- Base Preparation & Civil Works
+- Excavation for Landscaping, Concreting, Pools & Plumbing
+- Drainage Solutions
+- Excavator & Posi-Track Wet Hire
 
 ### Social Media
-- **Facebook:** NPD Building Solutions (https://www.facebook.com/profile.php?id=61588392252999) - ~38 followers, no reviews yet. Currently categorised as "Carpenter" - could be broadened to "General contractor" or "Building services" for better discoverability. Most recent post (13 March 2026) showcases bathroom renovation work with photos - real finished work builds trust
-
-### Forms
-- **Formspree:** https://formspree.io/f/maqpkepq - used for contact forms on index.html and contact.html
+- **Instagram:** @apolloearthworks - active with service-focused posts and engagement from other trades accounts. Post from November 2025 highlights their full service list and positions them on hard work, precision, and reliability
 
 ---
 

@@ -1,5 +1,3 @@
 node_modules/
 temporary screenshots/
-input.css
-
-.vercel
+.vercel/
