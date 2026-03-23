@@ -19,15 +19,23 @@
 - Contactable via phone, email, or Instagram
 
 ### Services
+
+**Earthworks & Excavation**
 - Site Cuts
+- Rock Breaking
+- Compaction
+- Excavation for Landscaping, Concreting, Pools & Plumbing
+
+**Site Services**
 - Site Clean
 - Rubbish Removal
-- Compaction
 - Material Export / Cartage
-- Rock Breaking
+
+**Civil & Drainage**
 - Base Preparation & Civil Works
-- Excavation for Landscaping, Concreting, Pools & Plumbing
 - Drainage Solutions
+
+**Wet Hire**
 - Excavator & Posi-Track Wet Hire
 
 ### Social Media

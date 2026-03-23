@@ -173,7 +173,7 @@
 <body class="bg-surface antialiased overflow-x-hidden">
 
   <!-- Navigation -->
-  <nav id="main-nav" class="fixed top-0 w-full z-50 transition-all duration-500" role="navigation" aria-label="Main navigation">
+  <nav id="main-nav" class="fixed top-0 w-full z-50 bg-ink lg:bg-transparent lg:transition-all lg:duration-500" role="navigation" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
       <div class="flex items-center justify-between h-20 lg:h-24">
         <a href="/" class="relative z-10" aria-label="Apollo Earthworks home">
@@ -255,16 +255,19 @@
     (function() {
       var nav = document.getElementById('main-nav');
       var lastScroll = 0;
+      var isDesktop = function() { return window.innerWidth >= 1024; };
       window.addEventListener('scroll', function() {
         var y = window.scrollY;
-        if (y > 100) {
-          nav.style.background = 'rgba(10,10,10,0.95)';
-          nav.style.backdropFilter = 'blur(20px)';
-          nav.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
-        } else {
-          nav.style.background = 'transparent';
-          nav.style.backdropFilter = 'none';
-          nav.style.borderBottom = 'none';
+        if (isDesktop()) {
+          if (y > 100) {
+            nav.style.background = 'rgba(10,10,10,0.95)';
+            nav.style.backdropFilter = 'blur(20px)';
+            nav.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+          } else {
+            nav.style.background = '';
+            nav.style.backdropFilter = '';
+            nav.style.borderBottom = '';
+          }
         }
         if (y > lastScroll && y > 200) {
           nav.style.transform = 'translateY(-100%)';
@@ -341,90 +344,95 @@
         </div>
       </div>
 
-      <!-- Bento Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 stagger">
-        <!-- Card 1: Large featured -->
-        <div class="reveal md:col-span-2 lg:col-span-2 lg:row-span-2 group relative overflow-hidden bg-ink img-zoom cursor-default" style="min-height: 480px;">
+      <!-- Bento Grid - 4 Categories -->
+      <div class="grid md:grid-cols-2 gap-4 stagger">
+        <!-- Left: Earthworks & Excavation (large) -->
+        <div class="reveal group relative overflow-hidden bg-ink img-zoom cursor-default" style="min-height: 480px;">
           <img src="Assets/excavation-landscaping.jpg" alt="Excavation and site cuts by Apollo Earthworks in Melbourne" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent"></div>
           <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
           <div class="relative z-10 flex flex-col justify-end h-full p-8 sm:p-10">
             <span class="text-brand text-xs font-semibold tracking-[0.2em] uppercase mb-3">Core Service</span>
-            <h3 class="text-2xl sm:text-3xl font-display font-bold text-white mb-3" style="letter-spacing: -0.02em;">Site Cuts & Excavation</h3>
-            <p class="text-white/60 text-sm max-w-lg" style="line-height: 1.7;">Precision site cuts and excavation for landscaping, concreting, pools and plumbing. Residential through to commercial projects across Melbourne.</p>
+            <h3 class="text-2xl sm:text-3xl font-display font-bold text-white mb-3" style="letter-spacing: -0.02em;">Earthworks & Excavation</h3>
+            <p class="text-white/60 text-sm max-w-lg" style="line-height: 1.7;">Site cuts, rock breaking, compaction and excavation for landscaping, concreting, pools and plumbing. Residential through to commercial projects across Melbourne.</p>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="reveal group relative overflow-hidden bg-ink img-zoom cursor-default" style="min-height: 230px;">
-          <img src="Assets/base-preparation-civil-works.jpg" alt="Base preparation and civil works by Apollo Earthworks" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
-          <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
-          <div class="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
-            <h3 class="text-lg font-display font-bold text-white mb-1.5">Base Preparation & Civil Works</h3>
-            <p class="text-white/65 text-sm" style="line-height: 1.6;">Professional groundwork for solid foundations.</p>
+        <!-- Right: 3 stacked categories -->
+        <div class="flex flex-col gap-4">
+          <!-- Site Services -->
+          <div class="reveal group relative overflow-hidden bg-ink img-zoom cursor-default flex-1" style="min-height: 150px;">
+            <img src="Assets/rubbish-removal.jpg" alt="Site services by Apollo Earthworks - site clean, rubbish removal and cartage" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
+            <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
+            <div class="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
+              <h3 class="text-lg font-display font-bold text-white mb-1.5">Site Services</h3>
+              <p class="text-white/65 text-sm" style="line-height: 1.6;">Site clean, rubbish removal, material export and cartage.</p>
+            </div>
           </div>
-        </div>
 
-        <!-- Card 3 -->
-        <div class="reveal group relative overflow-hidden bg-ink img-zoom cursor-default" style="min-height: 230px;">
-          <img src="Assets/posi-track-wet-hire.jpg" alt="Posi-track wet hire by Apollo Earthworks" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
-          <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
-          <div class="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
-            <h3 class="text-lg font-display font-bold text-white mb-1.5">Excavator & Posi-Track Wet Hire</h3>
-            <p class="text-white/65 text-sm" style="line-height: 1.6;">Machine and operator for any job size.</p>
+          <!-- Civil & Drainage -->
+          <div class="reveal group relative overflow-hidden bg-ink img-zoom cursor-default flex-1" style="min-height: 150px;">
+            <img src="Assets/drainage-solutions.jpg" alt="Civil works and drainage solutions by Apollo Earthworks" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
+            <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
+            <div class="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
+              <h3 class="text-lg font-display font-bold text-white mb-1.5">Civil & Drainage</h3>
+              <p class="text-white/65 text-sm" style="line-height: 1.6;">Base preparation, civil works and drainage solutions.</p>
+            </div>
           </div>
-        </div>
 
-        <!-- Card 4 -->
-        <div class="reveal group relative overflow-hidden bg-ink img-zoom cursor-default" style="min-height: 230px;">
-          <img src="Assets/drainage-solutions.jpg" alt="Drainage solutions by Apollo Earthworks" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
-          <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
-          <div class="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
-            <h3 class="text-lg font-display font-bold text-white mb-1.5">Drainage Solutions</h3>
-            <p class="text-white/65 text-sm" style="line-height: 1.6;">Complete drainage for residential and commercial.</p>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="reveal group relative overflow-hidden bg-ink img-zoom cursor-default" style="min-height: 230px;">
-          <img src="Assets/rubbish-removal.jpg" alt="Rubbish removal by Apollo Earthworks" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
-          <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
-          <div class="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
-            <h3 class="text-lg font-display font-bold text-white mb-1.5">Rubbish Removal</h3>
-            <p class="text-white/65 text-sm" style="line-height: 1.6;">Fast, clean site clearance and waste removal.</p>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="reveal group relative overflow-hidden bg-ink img-zoom cursor-default" style="min-height: 230px;">
-          <img src="Assets/material-export-cartage.jpg" alt="Material export and cartage by Apollo Earthworks" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
-          <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
-          <div class="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
-            <h3 class="text-lg font-display font-bold text-white mb-1.5">Material Export / Cartage</h3>
-            <p class="text-white/65 text-sm" style="line-height: 1.6;">Efficient material transport and export.</p>
+          <!-- Wet Hire -->
+          <div class="reveal group relative overflow-hidden bg-ink img-zoom cursor-default flex-1" style="min-height: 150px;">
+            <img src="Assets/posi-track-wet-hire.jpg" alt="Excavator and posi-track wet hire by Apollo Earthworks" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
+            <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
+            <div class="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
+              <h3 class="text-lg font-display font-bold text-white mb-1.5">Wet Hire</h3>
+              <p class="text-white/65 text-sm" style="line-height: 1.6;">Excavator and posi-track wet hire. Machine and operator for any job size.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Full Service List - Minimal -->
+      <!-- Full Service List - Categorised -->
       <div class="mt-16 pt-12 border-t border-ink/10 reveal">
-        <div class="flex flex-wrap gap-x-6 gap-y-3 justify-center">
-          <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Site Cuts</span>
-          <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Site Clean</span>
-          <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Rubbish Removal</span>
-          <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Compaction</span>
-          <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Material Export / Cartage</span>
-          <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Rock Breaking</span>
-          <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Base Preparation & Civil Works</span>
-          <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Excavation for Landscaping, Concreting, Pools & Plumbing</span>
-          <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Drainage Solutions</span>
-          <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Excavator Wet Hire</span>
-          <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Posi-Track Wet Hire</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+          <!-- Earthworks & Excavation -->
+          <div>
+            <h4 class="text-xs font-semibold text-ink tracking-[0.15em] uppercase mb-4">Earthworks & Excavation</h4>
+            <div class="space-y-2.5">
+              <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span>Site Cuts</span>
+              <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span>Rock Breaking</span>
+              <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span>Compaction</span>
+              <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span>Excavation for Landscaping, Concreting, Pools & Plumbing</span>
+            </div>
+          </div>
+          <!-- Site Services -->
+          <div>
+            <h4 class="text-xs font-semibold text-ink tracking-[0.15em] uppercase mb-4">Site Services</h4>
+            <div class="space-y-2.5">
+              <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span>Site Clean</span>
+              <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span>Rubbish Removal</span>
+              <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span>Material Export / Cartage</span>
+            </div>
+          </div>
+          <!-- Civil & Drainage -->
+          <div>
+            <h4 class="text-xs font-semibold text-ink tracking-[0.15em] uppercase mb-4">Civil & Drainage</h4>
+            <div class="space-y-2.5">
+              <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span>Base Preparation & Civil Works</span>
+              <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span>Drainage Solutions</span>
+            </div>
+          </div>
+          <!-- Wet Hire -->
+          <div>
+            <h4 class="text-xs font-semibold text-ink tracking-[0.15em] uppercase mb-4">Wet Hire</h4>
+            <div class="space-y-2.5">
+              <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span>Excavator Wet Hire</span>
+              <span class="text-sm text-ink-muted flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span>Posi-Track Wet Hire</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
