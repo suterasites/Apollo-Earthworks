@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haulage & Wet Hire Melbourne | Apollo Earthworks</title>
+  <link rel="apple-touch-icon" href="Assets/Logo.png">
+  <link rel="icon" href="Assets/Logo.png">
+  <meta name="description" content="Material haulage, tipper hire, excavator wet hire and posi-track wet hire across Melbourne. Apollo Earthworks - machine and operator for any job size.">
+  <meta name="keywords" content="haulage Melbourne, tipper hire Melbourne, excavator wet hire Melbourne, posi-track wet hire, material haulage, machine and operator hire">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://apollo-earthworks.pages.dev/haulage-hire.html">
+
+  <meta property="og:title" content="Haulage & Wet Hire Melbourne | Apollo Earthworks">
+  <meta property="og:description" content="Material haulage, tipper hire and wet hire across Melbourne. Tough work. Done right.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Haulage and Wet Hire",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Apollo Earthworks",
+      "telephone": "+61431560908",
+      "email": "apolloearthworks@gmail.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "VIC", "addressCountry": "AU" }
+    },
+    "areaServed": { "@type": "Place", "name": "Melbourne, Victoria" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Haulage and Hire Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Material Haulage" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tipper Hire" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Excavator Wet Hire" }},
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posi-Track Wet Hire" }}
+      ]
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#1B8FD1', dark: '#1474AB', light: '#2BA0E0', 50: '#E8F4FC' },
+            surface: { DEFAULT: '#FAFAF8', warm: '#F3F1EC' },
+            ink: { DEFAULT: '#0A0A0A', muted: '#6B6B6B', light: '#9A9A9A' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: #0A0A0A; }
+    h1, h2, h3, h4, .font-display { font-family: 'Space Grotesk', system-ui, sans-serif; }
+    .grain::before {
+      content: ''; position: absolute; inset: 0; opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 1;
+    }
+    .shadow-elevated { box-shadow: 0 1px 2px rgba(10,10,10,0.04), 0 4px 12px rgba(10,10,10,0.06), 0 16px 32px rgba(10,10,10,0.04); }
+    .shadow-floating { box-shadow: 0 2px 4px rgba(27,143,209,0.05), 0 8px 24px rgba(10,10,10,0.08), 0 32px 64px rgba(10,10,10,0.06); }
+    .ease-spring { transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .btn:focus-visible { outline: 3px solid #1B8FD1; outline-offset: 3px; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .stagger > .reveal:nth-child(1) { transition-delay: 0ms; }
+    .stagger > .reveal:nth-child(2) { transition-delay: 80ms; }
+    .stagger > .reveal:nth-child(3) { transition-delay: 160ms; }
+    .stagger > .reveal:nth-child(4) { transition-delay: 240ms; }
+    .stagger > .reveal:nth-child(5) { transition-delay: 320ms; }
+    .stagger > .reveal:nth-child(6) { transition-delay: 400ms; }
+    .img-zoom img { transition: transform 0.6s cubic-bezier(0.22,1,0.36,1); }
+    .img-zoom:hover img { transform: scale(1.05); }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .marquee-track { animation: marquee 30s linear infinite; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0A0A0A; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
+    .mega-panel { opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.28s cubic-bezier(0.22,1,0.36,1), transform 0.28s cubic-bezier(0.22,1,0.36,1), visibility 0.28s; }
+    .mega-panel.mega-open { opacity: 1; visibility: visible; transform: translateY(0); }
+    .mega-trigger.mega-open .mega-caret { transform: rotate(180deg); }
+    .mega-trigger:hover .mega-link-label, .mega-trigger.mega-open .mega-link-label { color: #fff; }
+    .mega-trigger:hover .mega-underline, .mega-trigger.mega-open .mega-underline { transform: scaleX(1); }
+    .mega-underline { transform: scaleX(0); transform-origin: left center; transition: transform 0.35s cubic-bezier(0.22,1,0.36,1); }
+    .mega-item { position: relative; display: flex; align-items: center; gap: 0.625rem; padding: 0.5rem 0.625rem; margin-left: -0.625rem; border-radius: 8px; color: rgba(255,255,255,0.72); font-size: 13.5px; font-weight: 500; letter-spacing: 0.005em; transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s cubic-bezier(0.22,1,0.36,1); }
+    .mega-item::before { content: ''; width: 4px; height: 4px; border-radius: 9999px; background: rgba(27,143,209,0.55); transform: scale(0.7); transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), background-color 0.2s ease; }
+    .mega-item:hover { color: #fff; background: rgba(255,255,255,0.04); transform: translateX(2px); }
+    .mega-item:hover::before { background: #2BA0E0; transform: scale(1.2); }
+    .mega-item:focus-visible { outline: 2px solid #1B8FD1; outline-offset: 2px; color: #fff; }
+    .mega-col-title { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #2BA0E0; display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1.1rem; }
+    .mega-col-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(43,160,224,0.35), rgba(43,160,224,0)); }
+    .mega-feature { position: relative; overflow: hidden; border-radius: 14px; background: linear-gradient(135deg, #1474AB 0%, #0A0A0A 100%); isolation: isolate; }
+    .mega-feature::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(43,160,224,0.4), transparent 55%), radial-gradient(circle at 10% 90%, rgba(27,143,209,0.25), transparent 60%); z-index: 0; }
+    .mega-feature::after { content: ''; position: absolute; inset: 0; opacity: 0.08; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1; }
+    .mobile-accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.22,1,0.36,1); }
+    .mobile-accordion.open .mobile-accordion-content { max-height: 600px; }
+    .mobile-accordion.open .mobile-accordion-caret { transform: rotate(180deg); }
+
+    /* Service detail card */
+    .svc-card {
+      position: relative;
+      background: #fff;
+      border: 1px solid rgba(10,10,10,0.06);
+      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease, border-color 0.3s ease;
+    }
+    .svc-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 2px 4px rgba(27,143,209,0.05), 0 12px 32px rgba(10,10,10,0.08), 0 32px 64px rgba(10,10,10,0.05);
+      border-color: rgba(27,143,209,0.25);
+    }
+    .svc-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 0;
+      height: 3px;
+      background: #1B8FD1;
+      transition: width 0.5s cubic-bezier(0.22,1,0.36,1);
+    }
+    .svc-card:hover::before { width: 100%; }
+  </style>
+</head>
+<body class="bg-surface antialiased overflow-x-hidden">
+
+  <!-- Navigation -->
+  <nav id="main-nav" class="fixed top-0 w-full z-50 bg-ink lg:bg-transparent lg:duration-500" style="transition: background-color 500ms, backdrop-filter 500ms, box-shadow 500ms, transform 500ms;" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="flex items-center justify-between h-20 lg:h-24">
+        <a href="index.html" class="relative z-10" aria-label="Apollo Earthworks home">
+          <img src="Assets/Logo.png" alt="Apollo Earthworks" class="h-10 lg:h-12 rounded-sm">
+        </a>
+        <div class="hidden lg:flex items-center gap-10">
+          <div id="mega-services" class="mega-trigger relative">
+            <button type="button" id="mega-services-btn" class="flex items-center gap-1.5 text-[13px] font-medium tracking-wide uppercase text-white/80 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand focus-visible:outline-offset-4 transition-colors duration-300" aria-haspopup="true" aria-expanded="false" aria-controls="mega-services-panel">
+              <span class="mega-link-label transition-colors duration-300">Services</span>
+              <svg class="mega-caret w-3 h-3 text-white/60 transition-transform duration-300 ease-spring" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              <span class="mega-underline absolute left-0 -bottom-1.5 right-4 h-[1.5px] bg-brand"></span>
+            </button>
+          </div>
+          <a href="about.html" class="text-[13px] font-medium tracking-wide uppercase text-white/80 hover:text-brand transition-colors duration-300">About</a>
+          <a href="our-work.html" class="text-[13px] font-medium tracking-wide uppercase text-white/80 hover:text-brand transition-colors duration-300">Our Work</a>
+          <a href="index.html#contact" class="text-[13px] font-medium tracking-wide uppercase text-white/80 hover:text-brand transition-colors duration-300">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="tel:0431560908" class="btn hidden sm:inline-flex items-center gap-2.5 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-semibold text-[13px] tracking-wide px-6 py-3 transition-transform duration-300 ease-spring hover:scale-[1.03] active:scale-[0.97]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            0431 560 908
+          </a>
+          <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand active:scale-95 transition-transform duration-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mega-services-panel" class="mega-panel hidden lg:block absolute left-0 right-0 top-full px-5 sm:px-8 lg:px-12" role="region" aria-label="Services menu">
+      <div class="max-w-7xl mx-auto">
+        <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0A0A0A]/95 backdrop-blur-2xl shadow-floating">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/40 to-transparent"></div>
+          <div class="grid grid-cols-12 gap-8 p-8 lg:p-10">
+            <div class="col-span-3">
+              <h3 class="mega-col-title"><svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19h14M5 19l1-3h12l1 3M7 16V8a1 1 0 011-1h8a1 1 0 011 1v8"/></svg><a href="earthworks.html" class="hover:text-white transition-colors">Earthworks</a></h3>
+              <ul class="space-y-0.5">
+                <li><a href="earthworks.html" class="mega-item">Bulk Earthworks</a></li>
+                <li><a href="earthworks.html" class="mega-item">Site Cuts</a></li>
+                <li><a href="earthworks.html" class="mega-item">Basements</a></li>
+                <li><a href="earthworks.html" class="mega-item">Footings</a></li>
+                <li><a href="earthworks.html" class="mega-item">Trenching</a></li>
+                <li><a href="earthworks.html" class="mega-item">Final Trim</a></li>
+              </ul>
+            </div>
+            <div class="col-span-3">
+              <h3 class="mega-col-title"><svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><a href="demolition.html" class="hover:text-white transition-colors">Demolition</a></h3>
+              <ul class="space-y-0.5">
+                <li><a href="demolition.html" class="mega-item">Demolition</a></li>
+                <li><a href="demolition.html" class="mega-item">Land Clearing</a></li>
+                <li><a href="demolition.html" class="mega-item">Rock Breaking</a></li>
+                <li><a href="demolition.html" class="mega-item">Rock Removal</a></li>
+                <li><a href="demolition.html" class="mega-item">Soil Removal</a></li>
+                <li><a href="demolition.html" class="mega-item">Site Clean-ups</a></li>
+              </ul>
+            </div>
+            <div class="col-span-3">
+              <h3 class="mega-col-title"><svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17h8m-8 0a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 104 0 2 2 0 00-4 0zM3 7h10v10H3V7zm10 4h4l3 3v3h-7"/></svg><a href="haulage-hire.html" class="hover:text-white transition-colors">Haulage & Hire</a></h3>
+              <ul class="space-y-0.5">
+                <li><a href="haulage-hire.html" class="mega-item">Material Haulage</a></li>
+                <li><a href="haulage-hire.html" class="mega-item">Tipper Hire</a></li>
+                <li><a href="haulage-hire.html" class="mega-item">Excavator Wet Hire</a></li>
+                <li><a href="haulage-hire.html" class="mega-item">Posi-Track Wet Hire</a></li>
+              </ul>
+              <h3 class="mega-col-title mt-7"><svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5"/></svg><a href="civil.html" class="hover:text-white transition-colors">Civil</a></h3>
+              <ul class="space-y-0.5">
+                <li><a href="civil.html" class="mega-item">Retaining Walls</a></li>
+                <li><a href="civil.html" class="mega-item">Drainage</a></li>
+                <li><a href="civil.html" class="mega-item">Driveways & Car Parks</a></li>
+                <li><a href="civil.html" class="mega-item">Concrete & Slabs</a></li>
+              </ul>
+            </div>
+            <div class="col-span-3">
+              <div class="mega-feature h-full p-6 flex flex-col justify-between min-h-[280px]">
+                <div class="relative z-10">
+                  <span class="inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.18em] uppercase text-brand-light/90 mb-3"><span class="w-1.5 h-1.5 rounded-full bg-brand-light animate-pulse"></span>Available Now</span>
+                  <h4 class="font-display text-white text-[22px] leading-[1.15] font-semibold tracking-tight mb-2">Need a quote on your next site?</h4>
+                  <p class="text-white/65 text-[13px] leading-relaxed">Talk to Kosta. Quick turnaround on residential, commercial and civil jobs across Melbourne.</p>
+                </div>
+                <div class="relative z-10 flex flex-col gap-2.5 mt-6">
+                  <a href="tel:0431560908" class="group inline-flex items-center justify-between gap-2 bg-white text-ink font-semibold text-[12px] tracking-wide uppercase px-4 py-3 rounded-lg transition-transform duration-300 ease-spring hover:scale-[1.02] active:scale-[0.98]">
+                    <span class="flex items-center gap-2"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>0431 560 908</span>
+                    <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                  </a>
+                  <a href="index.html#contact" class="inline-flex items-center justify-center gap-2 border border-white/15 hover:border-white/30 text-white/90 hover:text-white font-semibold text-[12px] tracking-wide uppercase px-4 py-3 rounded-lg transition-colors duration-200">Request a Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-t border-white/8 px-8 lg:px-10 py-4 flex flex-wrap items-center justify-between gap-3 bg-white/[0.015]">
+            <div class="flex items-center gap-5 text-[11px] font-medium tracking-wide uppercase text-white/55">
+              <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Fully Insured</span>
+              <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Ticketed Operators</span>
+              <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Melbourne-Wide</span>
+            </div>
+            <a href="services.html" class="inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-wide uppercase text-brand-light hover:text-white transition-colors duration-200">View All Services<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="lg:hidden overflow-hidden transition-[max-height] duration-300 ease-out max-h-0 bg-ink/95 backdrop-blur-xl border-t border-white/10">
+      <div class="px-5 py-6 flex flex-col gap-1">
+        <div class="mobile-accordion">
+          <button type="button" class="mobile-accordion-btn w-full flex items-center justify-between px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200" aria-expanded="false">
+            <span>Services</span>
+            <svg class="mobile-accordion-caret w-4 h-4 transition-transform duration-300 ease-spring" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <div class="px-4 pb-3 pt-1 space-y-4">
+              <div>
+                <a href="earthworks.html" class="mobile-nav-link block text-[10px] font-semibold tracking-[0.18em] uppercase text-brand-light mb-2 hover:text-white">Earthworks →</a>
+                <div class="grid grid-cols-2 gap-x-3 gap-y-1.5">
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Bulk Earthworks</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Site Cuts</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Basements</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Footings</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Trenching</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Final Trim</a>
+                </div>
+              </div>
+              <div>
+                <a href="demolition.html" class="mobile-nav-link block text-[10px] font-semibold tracking-[0.18em] uppercase text-brand-light mb-2 hover:text-white">Demolition →</a>
+                <div class="grid grid-cols-2 gap-x-3 gap-y-1.5">
+                  <a href="demolition.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Demolition</a>
+                  <a href="demolition.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Land Clearing</a>
+                  <a href="demolition.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Rock Breaking</a>
+                  <a href="demolition.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Soil Removal</a>
+                </div>
+              </div>
+              <div>
+                <a href="haulage-hire.html" class="mobile-nav-link block text-[10px] font-semibold tracking-[0.18em] uppercase text-brand-light mb-2 hover:text-white">Haulage & Hire →</a>
+                <div class="grid grid-cols-2 gap-x-3 gap-y-1.5">
+                  <a href="haulage-hire.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Material Haulage</a>
+                  <a href="haulage-hire.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Tipper Hire</a>
+                  <a href="haulage-hire.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Excavator Hire</a>
+                  <a href="haulage-hire.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Posi-Track Hire</a>
+                </div>
+              </div>
+              <div>
+                <a href="civil.html" class="mobile-nav-link block text-[10px] font-semibold tracking-[0.18em] uppercase text-brand-light mb-2 hover:text-white">Civil →</a>
+                <div class="grid grid-cols-2 gap-x-3 gap-y-1.5">
+                  <a href="civil.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Retaining Walls</a>
+                  <a href="civil.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Drainage</a>
+                  <a href="civil.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Driveways</a>
+                  <a href="civil.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Concrete & Slabs</a>
+                </div>
+              </div>
+              <a href="services.html" class="mobile-nav-link block text-[12px] font-semibold tracking-wide uppercase text-brand mt-2">View All Services →</a>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="mobile-nav-link block px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200">About</a>
+        <a href="our-work.html" class="mobile-nav-link block px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200">Our Work</a>
+        <a href="index.html#contact" class="mobile-nav-link block px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200">Contact</a>
+        <div class="mt-4 px-4">
+          <a href="tel:0431560908" class="btn inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm px-6 py-3 w-full justify-center">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            0431 560 908
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    (function() {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var hamburger = document.getElementById('hamburger-icon');
+      var closeIcon = document.getElementById('close-icon');
+      var links = menu.querySelectorAll('.mobile-nav-link');
+      function recalcOpenHeight() { if (menu.style.maxHeight && menu.style.maxHeight !== '0px') { menu.style.maxHeight = menu.scrollHeight + 'px'; } }
+      function toggleMenu() {
+        var isOpen = menu.style.maxHeight && menu.style.maxHeight !== '0px';
+        if (isOpen) { menu.style.maxHeight = '0px'; hamburger.classList.remove('hidden'); closeIcon.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false'); }
+        else { menu.style.maxHeight = menu.scrollHeight + 'px'; hamburger.classList.add('hidden'); closeIcon.classList.remove('hidden'); btn.setAttribute('aria-expanded', 'true'); }
+      }
+      btn.addEventListener('click', toggleMenu);
+      links.forEach(function(link) { link.addEventListener('click', function() { menu.style.maxHeight = '0px'; hamburger.classList.remove('hidden'); closeIcon.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false'); }); });
+      var accordion = menu.querySelector('.mobile-accordion');
+      if (accordion) {
+        var accBtn = accordion.querySelector('.mobile-accordion-btn');
+        accBtn.addEventListener('click', function(e) { e.stopPropagation(); var open = accordion.classList.toggle('open'); accBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); setTimeout(recalcOpenHeight, 360); recalcOpenHeight(); });
+      }
+    })();
+  </script>
+
+  <script>
+    (function() {
+      var trigger = document.getElementById('mega-services');
+      var btn = document.getElementById('mega-services-btn');
+      var panel = document.getElementById('mega-services-panel');
+      if (!trigger || !btn || !panel) return;
+      var closeTimer = null;
+      var isDesktop = function() { return window.innerWidth >= 1024; };
+      function open() { if (!isDesktop()) return; clearTimeout(closeTimer); trigger.classList.add('mega-open'); panel.classList.add('mega-open'); btn.setAttribute('aria-expanded', 'true'); }
+      function close() { trigger.classList.remove('mega-open'); panel.classList.remove('mega-open'); btn.setAttribute('aria-expanded', 'false'); }
+      function scheduleClose() { clearTimeout(closeTimer); closeTimer = setTimeout(close, 140); }
+      trigger.addEventListener('mouseenter', open);
+      trigger.addEventListener('mouseleave', scheduleClose);
+      panel.addEventListener('mouseenter', function() { clearTimeout(closeTimer); });
+      panel.addEventListener('mouseleave', scheduleClose);
+      btn.addEventListener('click', function(e) { e.preventDefault(); if (trigger.classList.contains('mega-open')) { close(); } else { open(); } });
+      btn.addEventListener('focus', open);
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+      document.addEventListener('click', function(e) { if (!trigger.contains(e.target) && !panel.contains(e.target)) close(); });
+      window.addEventListener('scroll', function() { if (trigger.classList.contains('mega-open')) close(); }, { passive: true });
+      window.addEventListener('resize', function() { if (!isDesktop()) close(); });
+    })();
+  </script>
+
+  <script>
+    (function() {
+      var nav = document.getElementById('main-nav');
+      var lastScroll = 0;
+      var isDesktop = function() { return window.innerWidth >= 1024; };
+      window.addEventListener('scroll', function() {
+        var y = window.scrollY;
+        if (isDesktop()) {
+          if (y > 100) { nav.style.background = 'rgba(10,10,10,0.95)'; nav.style.backdropFilter = 'blur(20px)'; nav.style.boxShadow = 'inset 0 -1px 0 rgba(255,255,255,0.06)'; }
+          else { nav.style.background = ''; nav.style.backdropFilter = ''; nav.style.boxShadow = ''; }
+        }
+        if (y > lastScroll && y > 200) { nav.style.transform = 'translateY(-100%)'; } else { nav.style.transform = 'translateY(0)'; }
+        lastScroll = y;
+      });
+    })();
+  </script>
+
+  <!-- ==================== HERO ==================== -->
+  <header class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-32 overflow-hidden grain bg-ink" id="page-hero">
+    <div class="absolute inset-0">
+      <img src="Assets/material-export-cartage.jpg" alt="Apollo Earthworks tipper truck and material haulage in Melbourne" class="w-full h-full object-cover opacity-40" loading="eager">
+      <div class="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/85 to-ink"></div>
+      <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse at 70% 40%, rgba(27,143,209,0.18) 0%, transparent 55%);"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <nav class="flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-white/40 mb-8" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-brand transition-colors duration-200">Home</a>
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+        <a href="services.html" class="hover:text-brand transition-colors duration-200">Services</a>
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+        <span class="text-white/70">Haulage &amp; Hire</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+        <div class="lg:col-span-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-8 h-[2px] bg-brand"></div>
+            <span class="text-brand text-xs font-semibold tracking-[0.25em] uppercase">03 - Haulage &amp; Hire</span>
+          </div>
+          <h1 class="font-display text-[clamp(2.5rem,6vw,5rem)] text-white leading-[0.95] mb-0" style="letter-spacing: -0.04em;">
+            Haulage &amp;<br>
+            <span class="text-brand">wet hire fleet.</span>
+          </h1>
+        </div>
+        <div class="lg:col-span-4 lg:pb-3">
+          <p class="text-white/65 text-[15px]" style="line-height: 1.8;">
+            Tipper hire, material haulage, and wet hire on excavators and posi-tracks. Machine plus operator, ready when you are.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== INTRO ==================== -->
+  <section class="py-24 sm:py-32 bg-surface">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+        <div class="lg:col-span-5 reveal">
+          <div class="relative img-zoom overflow-hidden shadow-floating">
+            <img src="Assets/posi-track-wet-hire.jpg" alt="Apollo Earthworks posi-track wet hire in Melbourne" class="w-full h-[440px] sm:h-[520px] object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
+          </div>
+        </div>
+        <div class="lg:col-span-7 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-[2px] bg-brand"></div>
+            <span class="text-brand text-xs font-semibold tracking-[0.25em] uppercase">Overview</span>
+          </div>
+          <h2 class="text-3xl sm:text-[2.75rem] font-display font-bold text-ink mb-8" style="letter-spacing: -0.03em; line-height: 1.1;">Machine and operator. One call.</h2>
+          <div class="space-y-6 text-ink-muted text-[15px]" style="line-height: 1.85;">
+            <p>Wet hire means you get the machine and a ticketed operator on the back of it. No mucking around with dry hire logistics, induction and tickets, or the worry of who is running the gear on your site. We turn up, work the day, and the job moves forward.</p>
+            <p>Apollo Earthworks runs a fleet of <strong class="text-ink font-semibold">excavators from 1.7T to 30T</strong>, posi-tracks, skid steers, tandem tipper trucks and machinery floats. Whatever your site needs, we have the gear and the people to run it.</p>
+            <p>Builders, contractors, landscapers and owner-builders all use our wet hire service for one reason - it is straightforward and reliable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICE DETAILS ==================== -->
+  <section class="py-24 sm:py-32 bg-white relative">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid lg:grid-cols-2 gap-6 mb-16 reveal">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-[2px] bg-brand"></div>
+            <span class="text-brand text-xs font-semibold tracking-[0.25em] uppercase">Services in Detail</span>
+          </div>
+          <h2 class="text-3xl sm:text-[2.75rem] font-display font-bold text-ink" style="letter-spacing: -0.03em; line-height: 1.1;">Four haulage &amp; hire services</h2>
+        </div>
+        <div class="lg:flex lg:items-end lg:justify-end">
+          <p class="text-ink-muted text-[15px] max-w-md" style="line-height: 1.75;">All wet hire includes a ticketed operator, fully insured, on a serviced machine.</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 stagger">
+        <article class="reveal svc-card p-8">
+          <div class="flex items-center justify-between mb-5">
+            <span class="font-display text-brand/30 text-4xl font-bold">01</span>
+            <div class="w-11 h-11 bg-brand-50 flex items-center justify-center rounded-lg">
+              <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17h8m-8 0a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 104 0 2 2 0 00-4 0zM3 7h10v10H3V7zm10 4h4l3 3v3h-7"/></svg>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-ink text-xl mb-3">Material Haulage</h3>
+          <p class="text-sm text-ink-muted mb-4" style="line-height: 1.7;">Cartage of soil, rock, sand, gravel and aggregates. Inbound supply or outbound disposal, all run by our own trucks and operators.</p>
+          <ul class="space-y-1.5 text-xs text-ink-muted">
+            <li class="flex items-start gap-2"><span class="text-brand mt-0.5">•</span>Soil and spoil disposal</li>
+            <li class="flex items-start gap-2"><span class="text-brand mt-0.5">•</span>Aggregate supply</li>
+            <li class="flex items-start gap-2"><span class="text-brand mt-0.5">•</span>Same-day cartage</li>
+          </ul>
+        </article>
+
+        <article class="reveal svc-card p-8">
+          <div class="flex items-center justify-between mb-5">
+            <span class="font-display text-brand/30 text-4xl font-bold">02</span>
+            <div class="w-11 h-11 bg-brand-50 flex items-center justify-center rounded-lg">
+              <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0zM13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1"/></svg>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-ink text-xl mb-3">Tipper Hire</h3>
+          <p class="text-sm text-ink-muted mb-4" style="line-height: 1.7;">Tandem tipper trucks with experienced drivers. By the hour, day, or week. Whatever your project needs to keep material moving.</p>
+          <ul class="space-y-1.5 text-xs text-ink-muted">
+            <li class="flex items-start gap-2"><span class="text-brand mt-0.5">•</span>Tandem tipper trucks</li>
+            <li class="flex items-start gap-2"><span class="text-brand mt-0.5">•</span>Experienced drivers included</li>
+            <li class="flex items-start gap-2"><span class="text-brand mt-0.5">•</span>Hourly, daily or weekly rates</li>
+          </ul>
+        </article>
+
+        <article class="reveal svc-card p-8">
+          <div class="flex items-center justify-between mb-5">
+            <span class="font-display text-brand/30 text-4xl font-bold">03</span>
+            <div class="w-11 h-11 bg-brand-50 flex items-center justify-center rounded-lg">
+              <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19h14M5 19l1-3h12l1 3M7 16V8a1 1 0 011-1h8a1 1 0 011 1v8"/></svg>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-ink text-xl mb-3">Excavator Wet Hire</h3>
+          <p class="text-sm text-ink-muted mb-4" style="line-height: 1.7;">From 1.7T tight access machines through to 30T workhorses. Operator included, attachments available, ready to work on your site.</p>
+          <ul class="space-y-1.5 text-xs text-ink-muted">
+            <li class="flex items-start gap-2"><span class="text-brand mt-0.5">•</span>1.7T to 30T size range</li>
+            <li class="flex items-start gap-2"><span class="text-brand mt-0.5">•</span>Buckets, hammers, augers</li>
+            <li class="flex items-start gap-2"><span class="text-brand mt-0.5">•</span>Ticketed operator included</li>
+          </ul>
+        </article>
+
+        <article class="reveal svc-card p-8">
+          <div class="flex items-center justify-between mb-5">
+            <span class="font-display text-brand/30 text-4xl font-bold">04</span>
+            <div class="w-11 h-11 bg-brand-50 flex items-center justify-center rounded-lg">
+              <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-ink text-xl mb-3">Posi-Track Wet Hire</h3>
+          <p class="text-sm text-ink-muted mb-4" style="line-height: 1.7;">Compact, manoeuvrable and gentle on lawns and driveways. Posi-tracks are a landscaper's best friend for tight residential work.</p>
+          <ul class="space-y-1.5 text-xs text-ink-muted">
+            <li class="flex items-start gap-2"><span class="text-brand mt-0.5">•</span>Tight residential access</li>
+            <li class="flex items-start gap-2"><span class="text-brand mt-0.5">•</span>Lawn-friendly tracks</li>
+            <li class="flex items-start gap-2"><span class="text-brand mt-0.5">•</span>Quick load and unload</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FLEET ==================== -->
+  <section class="py-24 sm:py-32 bg-ink relative grain overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-end mb-16">
+        <div class="lg:col-span-7 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-[2px] bg-brand"></div>
+            <span class="text-brand text-xs font-semibold tracking-[0.25em] uppercase">The Fleet</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white" style="letter-spacing: -0.03em; line-height: 1.1;">Modern, serviced, ready to work</h2>
+        </div>
+        <div class="lg:col-span-5 reveal">
+          <p class="text-white/50 text-[15px]" style="line-height: 1.8;">Every machine in our fleet is regularly serviced and operated by ticketed people. We turn up reliable so your job runs reliable.</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 stagger">
+        <div class="reveal bg-white/[0.04] border border-white/10 p-6 hover:bg-white/[0.06] transition-colors duration-300">
+          <p class="font-display text-brand-light text-3xl font-bold mb-2">1.7T - 30T</p>
+          <p class="text-white/80 text-sm font-semibold mb-1">Excavators</p>
+          <p class="text-white/40 text-xs">Full size range with attachments</p>
+        </div>
+        <div class="reveal bg-white/[0.04] border border-white/10 p-6 hover:bg-white/[0.06] transition-colors duration-300">
+          <p class="font-display text-brand-light text-3xl font-bold mb-2">Tandem</p>
+          <p class="text-white/80 text-sm font-semibold mb-1">Tipper Trucks</p>
+          <p class="text-white/40 text-xs">Cartage and material haulage</p>
+        </div>
+        <div class="reveal bg-white/[0.04] border border-white/10 p-6 hover:bg-white/[0.06] transition-colors duration-300">
+          <p class="font-display text-brand-light text-3xl font-bold mb-2">Posi-Track</p>
+          <p class="text-white/80 text-sm font-semibold mb-1">+ Skid Steers</p>
+          <p class="text-white/40 text-xs">Tight access and finishing work</p>
+        </div>
+        <div class="reveal bg-white/[0.04] border border-white/10 p-6 hover:bg-white/[0.06] transition-colors duration-300">
+          <p class="font-display text-brand-light text-3xl font-bold mb-2">Up to 10T</p>
+          <p class="text-white/80 text-sm font-semibold mb-1">Machinery Floats</p>
+          <p class="text-white/40 text-xs">We move our own gear</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="py-16 sm:py-20 bg-brand relative overflow-hidden grain" aria-label="Call to action">
+    <div class="relative z-10">
+      <div class="overflow-hidden mb-12">
+        <div class="flex marquee-track whitespace-nowrap">
+          <span class="text-5xl sm:text-7xl lg:text-8xl font-display font-bold text-white/10 mx-6" style="letter-spacing: -0.04em;" aria-hidden="true">Wet Hire. Done Right.</span>
+          <span class="text-5xl sm:text-7xl lg:text-8xl font-display font-bold text-white/10 mx-6" style="letter-spacing: -0.04em;" aria-hidden="true">Wet Hire. Done Right.</span>
+          <span class="text-5xl sm:text-7xl lg:text-8xl font-display font-bold text-white/10 mx-6" style="letter-spacing: -0.04em;" aria-hidden="true">Wet Hire. Done Right.</span>
+          <span class="text-5xl sm:text-7xl lg:text-8xl font-display font-bold text-white/10 mx-6" style="letter-spacing: -0.04em;" aria-hidden="true">Wet Hire. Done Right.</span>
+        </div>
+      </div>
+      <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mb-6" style="letter-spacing: -0.03em;">Need a machine and operator?</h2>
+        <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto" style="line-height: 1.7;">Call Kosta to book wet hire or haulage on your next project.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:0431560908" class="btn inline-flex items-center justify-center gap-2.5 bg-white hover:bg-white/90 active:bg-white/80 text-brand font-bold text-sm tracking-wide px-8 py-4 transition-transform duration-300 ease-spring hover:scale-[1.03] active:scale-[0.97] shadow-floating">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Call 0431 560 908
+          </a>
+          <a href="index.html#contact" class="btn inline-flex items-center justify-center gap-2.5 text-white font-semibold text-sm tracking-wide px-8 py-4 border-2 border-white/30 hover:border-white/60 hover:bg-white/10 active:bg-white/15 transition-all duration-300">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-ink pt-16 pb-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
+        <div class="lg:col-span-1">
+          <img src="Assets/Logo.png" alt="Apollo Earthworks" class="h-11 mb-5 rounded-sm">
+          <p class="text-sm text-white/40" style="line-height: 1.7;">Melbourne-based earthworks specialists. Tough work, done right.</p>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-5">Services</h4>
+          <nav class="space-y-2.5" aria-label="Services">
+            <a href="earthworks.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Earthworks</a>
+            <a href="demolition.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Demolition</a>
+            <a href="haulage-hire.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Haulage & Hire</a>
+            <a href="civil.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Civil</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-5">Company</h4>
+          <nav class="space-y-2.5" aria-label="Footer navigation">
+            <a href="services.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Services</a>
+            <a href="about.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">About</a>
+            <a href="our-work.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Our Work</a>
+            <a href="index.html#contact" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-5">Contact</h4>
+          <div class="space-y-2.5">
+            <a href="tel:0431560908" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">0431 560 908</a>
+            <a href="#" onclick="window.location='mailto:'+atob('YXBvbGxvZWFydGh3b3Jrc0BnbWFpbC5jb20=');return false;" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">
+              <span class="email-protect">apolloearthworks[at]gmail.com</span>
+            </a>
+            <p class="text-sm text-white/30">Melbourne, Victoria</p>
+          </div>
+          <div class="mt-5">
+            <a href="https://www.instagram.com/apolloearthworks" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-9 h-9 bg-white/6 hover:bg-brand transition-colors duration-200 rounded-sm" aria-label="Follow Apollo Earthworks on Instagram">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/6 pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <p class="text-xs text-white/20">&copy; 2026 Apollo Earthworks. All rights reserved.</p>
+        <p class="text-xs text-white/20">Melbourne, Victoria, Australia</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+  </script>
+
+  <script>
+    document.querySelectorAll('.email-protect').forEach(function(el){el.innerHTML='apolloearthworks@gmail.com';});
+  </script>
+
+</body>
+</html>

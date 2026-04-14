@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work | Apollo Earthworks Project Gallery Melbourne</title>
+  <link rel="apple-touch-icon" href="Assets/Logo.png">
+  <link rel="icon" href="Assets/Logo.png">
+  <meta name="description" content="Browse Apollo Earthworks project gallery. Real Melbourne earthworks, excavation, drainage, civil and wet hire jobs delivered for builders, developers and contractors.">
+  <meta name="keywords" content="earthworks gallery Melbourne, excavation projects Melbourne, drainage Melbourne, civil works portfolio, posi-track wet hire Melbourne, Apollo Earthworks projects">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://apollo-earthworks.pages.dev/our-work.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Our Work | Apollo Earthworks Project Gallery">
+  <meta property="og:description" content="Real Melbourne earthworks, excavation, drainage and civil projects delivered by Apollo Earthworks. Tough work, done right.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:url" content="https://apollo-earthworks.pages.dev/our-work.html">
+  <meta property="og:image" content="https://apollo-earthworks.pages.dev/Assets/excavation-pools.jpg">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Apollo Earthworks Project Gallery",
+    "description": "A gallery of recent earthworks, excavation, drainage, civil and wet hire projects delivered by Apollo Earthworks across the Melbourne metropolitan area.",
+    "url": "https://apollo-earthworks.pages.dev/our-work.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Apollo Earthworks",
+      "url": "https://apollo-earthworks.pages.dev/"
+    },
+    "about": {
+      "@type": "LocalBusiness",
+      "name": "Apollo Earthworks",
+      "telephone": "+61431560908",
+      "email": "apolloearthworks@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2/26 Allister Street",
+        "addressLocality": "Mount Waverley",
+        "addressRegion": "VIC",
+        "postalCode": "3149",
+        "addressCountry": "AU"
+      },
+      "areaServed": "Melbourne Metropolitan Area"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apollo-earthworks.pages.dev/" },
+      { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://apollo-earthworks.pages.dev/our-work.html" }
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#1B8FD1',
+              dark: '#1474AB',
+              light: '#2BA0E0',
+              50: '#E8F4FC',
+            },
+            surface: {
+              DEFAULT: '#FAFAF8',
+              warm: '#F3F1EC',
+            },
+            ink: {
+              DEFAULT: '#0A0A0A',
+              muted: '#6B6B6B',
+              light: '#9A9A9A',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: #0A0A0A; }
+    h1, h2, h3, h4, .font-display { font-family: 'Space Grotesk', system-ui, sans-serif; }
+
+    /* Grain texture */
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Shadow system */
+    .shadow-elevated {
+      box-shadow:
+        0 1px 2px rgba(10, 10, 10, 0.04),
+        0 4px 12px rgba(10, 10, 10, 0.06),
+        0 16px 32px rgba(10, 10, 10, 0.04);
+    }
+    .shadow-floating {
+      box-shadow:
+        0 2px 4px rgba(27, 143, 209, 0.05),
+        0 8px 24px rgba(10, 10, 10, 0.08),
+        0 32px 64px rgba(10, 10, 10, 0.06);
+    }
+
+    /* Spring easing */
+    .ease-spring { transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+    /* Focus */
+    .btn:focus-visible {
+      outline: 3px solid #1B8FD1;
+      outline-offset: 3px;
+    }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger children */
+    .stagger > .reveal:nth-child(1) { transition-delay: 0ms; }
+    .stagger > .reveal:nth-child(2) { transition-delay: 60ms; }
+    .stagger > .reveal:nth-child(3) { transition-delay: 120ms; }
+    .stagger > .reveal:nth-child(4) { transition-delay: 180ms; }
+    .stagger > .reveal:nth-child(5) { transition-delay: 240ms; }
+    .stagger > .reveal:nth-child(6) { transition-delay: 300ms; }
+    .stagger > .reveal:nth-child(7) { transition-delay: 360ms; }
+    .stagger > .reveal:nth-child(8) { transition-delay: 420ms; }
+    .stagger > .reveal:nth-child(9) { transition-delay: 480ms; }
+
+    /* Number outlines */
+    .number-outline {
+      -webkit-text-stroke: 2px #1B8FD1;
+      color: transparent;
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+    }
+
+    /* Image zoom on hover */
+    .img-zoom img {
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .img-zoom:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0A0A0A; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+    /* Mega menu */
+    .mega-panel {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: opacity 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+                  visibility 0.28s;
+    }
+    .mega-panel.mega-open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .mega-trigger.mega-open .mega-caret { transform: rotate(180deg); }
+    .mega-trigger:hover .mega-link-label,
+    .mega-trigger.mega-open .mega-link-label { color: #fff; }
+    .mega-trigger:hover .mega-underline,
+    .mega-trigger.mega-open .mega-underline { transform: scaleX(1); }
+    .mega-underline {
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .mega-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.5rem 0.625rem;
+      margin-left: -0.625rem;
+      border-radius: 8px;
+      color: rgba(255,255,255,0.72);
+      font-size: 13.5px;
+      font-weight: 500;
+      letter-spacing: 0.005em;
+      transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s cubic-bezier(0.22,1,0.36,1);
+    }
+    .mega-item::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 9999px;
+      background: rgba(27,143,209,0.55);
+      transform: scale(0.7);
+      transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), background-color 0.2s ease;
+    }
+    .mega-item:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.04);
+      transform: translateX(2px);
+    }
+    .mega-item:hover::before {
+      background: #2BA0E0;
+      transform: scale(1.2);
+    }
+    .mega-item:focus-visible {
+      outline: 2px solid #1B8FD1;
+      outline-offset: 2px;
+      color: #fff;
+    }
+    .mega-col-title {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #2BA0E0;
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      margin-bottom: 1.1rem;
+    }
+    .mega-col-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(43,160,224,0.35), rgba(43,160,224,0));
+    }
+    .mega-feature {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #1474AB 0%, #0A0A0A 100%);
+      isolation: isolate;
+    }
+    .mega-feature::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(43,160,224,0.4), transparent 55%),
+        radial-gradient(circle at 10% 90%, rgba(27,143,209,0.25), transparent 60%);
+      z-index: 0;
+    }
+    .mega-feature::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.08;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Mobile mega accordion */
+    .mobile-accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .mobile-accordion.open .mobile-accordion-content { max-height: 600px; }
+    .mobile-accordion.open .mobile-accordion-caret { transform: rotate(180deg); }
+
+    /* Filter chips */
+    .filter-chip {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.25rem;
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, transform 0.25s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .filter-chip:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.14);
+    }
+    .filter-chip.is-active {
+      color: #fff;
+      background: #1B8FD1;
+      border-color: #1B8FD1;
+      box-shadow: 0 8px 24px rgba(27,143,209,0.25);
+    }
+    .filter-chip .chip-count {
+      font-size: 10.5px;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.55);
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    .filter-chip.is-active .chip-count {
+      background: rgba(255,255,255,0.18);
+      color: #fff;
+    }
+    .filter-chip:focus-visible {
+      outline: 2px solid #2BA0E0;
+      outline-offset: 3px;
+    }
+
+    /* Project tile */
+    .project-tile {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      isolation: isolate;
+      background: #0a0a0a;
+      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease;
+    }
+    .project-tile.is-hidden {
+      display: none;
+    }
+    .project-tile .tile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.22,1,0.36,1), filter 0.5s ease;
+      filter: brightness(0.85) saturate(1.05);
+    }
+    .project-tile:hover .tile-img {
+      transform: scale(1.08);
+      filter: brightness(0.95) saturate(1.1);
+    }
+    .project-tile .tile-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10,10,10,0.0) 35%, rgba(10,10,10,0.55) 70%, rgba(10,10,10,0.92) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .project-tile .tile-tint {
+      position: absolute;
+      inset: 0;
+      background: rgba(27,143,209,0.06);
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .project-tile .tile-content {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 1.6rem 1.6rem 1.6rem;
+      z-index: 2;
+    }
+    .project-tile .tile-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.32rem 0.7rem;
+      background: rgba(27,143,209,0.95);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
+      margin-bottom: 0.85rem;
+      transform: translateY(4px);
+      opacity: 0.95;
+      transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease;
+    }
+    .project-tile:hover .tile-tag { transform: translateY(0); opacity: 1; }
+    .project-tile .tile-title {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.45rem;
+    }
+    .project-tile .tile-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      color: rgba(255,255,255,0.65);
+      font-size: 12px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(6px);
+      transition: max-height 0.5s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease, transform 0.5s cubic-bezier(0.22,1,0.36,1);
+    }
+    .project-tile:hover .tile-meta {
+      max-height: 60px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .project-tile .tile-meta .dot {
+      width: 3px; height: 3px; border-radius: 999px; background: #2BA0E0;
+    }
+    .project-tile .tile-arrow {
+      position: absolute;
+      top: 1.4rem;
+      right: 1.4rem;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      border-radius: 999px;
+      color: #fff;
+      transform: translateY(-6px) rotate(-15deg);
+      opacity: 0;
+      transition: transform 0.5s cubic-bezier(0.34,1.56,0.64,1), opacity 0.35s ease, background 0.3s ease;
+      z-index: 2;
+    }
+    .project-tile:hover .tile-arrow {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    .project-tile:hover .tile-arrow {
+      background: rgba(27,143,209,0.95);
+    }
+
+    /* Tile heights for varied bento layout */
+    .tile-h-sm { height: 320px; }
+    .tile-h-md { height: 380px; }
+    .tile-h-lg { height: 460px; }
+    @media (min-width: 640px) {
+      .tile-h-sm { height: 360px; }
+      .tile-h-md { height: 420px; }
+      .tile-h-lg { height: 520px; }
+    }
+    @media (min-width: 1024px) {
+      .tile-h-sm { height: 380px; }
+      .tile-h-md { height: 440px; }
+      .tile-h-lg { height: 560px; }
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(5,5,5,0.92);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .lightbox.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .lightbox-inner {
+      position: relative;
+      max-width: 1100px;
+      width: 100%;
+      max-height: 90vh;
+      transform: scale(0.96);
+      transition: transform 0.45s cubic-bezier(0.22,1,0.36,1);
+    }
+    .lightbox.is-open .lightbox-inner { transform: scale(1); }
+    .lightbox-img {
+      width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+    }
+    .lightbox-caption {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .lightbox-caption .lc-tag {
+      display: inline-block;
+      padding: 0.3rem 0.7rem;
+      background: rgba(27,143,209,0.9);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+    .lightbox-caption .lc-title {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+    .lightbox-caption .lc-desc {
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      margin-top: 0.35rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    .lightbox-close,
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 999px;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.25s ease, transform 0.25s ease;
+      z-index: 5;
+    }
+    .lightbox-nav:hover { background: rgba(27,143,209,0.95); transform: translateY(-50%) scale(1.05); }
+    .lightbox-prev { left: -2.5rem; transform: translateY(-50%); }
+    .lightbox-next { right: -2.5rem; transform: translateY(-50%); }
+    .lightbox-close {
+      top: -3.25rem;
+      right: 0;
+      transform: none;
+    }
+    .lightbox-close:hover { background: rgba(27,143,209,0.95); transform: rotate(90deg); }
+    @media (max-width: 900px) {
+      .lightbox-prev { left: 0.5rem; }
+      .lightbox-next { right: 0.5rem; }
+      .lightbox-close { top: 0.5rem; right: 0.5rem; }
+    }
+
+    /* Empty state */
+    .empty-state {
+      display: none;
+      padding: 4rem 1rem;
+      text-align: center;
+      color: rgba(255,255,255,0.5);
+    }
+    .empty-state.is-visible { display: block; }
+  </style>
+</head>
+<body class="bg-surface antialiased overflow-x-hidden">
+
+  <!-- Navigation -->
+  <nav id="main-nav" class="fixed top-0 w-full z-50 bg-ink lg:bg-transparent lg:duration-500" style="transition: background-color 500ms, backdrop-filter 500ms, box-shadow 500ms, transform 500ms;" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="flex items-center justify-between h-20 lg:h-24">
+        <a href="index.html" class="relative z-10" aria-label="Apollo Earthworks home">
+          <img src="Assets/Logo.png" alt="Apollo Earthworks" class="h-10 lg:h-12 rounded-sm">
+        </a>
+
+        <div class="hidden lg:flex items-center gap-10">
+          <!-- Services mega trigger -->
+          <div id="mega-services" class="mega-trigger relative">
+            <button type="button" id="mega-services-btn" class="flex items-center gap-1.5 text-[13px] font-medium tracking-wide uppercase text-white/80 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand focus-visible:outline-offset-4 transition-colors duration-300" aria-haspopup="true" aria-expanded="false" aria-controls="mega-services-panel">
+              <span class="mega-link-label transition-colors duration-300">Services</span>
+              <svg class="mega-caret w-3 h-3 text-white/60 transition-transform duration-300 ease-spring" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              <span class="mega-underline absolute left-0 -bottom-1.5 right-4 h-[1.5px] bg-brand"></span>
+            </button>
+          </div>
+          <a href="about.html" class="text-[13px] font-medium tracking-wide uppercase text-white/80 hover:text-brand transition-colors duration-300">About</a>
+          <a href="our-work.html" class="text-[13px] font-medium tracking-wide uppercase text-white hover:text-brand transition-colors duration-300">Our Work</a>
+          <a href="index.html#contact" class="text-[13px] font-medium tracking-wide uppercase text-white/80 hover:text-brand transition-colors duration-300">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="tel:0431560908" class="btn hidden sm:inline-flex items-center gap-2.5 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-semibold text-[13px] tracking-wide px-6 py-3 transition-transform duration-300 ease-spring hover:scale-[1.03] active:scale-[0.97]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            0431 560 908
+          </a>
+          <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand active:scale-95 transition-transform duration-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega Panel (Desktop) -->
+    <div id="mega-services-panel" class="mega-panel hidden lg:block absolute left-0 right-0 top-full px-5 sm:px-8 lg:px-12" role="region" aria-label="Services menu">
+      <div class="max-w-7xl mx-auto">
+        <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0A0A0A]/95 backdrop-blur-2xl shadow-floating">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/40 to-transparent"></div>
+          <div class="grid grid-cols-12 gap-8 p-8 lg:p-10">
+
+            <!-- Column 1: Earthworks -->
+            <div class="col-span-3">
+              <h3 class="mega-col-title">
+                <svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19h14M5 19l1-3h12l1 3M7 16V8a1 1 0 011-1h8a1 1 0 011 1v8"/></svg>
+                Earthworks
+              </h3>
+              <ul class="space-y-0.5">
+                <li><a href="earthworks.html" class="mega-item">Bulk Earthworks</a></li>
+                <li><a href="earthworks.html" class="mega-item">Site Cuts</a></li>
+                <li><a href="earthworks.html" class="mega-item">Basements</a></li>
+                <li><a href="earthworks.html" class="mega-item">Footings</a></li>
+                <li><a href="earthworks.html" class="mega-item">Trenching</a></li>
+                <li><a href="earthworks.html" class="mega-item">Final Trim</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 2: Demolition -->
+            <div class="col-span-3">
+              <h3 class="mega-col-title">
+                <svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Demolition
+              </h3>
+              <ul class="space-y-0.5">
+                <li><a href="demolition.html" class="mega-item">Demolition</a></li>
+                <li><a href="demolition.html" class="mega-item">Land Clearing</a></li>
+                <li><a href="demolition.html" class="mega-item">Rock Breaking</a></li>
+                <li><a href="demolition.html" class="mega-item">Rock Removal</a></li>
+                <li><a href="demolition.html" class="mega-item">Soil Removal</a></li>
+                <li><a href="demolition.html" class="mega-item">Site Clean-ups</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Haulage & Hire -->
+            <div class="col-span-3">
+              <h3 class="mega-col-title">
+                <svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17h8m-8 0a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 104 0 2 2 0 00-4 0zM3 7h10v10H3V7zm10 4h4l3 3v3h-7"/></svg>
+                Haulage & Hire
+              </h3>
+              <ul class="space-y-0.5">
+                <li><a href="haulage-hire.html" class="mega-item">Material Haulage</a></li>
+                <li><a href="haulage-hire.html" class="mega-item">Tipper Hire</a></li>
+                <li><a href="haulage-hire.html" class="mega-item">Excavator Wet Hire</a></li>
+                <li><a href="haulage-hire.html" class="mega-item">Posi-Track Wet Hire</a></li>
+              </ul>
+              <h3 class="mega-col-title mt-7">
+                <svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5"/></svg>
+                Civil
+              </h3>
+              <ul class="space-y-0.5">
+                <li><a href="civil.html" class="mega-item">Retaining Walls</a></li>
+                <li><a href="civil.html" class="mega-item">Drainage</a></li>
+                <li><a href="civil.html" class="mega-item">Driveways & Car Parks</a></li>
+                <li><a href="civil.html" class="mega-item">Concrete & Slabs</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Featured CTA -->
+            <div class="col-span-3">
+              <div class="mega-feature h-full p-6 flex flex-col justify-between min-h-[280px]">
+                <div class="relative z-10">
+                  <span class="inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.18em] uppercase text-brand-light/90 mb-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-light animate-pulse"></span>
+                    Available Now
+                  </span>
+                  <h4 class="font-display text-white text-[22px] leading-[1.15] font-semibold tracking-tight mb-2">Need a quote on your next site?</h4>
+                  <p class="text-white/65 text-[13px] leading-relaxed">Talk to Kosta. Quick turnaround on residential, commercial and civil jobs across Melbourne.</p>
+                </div>
+                <div class="relative z-10 flex flex-col gap-2.5 mt-6">
+                  <a href="tel:0431560908" class="group inline-flex items-center justify-between gap-2 bg-white text-ink font-semibold text-[12px] tracking-wide uppercase px-4 py-3 rounded-lg transition-transform duration-300 ease-spring hover:scale-[1.02] active:scale-[0.98]">
+                    <span class="flex items-center gap-2">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                      0431 560 908
+                    </span>
+                    <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                  </a>
+                  <a href="index.html#contact" class="inline-flex items-center justify-center gap-2 border border-white/15 hover:border-white/30 text-white/90 hover:text-white font-semibold text-[12px] tracking-wide uppercase px-4 py-3 rounded-lg transition-colors duration-200">
+                    Request a Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom strip -->
+          <div class="border-t border-white/8 px-8 lg:px-10 py-4 flex flex-wrap items-center justify-between gap-3 bg-white/[0.015]">
+            <div class="flex items-center gap-5 text-[11px] font-medium tracking-wide uppercase text-white/55">
+              <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Fully Insured</span>
+              <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Ticketed Operators</span>
+              <span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Melbourne-Wide</span>
+            </div>
+            <a href="services.html" class="inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-wide uppercase text-brand-light hover:text-white transition-colors duration-200">View All Services
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden overflow-hidden transition-[max-height] duration-300 ease-out max-h-0 bg-ink/95 backdrop-blur-xl border-t border-white/10">
+      <div class="px-5 py-6 flex flex-col gap-1">
+        <!-- Services accordion -->
+        <div class="mobile-accordion">
+          <button type="button" class="mobile-accordion-btn w-full flex items-center justify-between px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200" aria-expanded="false">
+            <span>Services</span>
+            <svg class="mobile-accordion-caret w-4 h-4 transition-transform duration-300 ease-spring" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <div class="px-4 pb-3 pt-1 space-y-4">
+              <div>
+                <p class="text-[10px] font-semibold tracking-[0.18em] uppercase text-brand-light mb-2">Earthworks</p>
+                <div class="grid grid-cols-2 gap-x-3 gap-y-1.5">
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Bulk Earthworks</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Site Cuts</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Basements</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Footings</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Trenching</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Final Trim</a>
+                </div>
+              </div>
+              <div>
+                <p class="text-[10px] font-semibold tracking-[0.18em] uppercase text-brand-light mb-2">Demolition</p>
+                <div class="grid grid-cols-2 gap-x-3 gap-y-1.5">
+                  <a href="demolition.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Demolition</a>
+                  <a href="demolition.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Land Clearing</a>
+                  <a href="demolition.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Rock Breaking</a>
+                  <a href="demolition.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Soil Removal</a>
+                </div>
+              </div>
+              <div>
+                <p class="text-[10px] font-semibold tracking-[0.18em] uppercase text-brand-light mb-2">Haulage & Hire</p>
+                <div class="grid grid-cols-2 gap-x-3 gap-y-1.5">
+                  <a href="haulage-hire.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Material Haulage</a>
+                  <a href="haulage-hire.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Tipper Hire</a>
+                  <a href="demolition.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Excavator Hire</a>
+                  <a href="haulage-hire.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Posi-Track Hire</a>
+                </div>
+              </div>
+              <div>
+                <p class="text-[10px] font-semibold tracking-[0.18em] uppercase text-brand-light mb-2">Civil</p>
+                <div class="grid grid-cols-2 gap-x-3 gap-y-1.5">
+                  <a href="civil.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Retaining Walls</a>
+                  <a href="civil.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Drainage</a>
+                  <a href="civil.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Driveways</a>
+                  <a href="civil.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Concrete & Slabs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="mobile-nav-link block px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200">About</a>
+        <a href="our-work.html" class="mobile-nav-link block px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white hover:text-brand hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200">Our Work</a>
+        <a href="index.html#contact" class="mobile-nav-link block px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200">Contact</a>
+        <div class="mt-4 px-4">
+          <a href="tel:0431560908" class="btn inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm px-6 py-3 w-full justify-center">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            0431 560 908
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    (function() {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var hamburger = document.getElementById('hamburger-icon');
+      var closeIcon = document.getElementById('close-icon');
+      var links = menu.querySelectorAll('.mobile-nav-link');
+      function recalcOpenHeight() {
+        if (menu.style.maxHeight && menu.style.maxHeight !== '0px') {
+          menu.style.maxHeight = menu.scrollHeight + 'px';
+        }
+      }
+      function toggleMenu() {
+        var isOpen = menu.style.maxHeight && menu.style.maxHeight !== '0px';
+        if (isOpen) {
+          menu.style.maxHeight = '0px';
+          hamburger.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          menu.style.maxHeight = menu.scrollHeight + 'px';
+          hamburger.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      }
+      btn.addEventListener('click', toggleMenu);
+      links.forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.style.maxHeight = '0px';
+          hamburger.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      var accordion = menu.querySelector('.mobile-accordion');
+      if (accordion) {
+        var accBtn = accordion.querySelector('.mobile-accordion-btn');
+        accBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var open = accordion.classList.toggle('open');
+          accBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          setTimeout(recalcOpenHeight, 360);
+          recalcOpenHeight();
+        });
+      }
+    })();
+  </script>
+
+  <!-- Mega menu (desktop) -->
+  <script>
+    (function() {
+      var trigger = document.getElementById('mega-services');
+      var btn = document.getElementById('mega-services-btn');
+      var panel = document.getElementById('mega-services-panel');
+      if (!trigger || !btn || !panel) return;
+
+      var closeTimer = null;
+      var isDesktop = function() { return window.innerWidth >= 1024; };
+
+      function open() {
+        if (!isDesktop()) return;
+        clearTimeout(closeTimer);
+        trigger.classList.add('mega-open');
+        panel.classList.add('mega-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        trigger.classList.remove('mega-open');
+        panel.classList.remove('mega-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+      function scheduleClose() {
+        clearTimeout(closeTimer);
+        closeTimer = setTimeout(close, 140);
+      }
+
+      trigger.addEventListener('mouseenter', open);
+      trigger.addEventListener('mouseleave', scheduleClose);
+      panel.addEventListener('mouseenter', function() { clearTimeout(closeTimer); });
+      panel.addEventListener('mouseleave', scheduleClose);
+
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (trigger.classList.contains('mega-open')) {
+          close();
+        } else {
+          open();
+        }
+      });
+      btn.addEventListener('focus', open);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') close();
+      });
+      document.addEventListener('click', function(e) {
+        if (!trigger.contains(e.target) && !panel.contains(e.target)) close();
+      });
+      window.addEventListener('scroll', function() {
+        if (trigger.classList.contains('mega-open')) close();
+      }, { passive: true });
+      window.addEventListener('resize', function() {
+        if (!isDesktop()) close();
+      });
+    })();
+  </script>
+
+  <!-- Nav scroll behavior -->
+  <script>
+    (function() {
+      var nav = document.getElementById('main-nav');
+      var lastScroll = 0;
+      var isDesktop = function() { return window.innerWidth >= 1024; };
+      window.addEventListener('scroll', function() {
+        var y = window.scrollY;
+        if (isDesktop()) {
+          if (y > 100) {
+            nav.style.background = 'rgba(10,10,10,0.95)';
+            nav.style.backdropFilter = 'blur(20px)';
+            nav.style.boxShadow = 'inset 0 -1px 0 rgba(255,255,255,0.06)';
+          } else {
+            nav.style.background = '';
+            nav.style.backdropFilter = '';
+            nav.style.boxShadow = '';
+          }
+        }
+        if (y > lastScroll && y > 200) {
+          nav.style.transform = 'translateY(-100%)';
+        } else {
+          nav.style.transform = 'translateY(0)';
+        }
+        lastScroll = y;
+      });
+    })();
+  </script>
+
+
+  <!-- ==================== HERO ==================== -->
+  <header class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-32 overflow-hidden grain bg-ink" id="page-hero">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img src="Assets/excavation-landscaping.jpg" alt="Apollo Earthworks excavation landscaping job in Melbourne" class="w-full h-full object-cover opacity-35" loading="eager">
+      <div class="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/85 to-ink"></div>
+      <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse at 30% 50%, rgba(27,143,209,0.18) 0%, transparent 55%);"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-white/40 mb-8" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-brand transition-colors duration-200">Home</a>
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+        <span class="text-white/70">Our Work</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+        <div class="lg:col-span-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-8 h-[2px] bg-brand"></div>
+            <span class="text-brand text-xs font-semibold tracking-[0.25em] uppercase">Project Gallery</span>
+          </div>
+          <h1 class="font-display text-[clamp(2.5rem,6vw,5rem)] text-white leading-[0.95] mb-0" style="letter-spacing: -0.04em;">
+            Real jobs.<br>
+            <span class="text-brand">Real results.</span>
+          </h1>
+        </div>
+        <div class="lg:col-span-4 lg:pb-3">
+          <p class="text-white/65 text-[15px]" style="line-height: 1.8;">
+            A snapshot of recent earthworks, drainage, civil and wet hire jobs delivered for builders, developers and contractors across the Melbourne metro area.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section id="gallery" class="py-20 sm:py-28 bg-ink relative grain">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+
+      <!-- Section header -->
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12 reveal">
+        <div class="max-w-xl">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-[2px] bg-brand"></div>
+            <span class="text-brand text-xs font-semibold tracking-[0.25em] uppercase">Recent Projects</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white" style="letter-spacing: -0.03em; line-height: 1.1;">From the yard. From the site.</h2>
+          <p class="text-white/55 text-[14.5px] mt-5" style="line-height: 1.75;">Filter by category to see the kind of work we do day in, day out. Click any tile to view full size.</p>
+        </div>
+
+        <!-- Filter chips -->
+        <div class="flex flex-wrap items-center gap-2.5" id="filter-bar" role="tablist" aria-label="Project category filters">
+          <button type="button" class="filter-chip is-active" data-filter="all" role="tab" aria-selected="true">All Work <span class="chip-count">9</span></button>
+          <button type="button" class="filter-chip" data-filter="excavation" role="tab" aria-selected="false">Excavation <span class="chip-count">2</span></button>
+          <button type="button" class="filter-chip" data-filter="drainage-civil" role="tab" aria-selected="false">Drainage & Civil <span class="chip-count">2</span></button>
+          <button type="button" class="filter-chip" data-filter="site-cleanup" role="tab" aria-selected="false">Site Cleanup <span class="chip-count">2</span></button>
+          <button type="button" class="filter-chip" data-filter="wet-hire" role="tab" aria-selected="false">Wet Hire <span class="chip-count">2</span></button>
+          <button type="button" class="filter-chip" data-filter="haulage" role="tab" aria-selected="false">Haulage <span class="chip-count">1</span></button>
+        </div>
+      </div>
+
+      <!-- Project bento grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-12 gap-4 lg:gap-5 stagger" id="project-grid">
+
+        <!-- 1: Pool Excavation (large feature) -->
+        <a href="#" class="project-tile reveal sm:col-span-6 lg:col-span-7 tile-h-lg" data-category="excavation" data-index="0">
+          <img src="Assets/excavation-pools.jpg" alt="Pool excavation by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <div class="tile-tint"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
+          <div class="tile-content">
+            <span class="tile-tag">Excavation</span>
+            <h3 class="tile-title">Backyard Pool Excavation</h3>
+            <div class="tile-meta">
+              <span>Residential</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 2: Drainage Solutions -->
+        <a href="#" class="project-tile reveal sm:col-span-6 lg:col-span-5 tile-h-lg" data-category="drainage-civil" data-index="1">
+          <img src="Assets/drainage-solutions.jpg" alt="Drainage solutions by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <div class="tile-tint"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
+          <div class="tile-content">
+            <span class="tile-tag">Drainage & Civil</span>
+            <h3 class="tile-title">Stormwater Drainage Install</h3>
+            <div class="tile-meta">
+              <span>Residential</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 3: Excavation Landscaping -->
+        <a href="#" class="project-tile reveal sm:col-span-3 lg:col-span-4 tile-h-md" data-category="excavation" data-index="2">
+          <img src="Assets/excavation-landscaping.jpg" alt="Landscaping excavation by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <div class="tile-tint"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
+          <div class="tile-content">
+            <span class="tile-tag">Excavation</span>
+            <h3 class="tile-title">Landscape Excavation</h3>
+            <div class="tile-meta">
+              <span>Residential</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 4: Base Preparation & Civil -->
+        <a href="#" class="project-tile reveal sm:col-span-3 lg:col-span-4 tile-h-md" data-category="drainage-civil" data-index="3">
+          <img src="Assets/base-preparation-civil-works.jpg" alt="Base preparation and civil works by Apollo Earthworks" class="tile-img" loading="lazy">
+          <div class="tile-tint"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
+          <div class="tile-content">
+            <span class="tile-tag">Civil Works</span>
+            <h3 class="tile-title">Base Preparation & Civil</h3>
+            <div class="tile-meta">
+              <span>Commercial</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 5: Excavator Wet Hire -->
+        <a href="#" class="project-tile reveal sm:col-span-6 lg:col-span-4 tile-h-md" data-category="wet-hire" data-index="4">
+          <img src="Assets/excavator-wet-hire.jpg" alt="Excavator wet hire by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <div class="tile-tint"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
+          <div class="tile-content">
+            <span class="tile-tag">Wet Hire</span>
+            <h3 class="tile-title">Excavator Wet Hire</h3>
+            <div class="tile-meta">
+              <span>Civil Contractor</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 6: Site Clean -->
+        <a href="#" class="project-tile reveal sm:col-span-3 lg:col-span-5 tile-h-md" data-category="site-cleanup" data-index="5">
+          <img src="Assets/site-clean.jpg" alt="Site cleanup by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <div class="tile-tint"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
+          <div class="tile-content">
+            <span class="tile-tag">Site Cleanup</span>
+            <h3 class="tile-title">Site Clean & Final Trim</h3>
+            <div class="tile-meta">
+              <span>Builder Handover</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 7: Posi-Track Wet Hire -->
+        <a href="#" class="project-tile reveal sm:col-span-3 lg:col-span-3 tile-h-md" data-category="wet-hire" data-index="6">
+          <img src="Assets/posi-track-wet-hire.jpg" alt="Posi-track wet hire by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <div class="tile-tint"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
+          <div class="tile-content">
+            <span class="tile-tag">Wet Hire</span>
+            <h3 class="tile-title">Posi-Track Wet Hire</h3>
+            <div class="tile-meta">
+              <span>Landscaping</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 8: Material Export -->
+        <a href="#" class="project-tile reveal sm:col-span-3 lg:col-span-5 tile-h-md" data-category="haulage" data-index="7">
+          <img src="Assets/material-export-cartage.jpg" alt="Material export and cartage by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <div class="tile-tint"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
+          <div class="tile-content">
+            <span class="tile-tag">Haulage</span>
+            <h3 class="tile-title">Material Export & Cartage</h3>
+            <div class="tile-meta">
+              <span>Tandem Tippers</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 9: Rubbish Removal -->
+        <a href="#" class="project-tile reveal sm:col-span-6 lg:col-span-4 tile-h-md" data-category="site-cleanup" data-index="8">
+          <img src="Assets/rubbish-removal.jpg" alt="Rubbish removal by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <div class="tile-tint"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
+          <div class="tile-content">
+            <span class="tile-tag">Site Cleanup</span>
+            <h3 class="tile-title">Rubbish & Spoil Removal</h3>
+            <div class="tile-meta">
+              <span>Owner Builder</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Empty state -->
+      <div id="empty-state" class="empty-state">
+        <p class="text-sm font-semibold tracking-[0.16em] uppercase text-white/30">No projects in this category yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CAPABILITY STRIP ==================== -->
+  <section class="py-24 sm:py-28 bg-surface relative">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <!-- Left -->
+        <div class="lg:col-span-5 reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-[2px] bg-brand"></div>
+            <span class="text-brand text-xs font-semibold tracking-[0.25em] uppercase">What We Deliver</span>
+          </div>
+          <h2 class="text-3xl sm:text-[2.5rem] lg:text-[2.75rem] font-display font-bold text-ink mb-6" style="letter-spacing: -0.03em; line-height: 1.1;">
+            The same standard on every job, every time.
+          </h2>
+          <p class="text-ink-muted text-[15px]" style="line-height: 1.85;">
+            Every project in our gallery shares the same DNA. Experienced operators on every machine, modern serviced equipment, and a team that turns up when they say they will. From single-day pool digs to multi-stage subdivisions, the bar does not move.
+          </p>
+          <a href="index.html#contact" class="mt-8 inline-flex items-center gap-2 bg-ink hover:bg-brand text-white font-semibold text-[12.5px] tracking-[0.12em] uppercase px-7 py-4 transition-all duration-300 ease-spring hover:scale-[1.02] active:scale-[0.98]">
+            Start Your Project
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+        <!-- Right: capability cards -->
+        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4 lg:gap-5 stagger">
+          <div class="reveal bg-white p-7 lg:p-8 shadow-elevated relative overflow-hidden group">
+            <span class="number-outline text-5xl lg:text-6xl font-bold absolute top-5 right-6 opacity-50">01</span>
+            <div class="w-10 h-10 bg-brand flex items-center justify-center mb-5 rounded-sm">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-base font-display font-bold text-ink mb-2">On Time, On Budget</h3>
+            <p class="text-[13.5px] text-ink-muted" style="line-height: 1.7;">We quote it properly, plan it properly, and finish when we said we would.</p>
+          </div>
+
+          <div class="reveal bg-white p-7 lg:p-8 shadow-elevated relative overflow-hidden group">
+            <span class="number-outline text-5xl lg:text-6xl font-bold absolute top-5 right-6 opacity-50">02</span>
+            <div class="w-10 h-10 bg-brand flex items-center justify-center mb-5 rounded-sm">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-base font-display font-bold text-ink mb-2">Ticketed Operators</h3>
+            <p class="text-[13.5px] text-ink-muted" style="line-height: 1.7;">Every machine on every job is run by a qualified, experienced operator.</p>
+          </div>
+
+          <div class="reveal bg-white p-7 lg:p-8 shadow-elevated relative overflow-hidden group">
+            <span class="number-outline text-5xl lg:text-6xl font-bold absolute top-5 right-6 opacity-50">03</span>
+            <div class="w-10 h-10 bg-brand flex items-center justify-center mb-5 rounded-sm">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19h14M5 19l1-3h12l1 3M7 16V8a1 1 0 011-1h8a1 1 0 011 1v8"/></svg>
+            </div>
+            <h3 class="text-base font-display font-bold text-ink mb-2">Modern Fleet</h3>
+            <p class="text-[13.5px] text-ink-muted" style="line-height: 1.7;">1.7T to 30T excavators, tippers, posi-tracks and attachments serviced regularly.</p>
+          </div>
+
+          <div class="reveal bg-white p-7 lg:p-8 shadow-elevated relative overflow-hidden group">
+            <span class="number-outline text-5xl lg:text-6xl font-bold absolute top-5 right-6 opacity-50">04</span>
+            <div class="w-10 h-10 bg-brand flex items-center justify-center mb-5 rounded-sm">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+            </div>
+            <h3 class="text-base font-display font-bold text-ink mb-2">Fully Insured</h3>
+            <p class="text-[13.5px] text-ink-muted" style="line-height: 1.7;">SWMS available, OH&S compliant, and white card certified across the team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="py-24 sm:py-32 bg-ink relative overflow-hidden grain">
+    <div class="absolute inset-0">
+      <img src="Assets/base-preparation-civil-works.jpg" alt="" class="w-full h-full object-cover opacity-25" loading="lazy">
+      <div class="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/90 to-ink"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse at 70% 30%, rgba(27,143,209,0.22) 0%, transparent 60%);"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
+      <div class="flex items-center gap-3 justify-center mb-5 reveal">
+        <div class="w-8 h-[2px] bg-brand"></div>
+        <span class="text-brand text-xs font-semibold tracking-[0.25em] uppercase">Your Project Next</span>
+        <div class="w-8 h-[2px] bg-brand"></div>
+      </div>
+      <h2 class="font-display text-[clamp(2rem,5vw,3.75rem)] font-bold text-white mb-6 reveal" style="letter-spacing: -0.03em; line-height: 1.05;">
+        Got a site that needs<br><span class="text-brand">moving?</span>
+      </h2>
+      <p class="text-white/60 text-[15px] sm:text-base max-w-2xl mx-auto mb-10 reveal" style="line-height: 1.8;">
+        Talk to Kosta about your job. Free, no-obligation quotes on residential, commercial and civil work across the Melbourne metropolitan area.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center reveal">
+        <a href="tel:0431560908" class="btn inline-flex items-center justify-center gap-2.5 bg-brand hover:bg-brand-dark text-white font-semibold text-[13px] tracking-[0.12em] uppercase px-8 py-4 transition-all duration-300 ease-spring hover:scale-[1.03] active:scale-[0.97]">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Call 0431 560 908
+        </a>
+        <a href="index.html#contact" class="btn inline-flex items-center justify-center gap-2.5 border border-white/20 hover:border-brand text-white hover:text-brand font-semibold text-[13px] tracking-[0.12em] uppercase px-8 py-4 transition-all duration-300">
+          Request a Quote
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-ink pt-16 pb-8 border-t border-white/5" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <img src="Assets/Logo.png" alt="Apollo Earthworks" class="h-11 mb-5 rounded-sm">
+          <p class="text-sm text-white/40" style="line-height: 1.7;">Melbourne-based earthworks specialists. Tough work, done right.</p>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-5">Services</h4>
+          <nav class="space-y-2.5" aria-label="Services">
+            <a href="earthworks.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Earthworks</a>
+            <a href="demolition.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Demolition</a>
+            <a href="haulage-hire.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Haulage & Hire</a>
+            <a href="civil.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Civil</a>
+          </nav>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-5">Company</h4>
+          <nav class="space-y-2.5" aria-label="Footer navigation">
+            <a href="services.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Services</a>
+            <a href="about.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">About</a>
+            <a href="our-work.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Our Work</a>
+            <a href="index.html#contact" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-5">Contact</h4>
+          <div class="space-y-2.5">
+            <a href="tel:0431560908" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">0431 560 908</a>
+            <a href="#" onclick="window.location='mailto:'+atob('YXBvbGxvZWFydGh3b3Jrc0BnbWFpbC5jb20=');return false;" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">
+              <span class="email-protect">apolloearthworks[at]gmail.com</span>
+            </a>
+            <p class="text-sm text-white/30">Melbourne, Victoria</p>
+          </div>
+          <div class="mt-5">
+            <a href="https://www.instagram.com/apolloearthworks" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-9 h-9 bg-white/6 hover:bg-brand transition-colors duration-200 rounded-sm" aria-label="Follow Apollo Earthworks on Instagram">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/6 pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <p class="text-xs text-white/20">&copy; 2026 Apollo Earthworks. All rights reserved.</p>
+        <p class="text-xs text-white/20">Melbourne, Victoria, Australia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== LIGHTBOX ==================== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Project image" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button type="button" id="lb-close" class="lightbox-close" aria-label="Close">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <button type="button" id="lb-prev" class="lightbox-nav lightbox-prev" aria-label="Previous">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <button type="button" id="lb-next" class="lightbox-nav lightbox-next" aria-label="Next">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <img id="lb-img" class="lightbox-img" alt="">
+      <div class="lightbox-caption">
+        <span id="lb-tag" class="lc-tag">Excavation</span>
+        <h3 id="lb-title" class="lc-title"></h3>
+        <p id="lb-desc" class="lc-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reveal on scroll -->
+  <script>
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+  </script>
+
+  <!-- Filter logic -->
+  <script>
+    (function() {
+      var chips = document.querySelectorAll('.filter-chip');
+      var tiles = document.querySelectorAll('#project-grid .project-tile');
+      var emptyState = document.getElementById('empty-state');
+
+      chips.forEach(function(chip) {
+        chip.addEventListener('click', function() {
+          var filter = chip.getAttribute('data-filter');
+          chips.forEach(function(c) {
+            c.classList.remove('is-active');
+            c.setAttribute('aria-selected', 'false');
+          });
+          chip.classList.add('is-active');
+          chip.setAttribute('aria-selected', 'true');
+
+          var visible = 0;
+          tiles.forEach(function(tile) {
+            var cat = tile.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              tile.classList.remove('is-hidden');
+              visible++;
+            } else {
+              tile.classList.add('is-hidden');
+            }
+          });
+          if (visible === 0) emptyState.classList.add('is-visible');
+          else emptyState.classList.remove('is-visible');
+        });
+      });
+    })();
+  </script>
+
+  <!-- Lightbox logic -->
+  <script>
+    (function() {
+      var projects = [
+        { src: 'Assets/excavation-pools.jpg',           tag: 'Excavation',     title: 'Backyard Pool Excavation',  desc: 'Tight-access residential pool dig with precise spoil management and minimal disruption to surrounding landscape.' },
+        { src: 'Assets/drainage-solutions.jpg',         tag: 'Drainage & Civil', title: 'Stormwater Drainage Install', desc: 'Stormwater drainage installation for a Melbourne residential block, including pit and pipe runs to legal point of discharge.' },
+        { src: 'Assets/excavation-landscaping.jpg',     tag: 'Excavation',     title: 'Landscape Excavation',      desc: 'Bulk excavation and shaping for a residential landscape build across the eastern suburbs.' },
+        { src: 'Assets/base-preparation-civil-works.jpg', tag: 'Civil Works',  title: 'Base Preparation & Civil',  desc: 'Compaction, base prep and civil works ready for the next trade to step in and pour.' },
+        { src: 'Assets/excavator-wet-hire.jpg',         tag: 'Wet Hire',       title: 'Excavator Wet Hire',        desc: 'Excavator wet hire on a civil project. Operator and machine supplied with full insurance and tickets.' },
+        { src: 'Assets/site-clean.jpg',                 tag: 'Site Cleanup',   title: 'Site Clean & Final Trim',   desc: 'Final trim and site clean ahead of builder handover. Site left ready for landscaping or paving.' },
+        { src: 'Assets/posi-track-wet-hire.jpg',        tag: 'Wet Hire',       title: 'Posi-Track Wet Hire',       desc: 'Posi-track wet hire for tight-access landscaping work. Low ground pressure, fast and efficient.' },
+        { src: 'Assets/material-export-cartage.jpg',    tag: 'Haulage',        title: 'Material Export & Cartage', desc: 'Material export and cartage with our tandem tipper fleet across the Melbourne metropolitan area.' },
+        { src: 'Assets/rubbish-removal.jpg',            tag: 'Site Cleanup',   title: 'Rubbish & Spoil Removal',   desc: 'Rubbish and spoil removal for an owner builder in inner Melbourne. In and out same day.' }
+      ];
+
+      var lightbox = document.getElementById('lightbox');
+      var lbImg = document.getElementById('lb-img');
+      var lbTag = document.getElementById('lb-tag');
+      var lbTitle = document.getElementById('lb-title');
+      var lbDesc = document.getElementById('lb-desc');
+      var lbClose = document.getElementById('lb-close');
+      var lbPrev = document.getElementById('lb-prev');
+      var lbNext = document.getElementById('lb-next');
+      var current = 0;
+
+      function visibleProjects() {
+        var tiles = document.querySelectorAll('#project-grid .project-tile:not(.is-hidden)');
+        return Array.prototype.map.call(tiles, function(t) {
+          return parseInt(t.getAttribute('data-index'), 10);
+        });
+      }
+
+      function openAt(index) {
+        current = index;
+        var p = projects[index];
+        lbImg.src = p.src;
+        lbImg.alt = p.title;
+        lbTag.textContent = p.tag;
+        lbTitle.textContent = p.title;
+        lbDesc.textContent = p.desc;
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+      function step(dir) {
+        var visible = visibleProjects();
+        if (visible.length === 0) return;
+        var pos = visible.indexOf(current);
+        if (pos === -1) pos = 0;
+        else pos = (pos + dir + visible.length) % visible.length;
+        openAt(visible[pos]);
+      }
+
+      document.querySelectorAll('#project-grid .project-tile').forEach(function(tile) {
+        tile.addEventListener('click', function(e) {
+          e.preventDefault();
+          openAt(parseInt(tile.getAttribute('data-index'), 10));
+        });
+      });
+
+      lbClose.addEventListener('click', close);
+      lbPrev.addEventListener('click', function() { step(-1); });
+      lbNext.addEventListener('click', function() { step(1); });
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) close();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('is-open')) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowLeft') step(-1);
+        else if (e.key === 'ArrowRight') step(1);
+      });
+    })();
+  </script>
+
+  <!-- Email protection -->
+  <script>
+  document.querySelectorAll('.email-protect').forEach(function(el){el.innerHTML='apolloearthworks@gmail.com';});
+  </script>
+
+</body>
+</html>
