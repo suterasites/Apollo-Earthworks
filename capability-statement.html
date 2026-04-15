@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apollo Earthworks - Capability Statement</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================
+       RESET AND BASE
+    ======================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --blue: #1B8FD1;
+      --blue-dark: #1474AB;
+      --blue-light: #2BA0E0;
+      --blue-50: #E8F4FC;
+      --black: #0A0A0A;
+      --ink-muted: #6B6B6B;
+      --ink-light: #9A9A9A;
+      --white: #FFFFFF;
+      --surface: #FAFAF8;
+      --surface-warm: #F3F1EC;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--black);
+      background: #e0e0e0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ========================================
+       PAGE SETUP - A4 Print
+    ======================================== */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 20px auto;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      page-break-after: always;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+      }
+    }
+
+    /* ========================================
+       GEOMETRIC CORNER ELEMENTS
+       Angular black/blue shapes in corners
+    ======================================== */
+
+    /* Top-left corner - large angular shape */
+    .geo-top-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 80px solid var(--black);
+      border-right: 80px solid transparent;
+      z-index: 2;
+    }
+
+    .geo-top-left-blue {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 55px solid var(--blue);
+      border-right: 55px solid transparent;
+      z-index: 3;
+    }
+
+    /* Top-right corner - angular shape */
+    .geo-top-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 60px solid var(--blue);
+      border-left: 60px solid transparent;
+      z-index: 2;
+    }
+
+    .geo-top-right-black {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 35px solid var(--black);
+      border-left: 35px solid transparent;
+      z-index: 3;
+    }
+
+    /* Bottom-left corner */
+    .geo-bottom-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 60px solid var(--blue);
+      border-right: 60px solid transparent;
+      z-index: 2;
+    }
+
+    .geo-bottom-left-black {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 35px solid var(--black);
+      border-right: 35px solid transparent;
+      z-index: 3;
+    }
+
+    /* Bottom-right corner - large angular shape */
+    .geo-bottom-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 80px solid var(--black);
+      border-left: 80px solid transparent;
+      z-index: 2;
+    }
+
+    .geo-bottom-right-blue {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 55px solid var(--blue);
+      border-left: 55px solid transparent;
+      z-index: 3;
+    }
+
+    /* ========================================
+       ANGULAR ACCENT BARS
+    ======================================== */
+    .accent-bar-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--black) 0%, var(--black) 40%, var(--blue) 40%, var(--blue) 100%);
+      z-index: 10;
+    }
+
+    .accent-bar-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--blue) 0%, var(--blue) 60%, var(--black) 60%, var(--black) 100%);
+      z-index: 10;
+    }
+
+    /* ========================================
+       PAGE CONTENT AREAS
+    ======================================== */
+    .page-content {
+      position: relative;
+      z-index: 5;
+      padding: 28mm 22mm;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-content-tight {
+      padding: 20mm 22mm;
+    }
+
+    /* ========================================
+       TYPOGRAPHY
+    ======================================== */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 36pt;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 18pt;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid var(--blue);
+      display: inline-block;
+    }
+
+    h3 {
+      font-size: 12pt;
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    p {
+      font-size: 10pt;
+      line-height: 1.6;
+      color: var(--black);
+    }
+
+    .text-muted {
+      color: var(--ink-muted);
+    }
+
+    .text-small {
+      font-size: 9pt;
+    }
+
+    /* ========================================
+       ANGULAR SECTION DIVIDERS
+    ======================================== */
+    .section-divider {
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue) 0%, var(--blue) 30%, transparent 30%);
+      margin: 16px 0;
+    }
+
+    .section-divider-full {
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--black) 0%, var(--black) 20%, var(--blue) 20%, var(--blue) 50%, transparent 50%);
+      margin: 12px 0;
+    }
+
+    /* ========================================
+       COVER PAGE HEADER BAR
+    ======================================== */
+    .cover-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100mm;
+      background: var(--black);
+      clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+      z-index: 1;
+    }
+
+    .cover-header-blue {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 102mm;
+      background: var(--blue);
+      clip-path: polygon(0 94%, 100% 72%, 100% 78%, 0 100%);
+      z-index: 2;
+    }
+
+    /* ========================================
+       PAGE FOOTER
+    ======================================== */
+    .page-footer {
+      position: absolute;
+      bottom: 12mm;
+      left: 22mm;
+      right: 22mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 5;
+      font-size: 8pt;
+      color: var(--ink-muted);
+    }
+
+    .page-footer .footer-line {
+      position: absolute;
+      top: -6px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, var(--blue), var(--ink-light));
+    }
+
+    /* ========================================
+       LIST STYLES
+    ======================================== */
+    .competency-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .competency-group {
+      background: var(--surface);
+      border-radius: 4px;
+      padding: 16px;
+      border-left: 4px solid var(--blue);
+    }
+
+    .competency-group h3 {
+      font-size: 10pt;
+      margin-bottom: 10px;
+      color: var(--black);
+    }
+
+    .competency-group ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .competency-group ul li {
+      font-size: 9.5pt;
+      line-height: 1.5;
+      padding: 2px 0 2px 14px;
+      position: relative;
+      color: var(--black);
+    }
+
+    .competency-group ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      background: var(--blue);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    /* ========================================
+       EQUIPMENT AND INDUSTRY LISTS
+    ======================================== */
+    .equipment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+
+    .equipment-item {
+      font-size: 9.5pt;
+      padding: 6px 0 6px 14px;
+      position: relative;
+      border-bottom: 1px solid #eee;
+    }
+
+    .equipment-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 6px;
+      height: 6px;
+      background: var(--blue);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    .industry-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .industry-tag {
+      background: var(--blue-50);
+      color: var(--blue-dark);
+      font-size: 9pt;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 3px;
+      border: 1px solid rgba(27, 143, 209, 0.2);
+    }
+
+    /* ========================================
+       WHY CHOOSE US
+    ======================================== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px;
+      background: var(--surface);
+      border-radius: 4px;
+    }
+
+    .feature-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--blue);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+    }
+
+    .feature-icon svg {
+      width: 16px;
+      height: 16px;
+      fill: white;
+    }
+
+    .feature-text strong {
+      font-family: var(--font-display);
+      font-size: 9.5pt;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .feature-text span {
+      font-size: 8.5pt;
+      color: var(--ink-muted);
+      line-height: 1.3;
+    }
+
+    /* ========================================
+       SAFETY COMPLIANCE
+    ======================================== */
+    .safety-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .safety-item {
+      text-align: center;
+      padding: 12px 8px;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 3px;
+      font-size: 8.5pt;
+      font-weight: 500;
+      font-family: var(--font-display);
+    }
+
+    .safety-item svg {
+      display: block;
+      margin: 0 auto 6px;
+      width: 20px;
+      height: 20px;
+      fill: var(--blue);
+    }
+
+    /* ========================================
+       PHOTO GRID
+    ======================================== */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+    }
+
+    .photo-grid-item {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: 3px;
+      position: relative;
+    }
+
+    .photo-grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-grid-item .photo-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 4px 8px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: white;
+      font-size: 7.5pt;
+      font-weight: 500;
+    }
+
+    /* ========================================
+       CONTACT SECTION
+    ======================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+    }
+
+    .contact-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--blue);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: white;
+    }
+
+    .contact-item span {
+      font-size: 9.5pt;
+    }
+
+    .contact-item strong {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+      display: block;
+      margin-bottom: 1px;
+    }
+
+    /* ========================================
+       COVER PAGE SPECIFIC
+    ======================================== */
+    .cover-logo {
+      position: relative;
+      z-index: 5;
+      margin-top: 16mm;
+      margin-bottom: 12mm;
+    }
+
+    .cover-logo img {
+      height: 70mm;
+      width: auto;
+    }
+
+    .cover-title-area {
+      position: relative;
+      z-index: 5;
+      margin-top: auto;
+      margin-bottom: 30mm;
+    }
+
+    .cover-tagline {
+      font-family: var(--font-display);
+      font-size: 14pt;
+      font-weight: 500;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .cover-title {
+      font-family: var(--font-display);
+      font-size: 38pt;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .cover-contact-bar {
+      display: flex;
+      gap: 24px;
+      padding: 14px 0;
+      border-top: 3px solid var(--blue);
+      margin-top: 12px;
+    }
+
+    .cover-contact-item {
+      font-size: 9pt;
+      color: var(--ink-muted);
+    }
+
+    .cover-contact-item strong {
+      color: var(--black);
+      font-weight: 600;
+    }
+
+    /* ========================================
+       DIAGONAL BANNER
+    ======================================== */
+    .page-banner {
+      background: var(--black);
+      color: var(--white);
+      padding: 12px 22mm;
+      margin: 0 -22mm 20px;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      padding-bottom: 18px;
+    }
+
+    .page-banner h2 {
+      color: var(--white);
+      border-bottom-color: var(--blue);
+      margin-bottom: 0;
+      font-size: 20pt;
+    }
+
+    .page-banner-blue {
+      background: var(--blue);
+    }
+
+    /* ========================================
+       TWO COLUMN LAYOUT
+    ======================================== */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .flex-grow {
+      flex: 1;
+    }
+
+    .mt-auto {
+      margin-top: auto;
+    }
+
+    .mb-12 { margin-bottom: 12px; }
+    .mb-16 { margin-bottom: 16px; }
+    .mb-20 { margin-bottom: 20px; }
+    .mb-24 { margin-bottom: 24px; }
+    .mt-12 { margin-top: 12px; }
+    .mt-16 { margin-top: 16px; }
+    .mt-20 { margin-top: 20px; }
+
+    /* ========================================
+       IMAGE PLACEHOLDERS
+    ======================================== */
+    .hero-image-area {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 105mm;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .hero-image-area img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(10,10,10,0.6) 0%, rgba(10,10,10,0.85) 100%);
+    }
+
+    /* Photo section on page 4 */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .photo-strip-item {
+      height: 60mm;
+      overflow: hidden;
+      border-radius: 3px;
+    }
+
+    .photo-strip-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Summary box */
+    .summary-box {
+      background: var(--black);
+      color: var(--white);
+      padding: 24px;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .summary-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--blue);
+    }
+
+    .summary-box p {
+      color: var(--white);
+      font-size: 10.5pt;
+      line-height: 1.7;
+    }
+
+    /* ABN bar */
+    .abn-bar {
+      background: var(--blue);
+      color: var(--white);
+      text-align: center;
+      padding: 8px;
+      font-size: 9pt;
+      font-weight: 500;
+      font-family: var(--font-display);
+      letter-spacing: 0.05em;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       PAGE 1 - COVER
+  ============================================================= -->
+  <div class="page">
+    <!-- Hero image background -->
+    <div class="hero-image-area">
+      <img src="Assets/excavator-wet-hire.jpg" alt="Apollo Earthworks - Excavator on site">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Accent bars -->
+    <div class="accent-bar-top"></div>
+    <div class="accent-bar-bottom"></div>
+
+    <!-- Corner geometrics -->
+    <div class="geo-bottom-right"></div>
+    <div class="geo-bottom-right-blue"></div>
+
+    <div class="page-content">
+      <!-- Logo on dark hero area -->
+      <div class="cover-logo">
+        <img src="Assets/Logo.png" alt="Apollo Earthworks Logo">
+      </div>
+
+      <!-- Push title area to bottom -->
+      <div class="cover-title-area mt-auto">
+        <div class="cover-tagline">Tough Work. Done Right.</div>
+        <div class="cover-title">Capability<br>Statement</div>
+
+        <div class="cover-contact-bar">
+          <div class="cover-contact-item">
+            <strong>Phone</strong><br>
+            0431 560 908
+          </div>
+          <div class="cover-contact-item">
+            <strong>Email</strong><br>
+            info@apolloearthworks.com.au
+          </div>
+          <div class="cover-contact-item">
+            <strong>Location</strong><br>
+            Melbourne, VIC
+          </div>
+          <div class="cover-contact-item">
+            <strong>ABN</strong><br>
+            26 886 956 778
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 2 - COMPANY OVERVIEW
+  ============================================================= -->
+  <div class="page">
+    <div class="accent-bar-top"></div>
+    <div class="accent-bar-bottom"></div>
+    <div class="geo-top-left"></div>
+    <div class="geo-top-left-blue"></div>
+    <div class="geo-bottom-right"></div>
+    <div class="geo-bottom-right-blue"></div>
+
+    <div class="page-content page-content-tight">
+      <div class="page-banner">
+        <h2>Company Overview</h2>
+      </div>
+
+      <p class="mb-20" style="font-size: 11pt; line-height: 1.7;">
+        Apollo Earthworks is a Melbourne-based earthmoving and haulage company providing reliable excavation, bulk earthworks, site cuts, retaining walls, and material haulage services across residential, commercial, and civil projects. We pride ourselves on being dependable, efficient, and easy to work with, delivering projects on time and on budget.
+      </p>
+
+      <p class="mb-24" style="font-size: 10.5pt; line-height: 1.7;">
+        Our focus is building long-term relationships with builders, developers, and contractors by providing consistent service, experienced operators, and well-maintained equipment.
+      </p>
+
+      <div class="section-divider-full"></div>
+
+      <h2 class="mt-20">Our Approach</h2>
+
+      <p class="mb-16" style="line-height: 1.7;">
+        At Apollo Earthworks, every project starts with a clear understanding of your requirements. We work closely with our clients from the initial consultation through to project completion, ensuring open communication, accurate timelines, and no surprises. Whether it is a single-lot residential site cut or a multi-stage commercial development, we bring the same level of professionalism and commitment to every job.
+      </p>
+
+      <p class="mb-24" style="line-height: 1.7;">
+        We believe that reliable earthworks form the foundation of every successful build. That is why we invest in modern equipment, experienced operators, and efficient processes - so our clients can move forward with confidence.
+      </p>
+
+      <!-- Approach visual bar -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: auto;">
+        <div style="text-align: center; padding: 16px 8px; background: var(--blue); color: white; border-radius: 3px; clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);">
+          <div style="font-family: var(--font-display); font-size: 20pt; font-weight: 700;">01</div>
+          <div style="font-size: 8.5pt; font-weight: 500; margin-top: 4px;">Consultation</div>
+        </div>
+        <div style="text-align: center; padding: 16px 8px; background: var(--black); color: white; border-radius: 3px; clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);">
+          <div style="font-family: var(--font-display); font-size: 20pt; font-weight: 700;">02</div>
+          <div style="font-size: 8.5pt; font-weight: 500; margin-top: 4px;">Planning</div>
+        </div>
+        <div style="text-align: center; padding: 16px 8px; background: var(--blue); color: white; border-radius: 3px; clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);">
+          <div style="font-family: var(--font-display); font-size: 20pt; font-weight: 700;">03</div>
+          <div style="font-size: 8.5pt; font-weight: 500; margin-top: 4px;">Execution</div>
+        </div>
+        <div style="text-align: center; padding: 16px 8px; background: var(--black); color: white; border-radius: 3px; clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);">
+          <div style="font-family: var(--font-display); font-size: 20pt; font-weight: 700;">04</div>
+          <div style="font-size: 8.5pt; font-weight: 500; margin-top: 4px;">Completion</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div class="footer-line"></div>
+      <span>Apollo Earthworks</span>
+      <span>info@apolloearthworks.com.au</span>
+      <span>Page 2</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 3 - CORE COMPETENCIES
+  ============================================================= -->
+  <div class="page">
+    <div class="accent-bar-top"></div>
+    <div class="accent-bar-bottom"></div>
+    <div class="geo-top-right"></div>
+    <div class="geo-top-right-black"></div>
+    <div class="geo-bottom-left"></div>
+    <div class="geo-bottom-left-black"></div>
+
+    <div class="page-content page-content-tight">
+      <div class="page-banner page-banner-blue">
+        <h2>Core Competencies</h2>
+      </div>
+
+      <div class="competency-grid" style="flex: 1;">
+        <!-- Earthworks and Excavation -->
+        <div class="competency-group">
+          <h3>Earthworks and Excavation</h3>
+          <ul>
+            <li>Bulk Earthworks and Excavation</li>
+            <li>Site Cuts</li>
+            <li>Basements</li>
+            <li>Footings</li>
+            <li>Trenching</li>
+            <li>Final Trim</li>
+          </ul>
+        </div>
+
+        <!-- Demolition and Clearing -->
+        <div class="competency-group">
+          <h3>Demolition and Clearing</h3>
+          <ul>
+            <li>Demolition</li>
+            <li>Land Clearing</li>
+            <li>Rock Breaking</li>
+            <li>Rock Removal</li>
+            <li>Soil Removal</li>
+            <li>Site Clean-ups</li>
+          </ul>
+        </div>
+
+        <!-- Haulage and Hire -->
+        <div class="competency-group">
+          <h3>Haulage and Hire</h3>
+          <ul>
+            <li>Material Haulage</li>
+            <li>Tipper Hire</li>
+            <li>Excavator Hire</li>
+          </ul>
+        </div>
+
+        <!-- Structural and Civil -->
+        <div class="competency-group">
+          <h3>Structural and Civil</h3>
+          <ul>
+            <li>Retaining Walls</li>
+            <li>Drainage</li>
+            <li>Driveways and Car Parks</li>
+            <li>Concrete Slabs, Structural, Footpath, and Rehabilitation Works</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service area callout -->
+      <div style="background: var(--black); color: white; padding: 16px 20px; border-radius: 3px; display: flex; align-items: center; gap: 16px; margin-top: 16px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="flex-shrink: 0;">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#1B8FD1"/>
+        </svg>
+        <div>
+          <div style="font-family: var(--font-display); font-weight: 600; font-size: 11pt; margin-bottom: 2px;">Service Area</div>
+          <div style="font-size: 9.5pt; color: #ccc;">Melbourne Metropolitan Area and Surrounding Regions</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div class="footer-line"></div>
+      <span>Apollo Earthworks</span>
+      <span>info@apolloearthworks.com.au</span>
+      <span>Page 3</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 4 - EQUIPMENT AND INDUSTRIES
+  ============================================================= -->
+  <div class="page">
+    <div class="accent-bar-top"></div>
+    <div class="accent-bar-bottom"></div>
+    <div class="geo-top-left"></div>
+    <div class="geo-top-left-blue"></div>
+    <div class="geo-bottom-right"></div>
+    <div class="geo-bottom-right-blue"></div>
+
+    <div class="page-content page-content-tight">
+      <div class="page-banner">
+        <h2>Equipment and Industries</h2>
+      </div>
+
+      <h3 class="mb-12">Our Fleet</h3>
+      <p class="text-muted mb-16" style="font-size: 9.5pt;">Modern, reliable machinery suitable for small to large-scale projects. All machinery is serviced regularly and operated by experienced, ticketed operators.</p>
+
+      <div class="equipment-grid mb-24">
+        <div class="equipment-item">Excavators (1.7T to 30T)</div>
+        <div class="equipment-item">Tandem Tipper Trucks</div>
+        <div class="equipment-item">Skid Steers</div>
+        <div class="equipment-item">Rock Breakers and Attachments</div>
+        <div class="equipment-item">Augers</div>
+        <div class="equipment-item">Compaction Equipment</div>
+        <div class="equipment-item">Machinery Floats (Up to 10T)</div>
+      </div>
+
+      <!-- Equipment photos -->
+      <div class="photo-strip mb-24">
+        <div class="photo-strip-item">
+          <img src="Assets/posi-track-wet-hire.jpg" alt="Posi Track on site">
+        </div>
+        <div class="photo-strip-item">
+          <img src="Assets/material-export-cartage.jpg" alt="Material haulage truck">
+        </div>
+      </div>
+
+      <div class="section-divider-full"></div>
+
+      <h3 class="mt-16 mb-12">Industries We Work With</h3>
+      <p class="text-muted mb-16" style="font-size: 9.5pt;">We regularly partner with professionals across a wide range of sectors:</p>
+
+      <div class="industry-tags">
+        <div class="industry-tag">Builders</div>
+        <div class="industry-tag">Developers</div>
+        <div class="industry-tag">Concreters</div>
+        <div class="industry-tag">Landscapers</div>
+        <div class="industry-tag">Plumbers</div>
+        <div class="industry-tag">Civil Contractors</div>
+        <div class="industry-tag">Owner Builders</div>
+        <div class="industry-tag">Government and Council</div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div class="footer-line"></div>
+      <span>Apollo Earthworks</span>
+      <span>info@apolloearthworks.com.au</span>
+      <span>Page 4</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 5 - WHY CHOOSE US + SAFETY
+  ============================================================= -->
+  <div class="page">
+    <div class="accent-bar-top"></div>
+    <div class="accent-bar-bottom"></div>
+    <div class="geo-top-right"></div>
+    <div class="geo-top-right-black"></div>
+    <div class="geo-bottom-left"></div>
+    <div class="geo-bottom-left-black"></div>
+
+    <div class="page-content page-content-tight">
+      <div class="page-banner page-banner-blue">
+        <h2>Why Choose Apollo Earthworks</h2>
+      </div>
+
+      <div class="features-grid mb-24">
+        <!-- Reliable -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Reliable and On Time</strong>
+            <span>We show up when we say we will and deliver on schedule</span>
+          </div>
+        </div>
+
+        <!-- Experienced -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Experienced Operators</strong>
+            <span>Skilled, ticketed professionals on every machine</span>
+          </div>
+        </div>
+
+        <!-- Modern -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 4v16H6V8.83L10.83 4H18m0-2h-8L4 8v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Modern Machinery</strong>
+            <span>Regularly serviced fleet ready for any project</span>
+          </div>
+        </div>
+
+        <!-- Competitive -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Competitive Rates</strong>
+            <span>Fair pricing without compromising on quality</span>
+          </div>
+        </div>
+
+        <!-- Insured -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Fully Insured</strong>
+            <span>Complete coverage for your peace of mind</span>
+          </div>
+        </div>
+
+        <!-- Safety -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Safety Focused</strong>
+            <span>Committed to safe practices on every site</span>
+          </div>
+        </div>
+
+        <!-- Flexible -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Flexible Engagement</strong>
+            <span>Available for short-term and long-term projects</span>
+          </div>
+        </div>
+
+        <!-- Melbourne Wide -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="feature-text">
+            <strong>Melbourne-Wide Service</strong>
+            <span>Covering metro Melbourne and surrounding areas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider-full"></div>
+
+      <h2 class="mt-16">Safety and Compliance</h2>
+      <p class="text-muted mb-16" style="font-size: 9.5pt;">Apollo Earthworks is committed to maintaining a safe work environment and complies with all Victorian safety regulations and site requirements.</p>
+
+      <div class="safety-grid">
+        <div class="safety-item">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          Fully Insured
+        </div>
+        <div class="safety-item">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          SWMS Available
+        </div>
+        <div class="safety-item">
+          <svg viewBox="0 0 24 24"><path d="M20 7h-4V5c0-.55-.22-1.05-.59-1.41C15.05 3.22 14.55 3 14 3h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM10 5h4v2h-4V5z"/></svg>
+          White Card Certified
+        </div>
+        <div class="safety-item">
+          <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          Machine Tickets and Licences
+        </div>
+        <div class="safety-item">
+          <svg viewBox="0 0 24 24"><path d="M19.77 7.23l.01-.01-3.72-3.72L15 4.56l2.11 2.11c-.94.36-1.61 1.26-1.61 2.33 0 1.38 1.12 2.5 2.5 2.5.36 0 .69-.08 1-.21v7.21c0 .55-.45 1-1 1s-1-.45-1-1V14c0-1.1-.9-2-2-2h-1V5c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v16h10v-7.5h1.5v5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5V9c0-.69-.28-1.32-.73-1.77zM12 10H6V5h6v5z"/></svg>
+          Regular Equipment Maintenance
+        </div>
+        <div class="safety-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          OH&S Compliant
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <div class="footer-line"></div>
+      <span>Apollo Earthworks</span>
+      <span>info@apolloearthworks.com.au</span>
+      <span>Page 5</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE 6 - PROJECT GALLERY + CONTACT
+  ============================================================= -->
+  <div class="page">
+    <div class="accent-bar-top"></div>
+    <div class="accent-bar-bottom"></div>
+    <div class="geo-top-left"></div>
+    <div class="geo-top-left-blue"></div>
+    <div class="geo-bottom-right"></div>
+    <div class="geo-bottom-right-blue"></div>
+
+    <div class="page-content page-content-tight">
+      <div class="page-banner">
+        <h2>Our Work</h2>
+      </div>
+
+      <!-- Photo grid - 6 project photos -->
+      <div class="photo-grid mb-24">
+        <div class="photo-grid-item">
+          <img src="Assets/drainage-solutions.jpg" alt="Drainage Solutions">
+          <div class="photo-label">Drainage Solutions</div>
+        </div>
+        <div class="photo-grid-item">
+          <img src="Assets/excavation-landscaping.jpg" alt="Excavation for Landscaping">
+          <div class="photo-label">Excavation</div>
+        </div>
+        <div class="photo-grid-item">
+          <img src="Assets/site-clean.jpg" alt="Site Clean-up">
+          <div class="photo-label">Site Clean-up</div>
+        </div>
+        <div class="photo-grid-item">
+          <img src="Assets/base-preparation-civil-works.jpg" alt="Base Preparation">
+          <div class="photo-label">Base Preparation</div>
+        </div>
+        <div class="photo-grid-item">
+          <img src="Assets/excavation-pools.jpg" alt="Pool Excavation">
+          <div class="photo-label">Pool Excavation</div>
+        </div>
+        <div class="photo-grid-item">
+          <img src="Assets/rubbish-removal.jpg" alt="Rubbish Removal">
+          <div class="photo-label">Rubbish Removal</div>
+        </div>
+      </div>
+
+      <!-- Summary statement -->
+      <div class="summary-box mb-24">
+        <p>Apollo Earthworks aims to be a trusted earthworks and haulage partner by delivering high-quality work, reliable service, and competitive pricing across every project we undertake.</p>
+      </div>
+
+      <!-- Contact section -->
+      <h2>Contact Us</h2>
+
+      <div class="contact-grid mb-16">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <div>
+            <strong>Contact</strong>
+            <span>Kosta Mastelidys</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div>
+            <strong>Phone</strong>
+            <span>0431 560 908</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div>
+            <strong>Email</strong>
+            <span>info@apolloearthworks.com.au</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div>
+            <strong>Address</strong>
+            <span>2/26 Allister Street, Mount Waverley VIC 3149</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+          </div>
+          <div>
+            <strong>Instagram</strong>
+            <span>@apolloearthworks</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
+          <div>
+            <strong>Service Area</strong>
+            <span>Melbourne Metro and Surrounding Areas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="abn-bar">ABN: 26 886 956 778</div>
+    </div>
+
+    <div class="page-footer">
+      <div class="footer-line"></div>
+      <span>Apollo Earthworks</span>
+      <span>info@apolloearthworks.com.au</span>
+      <span>Page 6</span>
+    </div>
+  </div>
+
+</body>
+</html>

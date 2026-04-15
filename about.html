@@ -24,7 +24,7 @@
     "name": "Apollo Earthworks",
     "description": "Melbourne-based earthworks company offering excavation and civil services across residential, industrial, commercial, and civil sectors.",
     "telephone": "+61431560908",
-    "email": "apolloearthworks@gmail.com",
+    "email": "info@apolloearthworks.com.au",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Melbourne",
@@ -306,7 +306,7 @@
       "name": "Apollo Earthworks",
       "founder": { "@type": "Person", "name": "Kosta Mastelidys" },
       "telephone": "+61431560908",
-      "email": "apolloearthworks@gmail.com",
+      "email": "info@apolloearthworks.com.au",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "2/26 Allister Street",
@@ -326,7 +326,7 @@
   <nav id="main-nav" class="fixed top-0 w-full z-50 bg-ink lg:bg-transparent lg:duration-500" style="transition: background-color 500ms, backdrop-filter 500ms, box-shadow 500ms, transform 500ms;" role="navigation" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
       <div class="flex items-center justify-between h-20 lg:h-24">
-        <a href="/" class="relative z-10" aria-label="Apollo Earthworks home">
+        <a href="index.html" class="relative z-10" aria-label="Apollo Earthworks home">
           <img src="Assets/Logo.png" alt="Apollo Earthworks" class="h-10 lg:h-12 rounded-sm">
         </a>
 
@@ -1080,7 +1080,9 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
         <!-- Brand -->
         <div class="lg:col-span-1">
-          <img src="Assets/Logo.png" alt="Apollo Earthworks" class="h-11 mb-5 rounded-sm">
+          <a href="index.html" aria-label="Apollo Earthworks home" class="inline-block mb-5">
+            <img src="Assets/Logo.png" alt="Apollo Earthworks" class="h-11 rounded-sm">
+          </a>
           <p class="text-sm text-white/40" style="line-height: 1.7;">Melbourne-based earthworks specialists. Tough work, done right.</p>
         </div>
 
@@ -1088,10 +1090,10 @@
         <div>
           <h4 class="text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-5">Services</h4>
           <nav class="space-y-2.5" aria-label="Services">
-            <p class="text-sm text-white/30">Site Cuts & Excavation</p>
-            <p class="text-sm text-white/30">Base Preparation & Civil</p>
-            <p class="text-sm text-white/30">Drainage Solutions</p>
-            <p class="text-sm text-white/30">Wet Hire</p>
+            <a href="earthworks.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Earthworks</a>
+            <a href="demolition.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Demolition</a>
+            <a href="haulage-hire.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Haulage & Hire</a>
+            <a href="civil.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Civil</a>
           </nav>
         </div>
 
@@ -1148,7 +1150,7 @@
 
   <!-- Email protection -->
   <script>
-  document.querySelectorAll('.email-protect').forEach(function(el){el.innerHTML='apolloearthworks@gmail.com';});
+  document.querySelectorAll('.email-protect').forEach(function(el){el.innerHTML='info@apolloearthworks.com.au';});
   </script>
 
 </body>
