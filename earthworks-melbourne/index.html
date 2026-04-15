@@ -712,31 +712,24 @@
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Conversion event hooks - gtag fires if GA/Google Ads is loaded later.
-    // For Google Ads, swap 'AW-XXXXXXX/YYYYYY' with the real conversion label once the account is active.
-    function fireConversion(type) {
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'conversion', {
-          event_category: 'engagement',
-          event_label: type,
-          value: 1
-        });
-      }
-      if (window.dataLayer) {
-        window.dataLayer.push({ event: 'apollo_conversion', conversion_type: type });
-      }
+    // Google Ads click conversion (Book appointment)
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17970130703/SgEgCMnKspwcEI_e6fhC',
+          'event_callback': callback
+      });
+      return false;
     }
 
-    // Click-to-call tracking
+    // Fire the click conversion on every call button
     document.querySelectorAll('[data-conversion="call"]').forEach(el => {
-      el.addEventListener('click', () => fireConversion('phone_call'));
+      el.addEventListener('click', () => gtag_report_conversion());
     });
-
-    // Form submission tracking (fires on submit; server-side confirmation still recommended)
-    const form = document.getElementById('quote-form');
-    if (form) {
-      form.addEventListener('submit', () => fireConversion('quote_form_submit'));
-    }
   </script>
 </body>
 </html>
