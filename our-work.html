@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Work | Apollo Earthworks Project Gallery Melbourne</title>
-  <link rel="apple-touch-icon" href="Assets/Logo.png">
-  <link rel="icon" href="Assets/Logo.png">
+  <link rel="apple-touch-icon" href="Assets/Logo-optimized.png">
+  <link rel="icon" href="Assets/Logo-optimized.png">
   <meta name="description" content="Browse Apollo Earthworks project gallery. Real Melbourne earthworks, excavation, drainage, civil and wet hire jobs delivered for builders, developers and contractors.">
   <meta name="keywords" content="earthworks gallery Melbourne, excavation projects Melbourne, drainage Melbourne, civil works portfolio, posi-track wet hire Melbourne, Apollo Earthworks projects">
   <meta name="robots" content="index, follow">
@@ -60,42 +60,12 @@
     ]
   }
   </script>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              DEFAULT: '#1B8FD1',
-              dark: '#1474AB',
-              light: '#2BA0E0',
-              50: '#E8F4FC',
-            },
-            surface: {
-              DEFAULT: '#FAFAF8',
-              warm: '#F3F1EC',
-            },
-            ink: {
-              DEFAULT: '#0A0A0A',
-              muted: '#6B6B6B',
-              light: '#9A9A9A',
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 
   <style>
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, sans-serif; color: #0A0A0A; }
-    h1, h2, h3, h4, .font-display { font-family: 'Space Grotesk', system-ui, sans-serif; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #0A0A0A; }
+    h1, h2, h3, h4, .font-display { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
 
     /* Grain texture */
     .grain::before {
@@ -157,7 +127,7 @@
     .number-outline {
       -webkit-text-stroke: 2px #1B8FD1;
       color: transparent;
-      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
     /* Image zoom on hover */
@@ -236,7 +206,7 @@
       color: #fff;
     }
     .mega-col-title {
-      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.16em;
@@ -295,7 +265,7 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.7rem 1.25rem;
-      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -399,7 +369,7 @@
     }
     .project-tile:hover .tile-tag { transform: translateY(0); opacity: 1; }
     .project-tile .tile-title {
-      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 1.4rem;
       font-weight: 700;
       color: #fff;
@@ -521,7 +491,7 @@
       margin-bottom: 0.75rem;
     }
     .lightbox-caption .lc-title {
-      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 1.25rem;
       font-weight: 700;
       color: #fff;
@@ -585,7 +555,7 @@
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
       <div class="flex items-center justify-between h-20 lg:h-24">
         <a href="index.html" class="relative z-10" aria-label="Apollo Earthworks home">
-          <img src="Assets/Logo.png" alt="Apollo Earthworks" class="h-10 lg:h-12 rounded-sm">
+          <img src="Assets/Logo-optimized.png" alt="Apollo Earthworks" class="h-10 lg:h-12 rounded-sm" decoding="async">
         </a>
 
         <div class="hidden lg:flex items-center gap-10">
@@ -594,20 +564,20 @@
             <button type="button" id="mega-services-btn" class="flex items-center gap-1.5 text-[13px] font-medium tracking-wide uppercase text-white/80 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand focus-visible:outline-offset-4 transition-colors duration-300" aria-haspopup="true" aria-expanded="false" aria-controls="mega-services-panel">
               <span class="mega-link-label transition-colors duration-300">Services</span>
               <svg class="mega-caret w-3 h-3 text-white/60 transition-transform duration-300 ease-spring" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
-              <span class="mega-underline absolute left-0 -bottom-1.5 right-4 h-[1.5px] bg-brand"></span>
+              <span class="mega-underline absolute left-0 -bottom-1.5 right-4 h-[1.5px] bg-brand-darker"></span>
             </button>
           </div>
-          <a href="about.html" class="text-[13px] font-medium tracking-wide uppercase text-white/80 hover:text-brand transition-colors duration-300">About</a>
-          <a href="our-work.html" class="text-[13px] font-medium tracking-wide uppercase text-white hover:text-brand transition-colors duration-300">Our Work</a>
-          <a href="contact.html" class="text-[13px] font-medium tracking-wide uppercase text-white/80 hover:text-brand transition-colors duration-300">Contact</a>
+          <a href="about.html" class="text-[13px] font-medium tracking-wide uppercase text-white/80 hover:text-brand-darker transition-colors duration-300">About</a>
+          <a href="our-work.html" class="text-[13px] font-medium tracking-wide uppercase text-white hover:text-brand-darker transition-colors duration-300">Our Work</a>
+          <a href="contact.html" class="text-[13px] font-medium tracking-wide uppercase text-white/80 hover:text-brand-darker transition-colors duration-300">Contact</a>
         </div>
 
         <div class="flex items-center gap-4">
-          <a href="tel:0431560908" class="btn hidden sm:inline-flex items-center gap-2.5 bg-brand hover:bg-brand-dark active:bg-brand-dark text-white font-semibold text-[13px] tracking-wide px-6 py-3 transition-transform duration-300 ease-spring hover:scale-[1.03] active:scale-[0.97]">
+          <a href="tel:0431560908" class="btn hidden sm:inline-flex items-center gap-2.5 bg-brand-darker hover:bg-brand-darker active:bg-brand-dark text-white font-semibold text-[13px] tracking-wide px-6 py-3 transition-transform duration-300 ease-spring hover:scale-[1.03] active:scale-[0.97]">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             0431 560 908
           </a>
-          <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand active:scale-95 transition-transform duration-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:text-brand-darker focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand active:scale-95 transition-transform duration-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
@@ -725,7 +695,7 @@
       <div class="px-5 py-6 flex flex-col gap-1">
         <!-- Services accordion -->
         <div class="mobile-accordion">
-          <button type="button" class="mobile-accordion-btn w-full flex items-center justify-between px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200" aria-expanded="false">
+          <button type="button" class="mobile-accordion-btn w-full flex items-center justify-between px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand-darker hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200" aria-expanded="false">
             <span>Services</span>
             <svg class="mobile-accordion-caret w-4 h-4 transition-transform duration-300 ease-spring" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
           </button>
@@ -772,11 +742,11 @@
             </div>
           </div>
         </div>
-        <a href="about.html" class="mobile-nav-link block px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200">About</a>
-        <a href="our-work.html" class="mobile-nav-link block px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white hover:text-brand hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200">Our Work</a>
-        <a href="contact.html" class="mobile-nav-link block px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200">Contact</a>
+        <a href="about.html" class="mobile-nav-link block px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand-darker hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200">About</a>
+        <a href="our-work.html" class="mobile-nav-link block px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white hover:text-brand-darker hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200">Our Work</a>
+        <a href="contact.html" class="mobile-nav-link block px-4 py-3.5 text-[13px] font-semibold tracking-wide uppercase text-white/80 hover:text-brand-darker hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors duration-200">Contact</a>
         <div class="mt-4 px-4">
-          <a href="tel:0431560908" class="btn inline-flex items-center gap-2 bg-brand text-white font-semibold text-sm px-6 py-3 w-full justify-center">
+          <a href="tel:0431560908" class="btn inline-flex items-center gap-2 bg-brand-darker text-white font-semibold text-sm px-6 py-3 w-full justify-center">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             0431 560 908
           </a>
@@ -927,7 +897,7 @@
   <header class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-32 overflow-hidden grain bg-ink" id="page-hero">
     <!-- Background image -->
     <div class="absolute inset-0">
-      <img src="Assets/excavation-landscaping.jpg" alt="Apollo Earthworks excavation landscaping job in Melbourne" class="w-full h-full object-cover opacity-35" loading="eager">
+      <img src="Assets/excavation-landscaping.webp" alt="Apollo Earthworks excavation landscaping job in Melbourne" class="w-full h-full object-cover opacity-35" loading="eager" decoding="async">
       <div class="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/85 to-ink"></div>
       <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
       <div class="absolute inset-0" style="background: radial-gradient(ellipse at 30% 50%, rgba(27,143,209,0.18) 0%, transparent 55%);"></div>
@@ -936,7 +906,7 @@
     <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
       <!-- Breadcrumbs -->
       <nav class="flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-white/40 mb-8" aria-label="Breadcrumb">
-        <a href="index.html" class="hover:text-brand transition-colors duration-200">Home</a>
+        <a href="index.html" class="hover:text-brand-darker transition-colors duration-200">Home</a>
         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
         <span class="text-white/70">Our Work</span>
       </nav>
@@ -944,12 +914,12 @@
       <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
         <div class="lg:col-span-8">
           <div class="flex items-center gap-3 mb-6">
-            <div class="w-8 h-[2px] bg-brand"></div>
-            <span class="text-brand text-xs font-semibold tracking-[0.25em] uppercase">Project Gallery</span>
+            <div class="w-8 h-[2px] bg-brand-darker"></div>
+            <span class="text-brand-darker text-xs font-semibold tracking-[0.25em] uppercase">Project Gallery</span>
           </div>
           <h1 class="font-display text-[clamp(2.5rem,6vw,5rem)] text-white leading-[0.95] mb-0" style="letter-spacing: -0.04em;">
             Real jobs.<br>
-            <span class="text-brand">Real results.</span>
+            <span class="text-brand-darker">Real results.</span>
           </h1>
         </div>
         <div class="lg:col-span-4 lg:pb-3">
@@ -970,8 +940,8 @@
       <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12 reveal">
         <div class="max-w-xl">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-8 h-[2px] bg-brand"></div>
-            <span class="text-brand text-xs font-semibold tracking-[0.25em] uppercase">Recent Projects</span>
+            <div class="w-8 h-[2px] bg-brand-darker"></div>
+            <span class="text-brand-darker text-xs font-semibold tracking-[0.25em] uppercase">Recent Projects</span>
           </div>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white" style="letter-spacing: -0.03em; line-height: 1.1;">From the yard. From the site.</h2>
           <p class="text-white/55 text-[14.5px] mt-5" style="line-height: 1.75;">Filter by category to see the kind of work we do day in, day out. Click any tile to view full size.</p>
@@ -993,7 +963,7 @@
 
         <!-- 1: Pool Excavation (large feature) -->
         <a href="#" class="project-tile reveal sm:col-span-6 lg:col-span-7 tile-h-lg" data-category="excavation" data-index="0">
-          <img src="Assets/excavation-pools.jpg" alt="Pool excavation by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <img src="Assets/excavation-pools-lg.webp" alt="Pool excavation by Apollo Earthworks Melbourne" class="tile-img" loading="lazy" decoding="async">
           <div class="tile-tint"></div>
           <div class="tile-overlay"></div>
           <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
@@ -1008,7 +978,7 @@
 
         <!-- 2: Drainage Solutions -->
         <a href="#" class="project-tile reveal sm:col-span-6 lg:col-span-5 tile-h-lg" data-category="drainage-civil" data-index="1">
-          <img src="Assets/drainage-solutions.jpg" alt="Drainage solutions by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <img src="Assets/drainage-solutions-lg.webp" alt="Drainage solutions by Apollo Earthworks Melbourne" class="tile-img" loading="lazy" decoding="async">
           <div class="tile-tint"></div>
           <div class="tile-overlay"></div>
           <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
@@ -1023,7 +993,7 @@
 
         <!-- 3: Excavation Landscaping -->
         <a href="#" class="project-tile reveal sm:col-span-3 lg:col-span-4 tile-h-md" data-category="excavation" data-index="2">
-          <img src="Assets/excavation-landscaping.jpg" alt="Landscaping excavation by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <img src="Assets/excavation-landscaping.webp" alt="Landscaping excavation by Apollo Earthworks Melbourne" class="tile-img" loading="lazy" decoding="async">
           <div class="tile-tint"></div>
           <div class="tile-overlay"></div>
           <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
@@ -1038,7 +1008,7 @@
 
         <!-- 4: Base Preparation & Civil -->
         <a href="#" class="project-tile reveal sm:col-span-3 lg:col-span-4 tile-h-md" data-category="drainage-civil" data-index="3">
-          <img src="Assets/base-preparation-civil-works.jpg" alt="Base preparation and civil works by Apollo Earthworks" class="tile-img" loading="lazy">
+          <img src="Assets/base-preparation-civil-works-lg.webp" alt="Base preparation and civil works by Apollo Earthworks" class="tile-img" loading="lazy" decoding="async">
           <div class="tile-tint"></div>
           <div class="tile-overlay"></div>
           <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
@@ -1053,7 +1023,7 @@
 
         <!-- 5: Excavator Wet Hire -->
         <a href="#" class="project-tile reveal sm:col-span-6 lg:col-span-4 tile-h-md" data-category="wet-hire" data-index="4">
-          <img src="Assets/excavator-wet-hire.jpg" alt="Excavator wet hire by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <img src="Assets/excavator-wet-hire-lg.webp" alt="Excavator wet hire by Apollo Earthworks Melbourne" class="tile-img" loading="lazy" decoding="async">
           <div class="tile-tint"></div>
           <div class="tile-overlay"></div>
           <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
@@ -1068,7 +1038,7 @@
 
         <!-- 6: Site Clean -->
         <a href="#" class="project-tile reveal sm:col-span-3 lg:col-span-5 tile-h-md" data-category="site-cleanup" data-index="5">
-          <img src="Assets/site-clean.jpg" alt="Site cleanup by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <img src="Assets/site-clean.webp" alt="Site cleanup by Apollo Earthworks Melbourne" class="tile-img" loading="lazy" decoding="async">
           <div class="tile-tint"></div>
           <div class="tile-overlay"></div>
           <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
@@ -1083,7 +1053,7 @@
 
         <!-- 7: Posi-Track Wet Hire -->
         <a href="#" class="project-tile reveal sm:col-span-3 lg:col-span-3 tile-h-md" data-category="wet-hire" data-index="6">
-          <img src="Assets/posi-track-wet-hire.jpg" alt="Posi-track wet hire by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <img src="Assets/posi-track-wet-hire-lg.webp" alt="Posi-track wet hire by Apollo Earthworks Melbourne" class="tile-img" loading="lazy" decoding="async">
           <div class="tile-tint"></div>
           <div class="tile-overlay"></div>
           <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
@@ -1098,7 +1068,7 @@
 
         <!-- 8: Material Export -->
         <a href="#" class="project-tile reveal sm:col-span-3 lg:col-span-5 tile-h-md" data-category="haulage" data-index="7">
-          <img src="Assets/material-export-cartage.jpg" alt="Material export and cartage by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <img src="Assets/material-export-cartage-lg.webp" alt="Material export and cartage by Apollo Earthworks Melbourne" class="tile-img" loading="lazy" decoding="async">
           <div class="tile-tint"></div>
           <div class="tile-overlay"></div>
           <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
@@ -1113,7 +1083,7 @@
 
         <!-- 9: Rubbish Removal -->
         <a href="#" class="project-tile reveal sm:col-span-6 lg:col-span-4 tile-h-md" data-category="site-cleanup" data-index="8">
-          <img src="Assets/rubbish-removal.jpg" alt="Rubbish removal by Apollo Earthworks Melbourne" class="tile-img" loading="lazy">
+          <img src="Assets/rubbish-removal.webp" alt="Rubbish removal by Apollo Earthworks Melbourne" class="tile-img" loading="lazy" decoding="async">
           <div class="tile-tint"></div>
           <div class="tile-overlay"></div>
           <div class="tile-arrow"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></div>
@@ -1141,8 +1111,8 @@
         <!-- Left -->
         <div class="lg:col-span-5 reveal">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-8 h-[2px] bg-brand"></div>
-            <span class="text-brand text-xs font-semibold tracking-[0.25em] uppercase">What We Deliver</span>
+            <div class="w-8 h-[2px] bg-brand-darker"></div>
+            <span class="text-brand-darker text-xs font-semibold tracking-[0.25em] uppercase">What We Deliver</span>
           </div>
           <h2 class="text-3xl sm:text-[2.5rem] lg:text-[2.75rem] font-display font-bold text-ink mb-6" style="letter-spacing: -0.03em; line-height: 1.1;">
             The same standard on every job, every time.
@@ -1150,7 +1120,7 @@
           <p class="text-ink-muted text-[15px]" style="line-height: 1.85;">
             Every project in our gallery shares the same DNA. Experienced operators on every machine, modern serviced equipment, and a team that turns up when they say they will. From single-day pool digs to multi-stage subdivisions, the bar does not move.
           </p>
-          <a href="contact.html" class="mt-8 inline-flex items-center gap-2 bg-ink hover:bg-brand text-white font-semibold text-[12.5px] tracking-[0.12em] uppercase px-7 py-4 transition-all duration-300 ease-spring hover:scale-[1.02] active:scale-[0.98]">
+          <a href="contact.html" class="mt-8 inline-flex items-center gap-2 bg-ink hover:bg-brand-darker text-white font-semibold text-[12.5px] tracking-[0.12em] uppercase px-7 py-4 transition-all duration-300 ease-spring hover:scale-[1.02] active:scale-[0.98]">
             Start Your Project
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
@@ -1160,7 +1130,7 @@
         <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4 lg:gap-5 stagger">
           <div class="reveal bg-white p-7 lg:p-8 shadow-elevated relative overflow-hidden group">
             <span class="number-outline text-5xl lg:text-6xl font-bold absolute top-5 right-6 opacity-50">01</span>
-            <div class="w-10 h-10 bg-brand flex items-center justify-center mb-5 rounded-sm">
+            <div class="w-10 h-10 bg-brand-darker flex items-center justify-center mb-5 rounded-sm">
               <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
             <h3 class="text-base font-display font-bold text-ink mb-2">On Time, On Budget</h3>
@@ -1169,7 +1139,7 @@
 
           <div class="reveal bg-white p-7 lg:p-8 shadow-elevated relative overflow-hidden group">
             <span class="number-outline text-5xl lg:text-6xl font-bold absolute top-5 right-6 opacity-50">02</span>
-            <div class="w-10 h-10 bg-brand flex items-center justify-center mb-5 rounded-sm">
+            <div class="w-10 h-10 bg-brand-darker flex items-center justify-center mb-5 rounded-sm">
               <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
             <h3 class="text-base font-display font-bold text-ink mb-2">Ticketed Operators</h3>
@@ -1178,7 +1148,7 @@
 
           <div class="reveal bg-white p-7 lg:p-8 shadow-elevated relative overflow-hidden group">
             <span class="number-outline text-5xl lg:text-6xl font-bold absolute top-5 right-6 opacity-50">03</span>
-            <div class="w-10 h-10 bg-brand flex items-center justify-center mb-5 rounded-sm">
+            <div class="w-10 h-10 bg-brand-darker flex items-center justify-center mb-5 rounded-sm">
               <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19h14M5 19l1-3h12l1 3M7 16V8a1 1 0 011-1h8a1 1 0 011 1v8"/></svg>
             </div>
             <h3 class="text-base font-display font-bold text-ink mb-2">Modern Fleet</h3>
@@ -1187,7 +1157,7 @@
 
           <div class="reveal bg-white p-7 lg:p-8 shadow-elevated relative overflow-hidden group">
             <span class="number-outline text-5xl lg:text-6xl font-bold absolute top-5 right-6 opacity-50">04</span>
-            <div class="w-10 h-10 bg-brand flex items-center justify-center mb-5 rounded-sm">
+            <div class="w-10 h-10 bg-brand-darker flex items-center justify-center mb-5 rounded-sm">
               <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
             </div>
             <h3 class="text-base font-display font-bold text-ink mb-2">Fully Insured</h3>
@@ -1201,28 +1171,28 @@
   <!-- ==================== CTA ==================== -->
   <section class="py-24 sm:py-32 bg-ink relative overflow-hidden grain">
     <div class="absolute inset-0">
-      <img src="Assets/base-preparation-civil-works.jpg" alt="" class="w-full h-full object-cover opacity-25" loading="lazy">
+      <img src="Assets/base-preparation-civil-works-lg.webp" alt="" class="w-full h-full object-cover opacity-25" loading="lazy" decoding="async">
       <div class="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/90 to-ink"></div>
       <div class="absolute inset-0" style="background: radial-gradient(ellipse at 70% 30%, rgba(27,143,209,0.22) 0%, transparent 60%);"></div>
     </div>
     <div class="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
       <div class="flex items-center gap-3 justify-center mb-5 reveal">
-        <div class="w-8 h-[2px] bg-brand"></div>
-        <span class="text-brand text-xs font-semibold tracking-[0.25em] uppercase">Your Project Next</span>
-        <div class="w-8 h-[2px] bg-brand"></div>
+        <div class="w-8 h-[2px] bg-brand-darker"></div>
+        <span class="text-brand-darker text-xs font-semibold tracking-[0.25em] uppercase">Your Project Next</span>
+        <div class="w-8 h-[2px] bg-brand-darker"></div>
       </div>
       <h2 class="font-display text-[clamp(2rem,5vw,3.75rem)] font-bold text-white mb-6 reveal" style="letter-spacing: -0.03em; line-height: 1.05;">
-        Got a site that needs<br><span class="text-brand">moving?</span>
+        Got a site that needs<br><span class="text-brand-darker">moving?</span>
       </h2>
       <p class="text-white/60 text-[15px] sm:text-base max-w-2xl mx-auto mb-10 reveal" style="line-height: 1.8;">
         Talk to Kosta about your job. Free, no-obligation quotes on residential, commercial and civil work across the Melbourne metropolitan area.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center reveal">
-        <a href="tel:0431560908" class="btn inline-flex items-center justify-center gap-2.5 bg-brand hover:bg-brand-dark text-white font-semibold text-[13px] tracking-[0.12em] uppercase px-8 py-4 transition-all duration-300 ease-spring hover:scale-[1.03] active:scale-[0.97]">
+        <a href="tel:0431560908" class="btn inline-flex items-center justify-center gap-2.5 bg-brand-darker hover:bg-brand-darker text-white font-semibold text-[13px] tracking-[0.12em] uppercase px-8 py-4 transition-all duration-300 ease-spring hover:scale-[1.03] active:scale-[0.97]">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
           Call 0431 560 908
         </a>
-        <a href="contact.html" class="btn inline-flex items-center justify-center gap-2.5 border border-white/20 hover:border-brand text-white hover:text-brand font-semibold text-[13px] tracking-[0.12em] uppercase px-8 py-4 transition-all duration-300">
+        <a href="contact.html" class="btn inline-flex items-center justify-center gap-2.5 border border-white/20 hover:border-brand text-white hover:text-brand-darker font-semibold text-[13px] tracking-[0.12em] uppercase px-8 py-4 transition-all duration-300">
           Request a Quote
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
@@ -1237,7 +1207,7 @@
         <!-- Brand -->
         <div class="lg:col-span-1">
           <a href="index.html" aria-label="Apollo Earthworks home" class="inline-block mb-5">
-            <img src="Assets/Logo.png" alt="Apollo Earthworks" class="h-11 rounded-sm">
+            <img src="Assets/Logo-optimized.png" alt="Apollo Earthworks" class="h-11 rounded-sm" decoding="async">
           </a>
           <p class="text-sm text-white/40" style="line-height: 1.7;">Melbourne-based earthworks specialists. Tough work, done right.</p>
         </div>
@@ -1246,10 +1216,10 @@
         <div>
           <h4 class="text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-5">Services</h4>
           <nav class="space-y-2.5" aria-label="Services">
-            <a href="earthworks.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Earthworks</a>
-            <a href="demolition.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Demolition</a>
-            <a href="haulage-hire.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Haulage & Hire</a>
-            <a href="civil.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Civil</a>
+            <a href="earthworks.html" class="block text-sm text-white/30 hover:text-brand-darker transition-colors duration-200">Earthworks</a>
+            <a href="demolition.html" class="block text-sm text-white/30 hover:text-brand-darker transition-colors duration-200">Demolition</a>
+            <a href="haulage-hire.html" class="block text-sm text-white/30 hover:text-brand-darker transition-colors duration-200">Haulage & Hire</a>
+            <a href="civil.html" class="block text-sm text-white/30 hover:text-brand-darker transition-colors duration-200">Civil</a>
           </nav>
         </div>
 
@@ -1257,10 +1227,10 @@
         <div>
           <h4 class="text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-5">Company</h4>
           <nav class="space-y-2.5" aria-label="Footer navigation">
-            <a href="services.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Services</a>
-            <a href="about.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">About</a>
-            <a href="our-work.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Our Work</a>
-            <a href="contact.html" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">Contact</a>
+            <a href="services.html" class="block text-sm text-white/30 hover:text-brand-darker transition-colors duration-200">Services</a>
+            <a href="about.html" class="block text-sm text-white/30 hover:text-brand-darker transition-colors duration-200">About</a>
+            <a href="our-work.html" class="block text-sm text-white/30 hover:text-brand-darker transition-colors duration-200">Our Work</a>
+            <a href="contact.html" class="block text-sm text-white/30 hover:text-brand-darker transition-colors duration-200">Contact</a>
           </nav>
         </div>
 
@@ -1268,14 +1238,14 @@
         <div>
           <h4 class="text-xs font-semibold text-white/60 uppercase tracking-[0.15em] mb-5">Contact</h4>
           <div class="space-y-2.5">
-            <a href="tel:0431560908" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">0431 560 908</a>
-            <a href="#" onclick="window.location='mailto:'+atob('YXBvbGxvZWFydGh3b3Jrc0BnbWFpbC5jb20=');return false;" class="block text-sm text-white/30 hover:text-brand transition-colors duration-200">
+            <a href="tel:0431560908" class="block text-sm text-white/30 hover:text-brand-darker transition-colors duration-200">0431 560 908</a>
+            <a href="#" onclick="window.location='mailto:'+atob('YXBvbGxvZWFydGh3b3Jrc0BnbWFpbC5jb20=');return false;" class="block text-sm text-white/30 hover:text-brand-darker transition-colors duration-200">
               <span class="email-protect">apolloearthworks[at]gmail.com</span>
             </a>
             <p class="text-sm text-white/30">Melbourne, Victoria</p>
           </div>
           <div class="mt-5">
-            <a href="https://www.instagram.com/apolloearthworks" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-9 h-9 bg-white/6 hover:bg-brand transition-colors duration-200 rounded-sm" aria-label="Follow Apollo Earthworks on Instagram">
+            <a href="https://www.instagram.com/apolloearthworks" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-9 h-9 bg-white/6 hover:bg-brand-darker transition-colors duration-200 rounded-sm" aria-label="Follow Apollo Earthworks on Instagram">
               <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             </a>
           </div>
@@ -1301,7 +1271,7 @@
       <button type="button" id="lb-next" class="lightbox-nav lightbox-next" aria-label="Next">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
       </button>
-      <img id="lb-img" class="lightbox-img" alt="">
+      <img id="lb-img" class="lightbox-img" alt="" decoding="async">
       <div class="lightbox-caption">
         <span id="lb-tag" class="lc-tag">Excavation</span>
         <h3 id="lb-title" class="lc-title"></h3>
