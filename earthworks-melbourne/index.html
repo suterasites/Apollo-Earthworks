@@ -12,14 +12,14 @@
   <meta name="robots" content="index, follow">
   <meta name="geo.region" content="AU-VIC">
   <meta name="geo.placename" content="Melbourne">
-  <link rel="canonical" href="https://apolloearthworks.com.au/earthworks-melbourne/">
+  <link rel="canonical" href="https://www.apolloearthworks.com.au/earthworks-melbourne/">
 
   <meta property="og:title" content="Earthworks & Excavation Melbourne | Apollo Earthworks">
   <meta property="og:description" content="Site cuts, bulk excavation, drainage & site prep across Eastern & South East Melbourne and the Mornington Peninsula. Fully insured. Free quotes.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_AU">
-  <meta property="og:url" content="https://apolloearthworks.com.au/earthworks-melbourne/">
-  <meta property="og:image" content="https://apolloearthworks.com.au/Assets/Site%20Preparation.jpg">
+  <meta property="og:url" content="https://www.apolloearthworks.com.au/earthworks-melbourne/">
+  <meta property="og:image" content="https://www.apolloearthworks.com.au/Assets/Site%20Preparation.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Earthworks & Excavation Melbourne | Apollo Earthworks">
   <meta name="twitter:description" content="Site cuts, bulk excavation, drainage & site prep. Eastern & SE Melbourne. Free quotes.">
@@ -30,13 +30,13 @@
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://apolloearthworks.com.au/#business",
+        "@id": "https://www.apolloearthworks.com.au/#business",
         "name": "Apollo Earthworks",
-        "image": "https://apolloearthworks.com.au/Assets/Logo.png",
-        "logo": "https://apolloearthworks.com.au/Assets/Logo.png",
+        "image": "https://www.apolloearthworks.com.au/Assets/Logo.png",
+        "logo": "https://www.apolloearthworks.com.au/Assets/Logo.png",
         "telephone": "+61431560908",
         "email": "info@apolloearthworks.com.au",
-        "url": "https://apolloearthworks.com.au/",
+        "url": "https://www.apolloearthworks.com.au/",
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
@@ -62,7 +62,7 @@
       {
         "@type": "Service",
         "serviceType": "Earthworks and Excavation",
-        "provider": { "@id": "https://apolloearthworks.com.au/#business" },
+        "provider": { "@id": "https://www.apolloearthworks.com.au/#business" },
         "areaServed": [
           { "@type": "City", "name": "Eastern Melbourne" },
           { "@type": "City", "name": "South East Melbourne" },
@@ -130,8 +130,8 @@
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apolloearthworks.com.au/" },
-          { "@type": "ListItem", "position": 2, "name": "Earthworks Melbourne", "item": "https://apolloearthworks.com.au/earthworks-melbourne/" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.apolloearthworks.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Earthworks Melbourne", "item": "https://www.apolloearthworks.com.au/earthworks-melbourne/" }
         ]
       }
     ]
@@ -160,7 +160,6 @@
   <link rel="preload" as="image" href="../Assets/Site%20Preparation.jpg" fetchpriority="high">
 
   <style>
-    html { scroll-behavior: smooth; }
     body { font-family: 'Inter', system-ui, sans-serif; color: #0A0A0A; line-height: 1.7; }
     h1, h2, h3, h4, .font-display { font-family: 'Space Grotesk', system-ui, sans-serif; letter-spacing: -0.02em; line-height: 1.15; }
     h1 { letter-spacing: -0.03em; }
@@ -172,64 +171,34 @@
     }
 
     .shadow-elevated { box-shadow: 0 1px 2px rgba(10,10,10,0.04), 0 4px 12px rgba(10,10,10,0.06), 0 16px 32px rgba(10,10,10,0.04); }
-    .shadow-floating { box-shadow: 0 2px 4px rgba(27,143,209,0.08), 0 8px 24px rgba(10,10,10,0.08), 0 32px 64px rgba(10,10,10,0.08); }
-    .shadow-cta { box-shadow: 0 4px 12px rgba(27,143,209,0.25), 0 12px 32px rgba(27,143,209,0.18); }
+    .shadow-floating { box-shadow: 0 2px 4px rgba(10,10,10,0.06), 0 8px 24px rgba(10,10,10,0.08), 0 32px 64px rgba(10,10,10,0.08); }
+    .shadow-cta { box-shadow: 0 4px 12px rgba(10,10,10,0.12), 0 12px 32px rgba(10,10,10,0.08); }
 
-    .ease-spring { transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); }
-    .btn { transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease; }
-    .btn:hover { transform: translateY(-2px); }
-    .btn:active { transform: translateY(0); }
     .btn:focus-visible { outline: 3px solid #1B8FD1; outline-offset: 3px; }
 
-    .hero-bg {
-      background:
-        radial-gradient(circle at 75% 20%, rgba(43,160,224,0.35), transparent 55%),
-        radial-gradient(circle at 15% 85%, rgba(27,143,209,0.22), transparent 60%),
-        linear-gradient(135deg, #0A0A0A 0%, #0E1A24 55%, #0A0A0A 100%);
-    }
+    .hero-bg { background: #0A0A0A; }
 
     .img-overlay::after {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(10,10,10,0) 40%, rgba(10,10,10,0.65) 100%);
+      background: rgba(10,10,10,0.55);
       pointer-events: none;
     }
-
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22,1,0.36,1); }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .stagger > .reveal:nth-child(1) { transition-delay: 0ms; }
-    .stagger > .reveal:nth-child(2) { transition-delay: 80ms; }
-    .stagger > .reveal:nth-child(3) { transition-delay: 160ms; }
-    .stagger > .reveal:nth-child(4) { transition-delay: 240ms; }
-    .stagger > .reveal:nth-child(5) { transition-delay: 320ms; }
-    .stagger > .reveal:nth-child(6) { transition-delay: 400ms; }
 
     .svc-card {
       position: relative; background: #fff;
       border: 1px solid rgba(10,10,10,0.06);
-      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease, border-color 0.3s ease;
     }
-    .svc-card:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(27,143,209,0.05), 0 12px 32px rgba(10,10,10,0.08), 0 32px 64px rgba(10,10,10,0.05); border-color: rgba(27,143,209,0.25); }
-    .svc-card::before { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 3px; background: #1B8FD1; transition: width 0.5s cubic-bezier(0.22,1,0.36,1); }
-    .svc-card:hover::before { width: 100%; }
 
-    .step-num {
-      background: linear-gradient(135deg, #1B8FD1 0%, #0E5A85 100%);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
+    .step-num { color: #1B8FD1; }
 
     .faq details { border-bottom: 1px solid rgba(10,10,10,0.08); }
     .faq details[open] summary .faq-icon { transform: rotate(45deg); }
     .faq summary { cursor: pointer; list-style: none; }
     .faq summary::-webkit-details-marker { display: none; }
-    .faq-icon { transition: transform 0.3s cubic-bezier(0.22,1,0.36,1); }
 
-    .form-input {
-      transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
-    }
     .form-input:focus {
       outline: none;
       border-color: #1B8FD1;
-      box-shadow: 0 0 0 4px rgba(27,143,209,0.15);
       background-color: #fff;
     }
 
@@ -275,7 +244,7 @@
         <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div class="lg:col-span-7 text-white">
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-white/80 mb-6">
-              <span class="w-2 h-2 rounded-full bg-brand-light animate-pulse"></span>
+              <span class="w-2 h-2 rounded-full bg-brand-light"></span>
               Now booking across Eastern & SE Melbourne
             </div>
             <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mb-5">
@@ -359,8 +328,8 @@
           <p class="text-ink-muted text-lg">From a single-day residential site cut to multi-week commercial excavation, Apollo Earthworks handles the full scope. Every job is quoted fixed, every machine is operated by a ticketed operator, and every site is left clean and ready for the next trade.</p>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 stagger">
-          <article class="svc-card rounded-2xl p-7 reveal">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <article class="svc-card rounded-2xl p-7">
             <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5">
               <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 17l6-6 4 4 6-6M4 21h16"/></svg>
             </div>
@@ -368,7 +337,7 @@
             <p class="text-ink-muted">Precision cuts to level and prep residential and commercial blocks. Graded to spec, compacted, and ready for slab or footing.</p>
           </article>
 
-          <article class="svc-card rounded-2xl p-7 reveal">
+          <article class="svc-card rounded-2xl p-7">
             <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5">
               <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12V8a2 2 0 00-2-2H6a2 2 0 00-2 2v4m16 0v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4m16 0H4"/></svg>
             </div>
@@ -376,7 +345,7 @@
             <p class="text-ink-muted">Basement, pool and large-volume digs. Tandem tippers on standby for efficient material export and cartage.</p>
           </article>
 
-          <article class="svc-card rounded-2xl p-7 reveal">
+          <article class="svc-card rounded-2xl p-7">
             <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5">
               <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
             </div>
@@ -384,7 +353,7 @@
             <p class="text-ink-muted">Tight access excavation for new builds, extensions, and reno footings. Careful work around existing structures and services.</p>
           </article>
 
-          <article class="svc-card rounded-2xl p-7 reveal">
+          <article class="svc-card rounded-2xl p-7">
             <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5">
               <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8"/></svg>
             </div>
@@ -392,7 +361,7 @@
             <p class="text-ink-muted">Stormwater, agi, and services trenching to plan. Drainage solutions that move water away from the slab the first time.</p>
           </article>
 
-          <article class="svc-card rounded-2xl p-7 reveal">
+          <article class="svc-card rounded-2xl p-7">
             <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5">
               <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
             </div>
@@ -400,7 +369,7 @@
             <p class="text-ink-muted">Hydraulic hammers for hard ground, bluestone and rocky lots. Broken up, loaded out, and carted off site.</p>
           </article>
 
-          <article class="svc-card rounded-2xl p-7 reveal">
+          <article class="svc-card rounded-2xl p-7">
             <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5">
               <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zm10 0a2 2 0 11-4 0 2 2 0 014 0zM13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h3.28a1 1 0 01.95.68l1.72 4.32a1 1 0 01.05.31V16a1 1 0 01-1 1h-1"/></svg>
             </div>
@@ -413,7 +382,6 @@
 
     <!-- WHY APOLLO -->
     <section class="py-20 sm:py-28 bg-ink text-white relative overflow-hidden">
-      <div class="absolute inset-0 opacity-50" style="background: radial-gradient(circle at 85% 15%, rgba(27,143,209,0.25), transparent 50%), radial-gradient(circle at 10% 90%, rgba(27,143,209,0.12), transparent 55%);"></div>
       <div class="relative max-w-6xl mx-auto px-5 sm:px-8">
         <div class="grid lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-5">
@@ -425,28 +393,28 @@
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
           </div>
-          <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4 stagger">
-            <div class="reveal p-6 rounded-2xl bg-white/[0.04] border border-white/10">
+          <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+            <div class="p-6 rounded-2xl bg-white/[0.04] border border-white/10">
               <p class="font-display font-semibold text-lg mb-1">On time, every time</p>
               <p class="text-white/65 text-sm">Bookings are honoured and schedules communicated. No ghosting, no drift.</p>
             </div>
-            <div class="reveal p-6 rounded-2xl bg-white/[0.04] border border-white/10">
+            <div class="p-6 rounded-2xl bg-white/[0.04] border border-white/10">
               <p class="font-display font-semibold text-lg mb-1">Modern, serviced fleet</p>
               <p class="text-white/65 text-sm">Excavators 1.7T-30T, tippers, skid steers, rock breakers. All regularly maintained.</p>
             </div>
-            <div class="reveal p-6 rounded-2xl bg-white/[0.04] border border-white/10">
+            <div class="p-6 rounded-2xl bg-white/[0.04] border border-white/10">
               <p class="font-display font-semibold text-lg mb-1">Ticketed operators</p>
               <p class="text-white/65 text-sm">Every operator is experienced, White Card certified, and machine-ticketed.</p>
             </div>
-            <div class="reveal p-6 rounded-2xl bg-white/[0.04] border border-white/10">
+            <div class="p-6 rounded-2xl bg-white/[0.04] border border-white/10">
               <p class="font-display font-semibold text-lg mb-1">Fixed, honest quotes</p>
               <p class="text-white/65 text-sm">Free on-site assessment. Clear scope, clear number, no day-rate blowouts.</p>
             </div>
-            <div class="reveal p-6 rounded-2xl bg-white/[0.04] border border-white/10">
+            <div class="p-6 rounded-2xl bg-white/[0.04] border border-white/10">
               <p class="font-display font-semibold text-lg mb-1">Fully insured & compliant</p>
               <p class="text-white/65 text-sm">Public liability, SWMS on request, OH&S compliant on every site.</p>
             </div>
-            <div class="reveal p-6 rounded-2xl bg-white/[0.04] border border-white/10">
+            <div class="p-6 rounded-2xl bg-white/[0.04] border border-white/10">
               <p class="font-display font-semibold text-lg mb-1">Residential & commercial</p>
               <p class="text-white/65 text-sm">From owner-builder site cuts to multi-week civil projects, any scale.</p>
             </div>
@@ -532,7 +500,6 @@
 
     <!-- QUOTE FORM -->
     <section id="quote" class="py-20 sm:py-28 bg-ink text-white relative overflow-hidden">
-      <div class="absolute inset-0" style="background: radial-gradient(circle at 80% 30%, rgba(27,143,209,0.35), transparent 55%), radial-gradient(circle at 15% 90%, rgba(27,143,209,0.18), transparent 60%);"></div>
       <div class="relative max-w-6xl mx-auto px-5 sm:px-8">
         <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div class="lg:col-span-5">
@@ -542,23 +509,23 @@
             <div class="space-y-4">
               <a href="tel:+61431560908"
                  data-conversion="call"
-                 class="group flex items-center gap-4 p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:bg-white/[0.07] transition">
+                 class="group flex items-center gap-4 p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:bg-white/[0.07]">
                 <div class="w-12 h-12 rounded-xl bg-brand/20 border border-brand/30 flex items-center justify-center shrink-0">
                   <svg class="w-5 h-5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.95.68l1.5 4.5a1 1 0 01-.27 1.06L7.91 10.91a12.05 12.05 0 005.18 5.18l1.67-1.55a1 1 0 011.06-.27l4.5 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
                 </div>
                 <div>
                   <p class="text-xs uppercase tracking-wider text-white/50">Call</p>
-                  <p class="font-display font-semibold text-lg text-white group-hover:text-brand-light transition">0431 560 908</p>
+                  <p class="font-display font-semibold text-lg text-white">0431 560 908</p>
                 </div>
               </a>
               <a href="mailto:info@apolloearthworks.com.au"
-                 class="group flex items-center gap-4 p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:bg-white/[0.07] transition">
+                 class="group flex items-center gap-4 p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:bg-white/[0.07]">
                 <div class="w-12 h-12 rounded-xl bg-brand/20 border border-brand/30 flex items-center justify-center shrink-0">
                   <svg class="w-5 h-5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l9 6 9-6m-18 0v10a2 2 0 002 2h14a2 2 0 002-2V8m-18 0l9-6 9 6"/></svg>
                 </div>
                 <div>
                   <p class="text-xs uppercase tracking-wider text-white/50">Email</p>
-                  <p class="font-display font-semibold text-base text-white group-hover:text-brand-light transition">info@apolloearthworks.com.au</p>
+                  <p class="font-display font-semibold text-base text-white">info@apolloearthworks.com.au</p>
                 </div>
               </a>
               <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.04] border border-white/10">
@@ -757,23 +724,6 @@
   </div>
 
   <script>
-    // Intersection observer for reveal animations
-    (function () {
-      if (!('IntersectionObserver' in window)) {
-        document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-        return;
-      }
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            io.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-    })();
-
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
