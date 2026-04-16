@@ -764,40 +764,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
-  <!-- Deferred tracking: loads after page paint to avoid blocking LCP -->
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5GX8F3GS');</script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17970130703"></script>
+  <!-- Tracking: delayed 3s after load to avoid blocking TBT -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17970130703');
 
-    // Google Ads click conversion (Book appointment)
     function gtag_report_conversion(url) {
       var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
+        if (typeof(url) != 'undefined') { window.location = url; }
       };
       gtag('event', 'conversion', {
-          'send_to': 'AW-17970130703/SgEgCMnKspwcEI_e6fhC',
-          'event_callback': callback
+        'send_to': 'AW-17970130703/SgEgCMnKspwcEI_e6fhC',
+        'event_callback': callback
       });
       return false;
     }
 
-    // Fire the click conversion on every call button
-    document.querySelectorAll('[data-conversion="call"]').forEach(el => {
-      el.addEventListener('click', () => gtag_report_conversion());
+    document.querySelectorAll('[data-conversion="call"]').forEach(function(el) {
+      el.addEventListener('click', function() { gtag_report_conversion(); });
     });
+
+    function loadTracking() {
+      // GTM
+      dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+      var g = document.createElement('script');
+      g.async = true;
+      g.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-5GX8F3GS';
+      document.head.appendChild(g);
+
+      // gtag
+      var t = document.createElement('script');
+      t.async = true;
+      t.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17970130703';
+      t.onload = function() {
+        gtag('js', new Date());
+        gtag('config', 'AW-17970130703');
+      };
+      document.head.appendChild(t);
+    }
+
+    // Wait 3s after page load before loading tracking scripts
+    if (document.readyState === 'complete') {
+      setTimeout(loadTracking, 3000);
+    } else {
+      window.addEventListener('load', function() { setTimeout(loadTracking, 3000); });
+    }
   </script>
 </body>
 </html>
