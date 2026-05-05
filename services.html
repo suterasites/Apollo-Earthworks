@@ -9,35 +9,77 @@
   <meta name="description" content="Full range of Apollo Earthworks services across Melbourne. Earthworks, demolition, haulage, wet hire and civil works for residential, commercial and civil projects.">
   <meta name="keywords" content="earthworks services Melbourne, excavation Melbourne, demolition Melbourne, haulage Melbourne, civil works Melbourne, wet hire Melbourne">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://apollo-earthworks.pages.dev/services.html">
+  <meta name="geo.region" content="AU-VIC">
+  <meta name="geo.placename" content="Melbourne">
+  <link rel="canonical" href="https://www.apolloearthworks.com.au/services.html">
 
   <meta property="og:title" content="Services | Apollo Earthworks Melbourne">
   <meta property="og:description" content="Earthworks, demolition, haulage and civil services across Melbourne. Tough work. Done right.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_AU">
+  <meta property="og:url" content="https://www.apolloearthworks.com.au/services.html">
+  <meta property="og:site_name" content="Apollo Earthworks">
+  <meta property="og:image" content="https://www.apolloearthworks.com.au/Assets/Site-Preparation.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="900">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services | Apollo Earthworks Melbourne">
+  <meta name="twitter:description" content="Earthworks, demolition, haulage and civil services across Melbourne.">
+  <meta name="twitter:image" content="https://www.apolloearthworks.com.au/Assets/Site-Preparation.webp">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Apollo Earthworks",
-    "description": "Melbourne-based earthworks company offering excavation, demolition, haulage and civil services.",
-    "telephone": "+61431560908",
-    "email": "info@apolloearthworks.com.au",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "2/26 Allister Street",
-      "addressLocality": "Mount Waverley",
-      "addressRegion": "VIC",
-      "postalCode": "3149",
-      "addressCountry": "AU"
-    },
-    "areaServed": [
-      { "@type": "Place", "name": "Melbourne" },
-      { "@type": "Place", "name": "Victoria" }
-    ],
-    "serviceType": ["Earthworks", "Excavation", "Demolition", "Land Clearing", "Material Haulage", "Tipper Hire", "Excavator Wet Hire", "Posi-Track Wet Hire", "Retaining Walls", "Drainage", "Driveways", "Concrete Works"],
-    "priceRange": "$$"
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.apolloearthworks.com.au/#business",
+        "name": "Apollo Earthworks",
+        "description": "Melbourne-based earthworks and excavation contractor offering site cuts, bulk excavation, demolition, drainage and wet hire.",
+        "image": "https://www.apolloearthworks.com.au/Assets/Logo-optimized.png",
+        "logo": "https://www.apolloearthworks.com.au/Assets/Logo-optimized.png",
+        "telephone": "+61431560908",
+        "email": "info@apolloearthworks.com.au",
+        "url": "https://www.apolloearthworks.com.au/",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2/26 Allister Street",
+          "addressLocality": "Mount Waverley",
+          "addressRegion": "VIC",
+          "postalCode": "3149",
+          "addressCountry": "AU"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Melbourne" },
+          { "@type": "State", "name": "Victoria" }
+        ],
+        "sameAs": ["https://www.instagram.com/apolloearthworks"]
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://www.apolloearthworks.com.au/services.html#collection",
+        "url": "https://www.apolloearthworks.com.au/services.html",
+        "name": "Apollo Earthworks Services",
+        "description": "Earthworks, demolition, haulage, wet hire and civil works across Melbourne.",
+        "isPartOf": { "@id": "https://www.apolloearthworks.com.au/#website" },
+        "about": { "@id": "https://www.apolloearthworks.com.au/#business" },
+        "hasPart": [
+          { "@type": "Service", "name": "Earthworks and Excavation", "url": "https://www.apolloearthworks.com.au/earthworks.html" },
+          { "@type": "Service", "name": "Demolition and Land Clearing", "url": "https://www.apolloearthworks.com.au/demolition.html" },
+          { "@type": "Service", "name": "Haulage and Hire", "url": "https://www.apolloearthworks.com.au/haulage-hire.html" },
+          { "@type": "Service", "name": "Civil and Structural Works", "url": "https://www.apolloearthworks.com.au/civil.html" }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.apolloearthworks.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.apolloearthworks.com.au/services.html" }
+        ]
+      }
+    ]
   }
   </script>
   <link rel="stylesheet" href="styles.css">
@@ -227,6 +269,8 @@
   </style>
 </head>
 <body class="bg-surface antialiased overflow-x-hidden">
+
+  <a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.cssText='position:fixed;top:12px;left:12px;width:auto;height:auto;background:#0A0A0A;color:#fff;padding:8px 16px;border-radius:4px;z-index:100;text-decoration:none;font-weight:600;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Skip to main content</a>
 
   <!-- Navigation -->
   <nav id="main-nav" class="fixed top-0 w-full z-50 bg-ink lg:bg-transparent lg:duration-500" style="transition: background-color 500ms, backdrop-filter 500ms, box-shadow 500ms, transform 500ms;" role="navigation" aria-label="Main navigation">
@@ -549,6 +593,17 @@
     })();
   </script>
 
+  <main id="main">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" style="position:absolute;left:0;right:0;top:96px;z-index:5;">
+    <ol class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex flex-wrap gap-2 text-xs text-white/60" style="list-style:none;padding-top:8px;padding-bottom:8px;">
+      <li><a href="index.html" class="hover:text-white">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li aria-current="page" class="text-white/90">Services</li>
+    </ol>
+  </nav>
+
   <!-- ==================== HERO ==================== -->
   <header class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-32 overflow-hidden grain bg-ink" id="page-hero">
     <div class="absolute inset-0">
@@ -812,6 +867,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="bg-ink pt-16 pb-8" role="contentinfo">

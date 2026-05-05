@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /thank-you.html
+Disallow: /quote-template.html
+Disallow: /quote-template_files/
 
 Sitemap: https://www.apolloearthworks.com.au/sitemap.xml

@@ -9,36 +9,81 @@
   <meta name="description" content="Material haulage, tipper hire, excavator wet hire and posi-track wet hire across Melbourne. Apollo Earthworks - machine and operator for any job size.">
   <meta name="keywords" content="haulage Melbourne, tipper hire Melbourne, excavator wet hire Melbourne, posi-track wet hire, material haulage, machine and operator hire">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://apollo-earthworks.pages.dev/haulage-hire.html">
+  <meta name="geo.region" content="AU-VIC">
+  <meta name="geo.placename" content="Melbourne">
+  <link rel="canonical" href="https://www.apolloearthworks.com.au/haulage-hire.html">
 
   <meta property="og:title" content="Haulage & Wet Hire Melbourne | Apollo Earthworks">
   <meta property="og:description" content="Material haulage, tipper hire and wet hire across Melbourne. Tough work. Done right.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_AU">
+  <meta property="og:url" content="https://www.apolloearthworks.com.au/haulage-hire.html">
+  <meta property="og:site_name" content="Apollo Earthworks">
+  <meta property="og:image" content="https://www.apolloearthworks.com.au/Assets/excavator-wet-hire.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="900">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Haulage & Wet Hire Melbourne | Apollo Earthworks">
+  <meta name="twitter:description" content="Material haulage, tipper hire and wet hire across Melbourne.">
+  <meta name="twitter:image" content="https://www.apolloearthworks.com.au/Assets/excavator-wet-hire.webp">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Haulage and Wet Hire",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Apollo Earthworks",
-      "telephone": "+61431560908",
-      "email": "info@apolloearthworks.com.au",
-      "address": { "@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "VIC", "addressCountry": "AU" }
-    },
-    "areaServed": { "@type": "Place", "name": "Melbourne, Victoria" },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Haulage and Hire Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Material Haulage" }},
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tipper Hire" }},
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Excavator Wet Hire" }},
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posi-Track Wet Hire" }}
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.apolloearthworks.com.au/#business",
+        "name": "Apollo Earthworks",
+        "description": "Melbourne-based earthworks and excavation contractor offering site cuts, bulk excavation, demolition, drainage and wet hire.",
+        "image": "https://www.apolloearthworks.com.au/Assets/Logo-optimized.png",
+        "logo": "https://www.apolloearthworks.com.au/Assets/Logo-optimized.png",
+        "telephone": "+61431560908",
+        "email": "info@apolloearthworks.com.au",
+        "url": "https://www.apolloearthworks.com.au/",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2/26 Allister Street",
+          "addressLocality": "Mount Waverley",
+          "addressRegion": "VIC",
+          "postalCode": "3149",
+          "addressCountry": "AU"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Melbourne" },
+          { "@type": "State", "name": "Victoria" }
+        ],
+        "sameAs": ["https://www.instagram.com/apolloearthworks"]
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Haulage and Hire",
+        "provider": { "@id": "https://www.apolloearthworks.com.au/#business" },
+        "areaServed": [
+          { "@type": "City", "name": "Melbourne" },
+          { "@type": "State", "name": "Victoria" }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Haulage and Hire Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Material Haulage" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tipper Hire" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Excavator Wet Hire" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posi-Track Wet Hire" }}
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.apolloearthworks.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Haulage and Hire", "item": "https://www.apolloearthworks.com.au/haulage-hire.html" }
+        ]
+      }
+    ]
   }
   </script>
   <link rel="stylesheet" href="styles.css">
@@ -117,6 +162,7 @@
   </style>
 </head>
 <body class="bg-surface antialiased overflow-x-hidden">
+  <a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.cssText='position:fixed;top:12px;left:12px;width:auto;height:auto;background:#0A0A0A;color:#fff;padding:8px 16px;border-radius:4px;z-index:100;text-decoration:none;font-weight:600;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Skip to main content</a>
 
   <!-- Navigation -->
   <nav id="main-nav" class="fixed top-0 w-full z-50 bg-ink lg:bg-transparent lg:duration-500" style="transition: background-color 500ms, backdrop-filter 500ms, box-shadow 500ms, transform 500ms;" role="navigation" aria-label="Main navigation">
@@ -350,6 +396,8 @@
     })();
   </script>
 
+  <main id="main">
+
   <!-- ==================== HERO ==================== -->
   <header class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-32 overflow-hidden grain bg-ink" id="page-hero">
     <div class="absolute inset-0">
@@ -564,6 +612,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="bg-ink pt-16 pb-8" role="contentinfo">
