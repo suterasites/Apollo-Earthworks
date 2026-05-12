@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="googlebot" content="noindex,nofollow" />
+<meta name="apple-mobile-web-app-title" content="AE Invoice" />
+<title>Apollo Earthworks - Invoice</title>
+<link rel="icon" href="../Assets/Logo-optimized.png" />
+<link rel="apple-touch-icon" href="../Assets/Logo-optimized.png" />
+<style>
+  :root {
+    --ink: #0a0a0a;
+    --muted: #6b7280;
+    --rule: #e5e7eb;
+    --rule-strong: #111827;
+    --brand: #1B8FD1;
+    --page-w: 210mm;
+    --page-h: 297mm;
+    --page-pad: 18mm;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #f4f4f5;
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    margin: 24px auto;
+    padding: var(--page-pad);
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.08);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header row: logo left, invoice block right */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 22mm;
+  }
+
+  .logo-panel {
+    width: 40mm;
+    height: 40mm;
+    background: #0A1628;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5mm;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .invoice-meta {
+    text-align: right;
+  }
+
+  .invoice-meta h1 {
+    margin: 0 0 4px 0;
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--ink);
+  }
+
+  .invoice-meta .meta-row {
+    font-size: 9.5pt;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+
+  .invoice-meta .meta-row span.label {
+    color: var(--muted);
+  }
+
+  /* From / Bill To row */
+  .parties {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24mm;
+    margin-bottom: 14mm;
+  }
+
+  .party-label {
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .party-name {
+    font-weight: 700;
+    font-size: 11pt;
+    margin-bottom: 2px;
+  }
+
+  .party-line {
+    color: var(--ink);
+    font-size: 10pt;
+    line-height: 1.55;
+  }
+
+  /* Items table */
+  table.items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10mm;
+  }
+
+  table.items thead th {
+    text-align: left;
+    font-size: 9pt;
+    font-weight: 600;
+    color: var(--ink);
+    padding: 8px 10px;
+    background: #f3f4f6;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+
+  table.items thead th.num {
+    text-align: right;
+    width: 70px;
+  }
+  table.items thead th.price,
+  table.items thead th.amount {
+    text-align: right;
+    width: 110px;
+  }
+
+  table.items tbody td {
+    padding: 12px 10px 4px 10px;
+    vertical-align: top;
+    font-size: 10pt;
+    border-bottom: none;
+  }
+
+  table.items tbody td.num,
+  table.items tbody td.price,
+  table.items tbody td.amount {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .item-title {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .item-sub {
+    padding: 0 10px 14px 10px;
+    font-size: 9.5pt;
+    color: var(--muted);
+    line-height: 1.6;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .item-sub ul {
+    margin: 2px 0 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .item-sub li::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+  }
+
+  /* Total row */
+  .totals {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 14mm;
+  }
+
+  .totals-table {
+    min-width: 200px;
+  }
+
+  .totals-table .total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    font-weight: 700;
+    font-size: 11pt;
+    border-top: 1px solid var(--rule-strong);
+  }
+
+  /* Notes / payments */
+  .notes {
+    margin-top: auto;
+    padding-top: 10mm;
+    border-top: 1px solid var(--rule);
+  }
+
+  .notes-label {
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .notes-body {
+    font-size: 10pt;
+    color: var(--ink);
+  }
+
+  /* Footer (bottom-right page marker) */
+  .page-footer {
+    margin-top: 14mm;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+
+  /* Editable placeholders - subtle highlight on screen, invisible on print */
+  [contenteditable="true"]:focus {
+    outline: 2px solid rgba(27, 143, 209, 0.35);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Hint banner - screen only */
+  .hint {
+    max-width: var(--page-w);
+    margin: 16px auto 0 auto;
+    padding: 10px 14px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    font-size: 9.5pt;
+    color: #1e3a8a;
+    line-height: 1.5;
+  }
+  .hint b { color: #0f172a; }
+
+  @media print {
+    html, body {
+      background: #fff;
+    }
+    .hint, .toolbar { display: none !important; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      width: auto;
+      min-height: auto;
+      padding: 14mm;
+    }
+    @page {
+      size: A4;
+      margin: 0;
+    }
+  }
+
+  /* Screen-only toolbar */
+  .toolbar {
+    max-width: var(--page-w);
+    margin: 16px auto 0 auto;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+  .toolbar button {
+    background: var(--ink);
+    color: #fff;
+    border: 0;
+    padding: 8px 14px;
+    font-size: 9.5pt;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .toolbar button.secondary {
+    background: #fff;
+    color: var(--ink);
+    border: 1px solid var(--rule-strong);
+  }
+  .toolbar button:hover { opacity: 0.9; }
+</style>
+</head>
+<body>
+
+<div class="hint">
+  <b>How to use:</b> Click any field on the invoice to edit it. Add or remove line items as needed. When you're done, hit <b>Print / Save as PDF</b> (top-right button or Ctrl+P) and choose "Save as PDF" as the destination. Bank details are locked at the bottom - update them once in the HTML if they ever change.
+</div>
+
+<div class="toolbar">
+  <button class="secondary" onclick="addLine()">+ Add line item</button>
+  <button onclick="window.print()">Print / Save as PDF</button>
+</div>
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-panel">
+      <img class="logo" src="../Assets/Logo.png" alt="Apollo Earthworks" />
+    </div>
+    <div class="invoice-meta">
+      <h1>INVOICE</h1>
+      <div class="meta-row">#<span contenteditable="true">001</span></div>
+      <div class="meta-row"><span class="label">Due</span> <span contenteditable="true">DD/MM/YYYY</span></div>
+      <div class="meta-row"><span class="label">Issued</span> <span contenteditable="true">DD/MM/YYYY</span></div>
+    </div>
+  </div>
+
+  <!-- From / Bill To -->
+  <div class="parties">
+    <div class="from">
+      <div class="party-label">From</div>
+      <div class="party-name">Apollo Earthworks</div>
+      <div class="party-line">Kosta Mastelidys</div>
+      <div class="party-line">0431 560 908</div>
+      <div class="party-line">info@apolloearthworks.com.au</div>
+      <div class="party-line">2/26 Allister Street, Mount Waverley</div>
+      <div class="party-line">ABN 26 886 956 778</div>
+    </div>
+    <div class="bill-to">
+      <div class="party-label">Bill To</div>
+      <div class="party-name" contenteditable="true">Client Name</div>
+      <div class="party-line" contenteditable="true">+61 4XX XXX XXX</div>
+      <div class="party-line" contenteditable="true">client@email.com</div>
+      <div class="party-line" contenteditable="true">Street address, Suburb</div>
+    </div>
+  </div>
+
+  <!-- Items table -->
+  <table class="items">
+    <thead>
+      <tr>
+        <th class="desc">Description</th>
+        <th class="num">QTY</th>
+        <th class="price">Price, AUD</th>
+        <th class="amount">Amount, AUD</th>
+      </tr>
+    </thead>
+    <tbody id="items-body">
+      <tr class="item-main">
+        <td><span class="item-title" contenteditable="true">Line item name</span></td>
+        <td class="num" contenteditable="true">1</td>
+        <td class="price" contenteditable="true">$0.00</td>
+        <td class="amount" contenteditable="true">$0.00</td>
+      </tr>
+      <tr class="item-detail">
+        <td class="item-sub" colspan="4">
+          <ul contenteditable="true">
+            <li>Inclusion 1</li>
+            <li>Inclusion 2</li>
+            <li>Inclusion 3</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Totals -->
+  <div class="totals">
+    <div class="totals-table">
+      <div class="total-row">
+        <span>Total</span>
+        <span contenteditable="true">$0.00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notes & Payments -->
+  <div class="notes">
+    <div class="notes-label">Notes &amp; Payments Instructions</div>
+    <div class="notes-body">
+      Bank Details: Apollo Earthworks &nbsp;|&nbsp; BSB: 033-085 &nbsp;|&nbsp; Acc: 635817
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="page-footer">
+    Inv #<span contenteditable="true">001</span> &nbsp; 1 of 1
+  </div>
+
+</div>
+
+<script>
+  // Add another line item (main row + sub-row with inclusions)
+  function addLine() {
+    const tbody = document.getElementById('items-body');
+
+    const main = document.createElement('tr');
+    main.className = 'item-main';
+    main.innerHTML = `
+      <td><span class="item-title" contenteditable="true">Line item name</span></td>
+      <td class="num" contenteditable="true">1</td>
+      <td class="price" contenteditable="true">$0.00</td>
+      <td class="amount" contenteditable="true">$0.00</td>
+    `;
+
+    const sub = document.createElement('tr');
+    sub.className = 'item-detail';
+    sub.innerHTML = `
+      <td class="item-sub" colspan="4">
+        <ul contenteditable="true">
+          <li>Inclusion 1</li>
+        </ul>
+      </td>
+    `;
+
+    tbody.appendChild(main);
+    tbody.appendChild(sub);
+  }
+</script>
+
+</body>
+</html>
