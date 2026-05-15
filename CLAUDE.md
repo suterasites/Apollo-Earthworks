@@ -152,6 +152,8 @@ Committed to maintaining a safe work environment and complies with all Victorian
 - Do not use `transition-all`
 - Do not use default Tailwind blue/indigo as primary color
 - Do not use em dashes (—) anywhere in content, code, or comments. Use hyphens (-), commas, or periods instead
+- Public-facing collateral (social posts, ads, website body copy, marketing graphics) uses "Mount Waverley" or "Melbourne" only - never the 2/26 Allister Street address. Street address is reserved for private documents (capability statements, quotes, invoices sent to specific clients).
+- Do not describe Apollo as "insured" or "fully insured" on any new collateral until a current Certificate of Currency is on file. Existing "Fully Insured" claims in the Why Choose / Safety blocks were locked in 2026-04-20 after Kosta bound a real public liability policy - any future re-export needs a fresh certificate sighted before reissue.
 
 ---
 
