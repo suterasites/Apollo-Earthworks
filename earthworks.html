@@ -73,8 +73,11 @@
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Cuts" }},
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basements" }},
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Footings" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Piling" }},
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trenching" }},
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Final Trim" }}
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Final Trim" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Cleanups" }},
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Bags" }}
           ]
         }
       },
@@ -177,7 +180,7 @@
     .mega-feature::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(43,160,224,0.4), transparent 55%), radial-gradient(circle at 10% 90%, rgba(27,143,209,0.25), transparent 60%); z-index: 0; }
     .mega-feature::after { content: ''; position: absolute; inset: 0; opacity: 0.08; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1; }
     .mobile-accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.22,1,0.36,1); }
-    .mobile-accordion.open .mobile-accordion-content { max-height: 600px; }
+    .mobile-accordion.open .mobile-accordion-content { max-height: 720px; }
     .mobile-accordion.open .mobile-accordion-caret { transform: rotate(180deg); }
 
     /* Service detail card */
@@ -249,10 +252,13 @@
               <ul class="space-y-0.5">
                 <li><a href="earthworks.html" class="mega-item">Bulk Earthworks</a></li>
                 <li><a href="earthworks.html" class="mega-item">Site Cuts</a></li>
-                <li><a href="earthworks.html" class="mega-item">Basements</a></li>
+                <li><a href="basements.html" class="mega-item">Basements</a></li>
                 <li><a href="earthworks.html" class="mega-item">Footings</a></li>
+                <li><a href="earthworks.html" class="mega-item">Piling</a></li>
                 <li><a href="earthworks.html" class="mega-item">Trenching</a></li>
                 <li><a href="earthworks.html" class="mega-item">Final Trim</a></li>
+                <li><a href="earthworks.html" class="mega-item">Site Cleanups</a></li>
+                <li><a href="earthworks.html" class="mega-item">Site Bags</a></li>
               </ul>
             </div>
             <div class="col-span-3">
@@ -325,10 +331,13 @@
                 <div class="grid grid-cols-2 gap-x-3 gap-y-1.5">
                   <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Bulk Earthworks</a>
                   <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Site Cuts</a>
-                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Basements</a>
+                  <a href="basements.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Basements</a>
                   <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Footings</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Piling</a>
                   <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Trenching</a>
                   <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Final Trim</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Site Cleanups</a>
+                  <a href="earthworks.html" class="mobile-nav-link text-[12.5px] text-white/70 hover:text-white py-1">Site Bags</a>
                 </div>
               </div>
               <div>
@@ -472,7 +481,7 @@
         </div>
         <div class="lg:col-span-4 lg:pb-3">
           <p class="text-white/65 text-[15px]" style="line-height: 1.8;">
-            Site cuts, basements, footings, trenching and final trim. Tight to spec, on schedule, and delivered with the gear and operators to back it up.
+            Site cuts, basements, footings, piling, trenching and final trim. Tight to spec, on schedule, and delivered with the gear and operators to back it up.
           </p>
         </div>
       </div>
@@ -515,7 +524,7 @@
             <div class="w-8 h-[2px] bg-brand-darker"></div>
             <span class="text-brand-darker text-xs font-semibold tracking-[0.25em] uppercase">Services in Detail</span>
           </div>
-          <h2 class="text-3xl sm:text-[2.75rem] font-display font-bold text-ink" style="letter-spacing: -0.03em; line-height: 1.1;">Six core earthworks services</h2>
+          <h2 class="text-3xl sm:text-[2.75rem] font-display font-bold text-ink" style="letter-spacing: -0.03em; line-height: 1.1;">Nine earthworks services</h2>
         </div>
         <div class="lg:flex lg:items-end lg:justify-end">
           <p class="text-ink-muted text-[15px] max-w-md" style="line-height: 1.75;">Each service is delivered by ticketed operators on serviced machinery, fully insured and finished to spec.</p>
@@ -616,6 +625,54 @@
             <li class="flex items-start gap-2"><span class="text-brand-darker mt-0.5">•</span>Slab and pad trim</li>
             <li class="flex items-start gap-2"><span class="text-brand-darker mt-0.5">•</span>Driveway preparation</li>
             <li class="flex items-start gap-2"><span class="text-brand-darker mt-0.5">•</span>Landscape final levels</li>
+          </ul>
+        </article>
+
+        <article class="reveal svc-card p-8">
+          <div class="flex items-center justify-between mb-5">
+            <span class="font-display text-brand/30 text-4xl font-bold">07</span>
+            <div class="w-11 h-11 bg-brand-50 flex items-center justify-center rounded-lg">
+              <svg class="w-5 h-5 text-brand-darker" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-ink text-xl mb-3">Piling</h3>
+          <p class="text-sm text-ink-muted mb-4" style="line-height: 1.7;">Screw piles, bored piers and soldier piles for footings, retention and basements. Set out to the drawings and coordinated with your engineer.</p>
+          <ul class="space-y-1.5 text-xs text-ink-muted">
+            <li class="flex items-start gap-2"><span class="text-brand-darker mt-0.5">•</span>Screw piles and bored piers</li>
+            <li class="flex items-start gap-2"><span class="text-brand-darker mt-0.5">•</span>Soldier piles and shoring</li>
+            <li class="flex items-start gap-2"><span class="text-brand-darker mt-0.5">•</span>Footing and basement piling</li>
+          </ul>
+        </article>
+
+        <article class="reveal svc-card p-8">
+          <div class="flex items-center justify-between mb-5">
+            <span class="font-display text-brand/30 text-4xl font-bold">08</span>
+            <div class="w-11 h-11 bg-brand-50 flex items-center justify-center rounded-lg">
+              <svg class="w-5 h-5 text-brand-darker" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-ink text-xl mb-3">Site Cleanups</h3>
+          <p class="text-sm text-ink-muted mb-4" style="line-height: 1.7;">Full site clean-ups during and after the works. We strip old material, clear debris, and leave the site tidy for the next trade.</p>
+          <ul class="space-y-1.5 text-xs text-ink-muted">
+            <li class="flex items-start gap-2"><span class="text-brand-darker mt-0.5">•</span>Builders' rubbish and debris</li>
+            <li class="flex items-start gap-2"><span class="text-brand-darker mt-0.5">•</span>Strip-outs and clearing</li>
+            <li class="flex items-start gap-2"><span class="text-brand-darker mt-0.5">•</span>End-of-job clean down</li>
+          </ul>
+        </article>
+
+        <article class="reveal svc-card p-8">
+          <div class="flex items-center justify-between mb-5">
+            <span class="font-display text-brand/30 text-4xl font-bold">09</span>
+            <div class="w-11 h-11 bg-brand-50 flex items-center justify-center rounded-lg">
+              <svg class="w-5 h-5 text-brand-darker" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            </div>
+          </div>
+          <h3 class="font-display font-bold text-ink text-xl mb-3">Site Bags</h3>
+          <p class="text-sm text-ink-muted mb-4" style="line-height: 1.7;">Bulk waste bags supplied and removed on site. A tidy, lower-cost alternative to a skip for spoil, rubble and builders' waste.</p>
+          <ul class="space-y-1.5 text-xs text-ink-muted">
+            <li class="flex items-start gap-2"><span class="text-brand-darker mt-0.5">•</span>Supplied and collected</li>
+            <li class="flex items-start gap-2"><span class="text-brand-darker mt-0.5">•</span>Spoil, rubble and waste</li>
+            <li class="flex items-start gap-2"><span class="text-brand-darker mt-0.5">•</span>Tidy alternative to a skip</li>
           </ul>
         </article>
       </div>
