@@ -994,6 +994,7 @@ def build_page(cfg, last_mod="2026-05-15"):
           <a href="../" class="hover:text-white">Home</a>
           <a href="../services.html" class="hover:text-white">Services</a>
           <a href="../contact.html" class="hover:text-white">Contact</a>
+          <a href="../privacy.html" class="hover:text-white">Privacy</a>
         </div>
       </div>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-x-5 text-xs sm:text-sm mt-6">
