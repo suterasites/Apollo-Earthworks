@@ -60,7 +60,7 @@ SERVICE_PAGES = [
         "page_type": "service",
         "keyword": "Site Cuts Melbourne",
         "h1_html": 'Site Cuts Melbourne.<br><span class="text-brand-light">Cut Right. Cut Once.</span>',
-        "meta_title": "Site Cuts Melbourne | Apollo Earthworks",
+        "meta_title": "Site Cuts Melbourne | Apollo Earthworks Excavation",
         "meta_desc": "Residential and commercial site cuts across Melbourne. Excavation to slab spec, fixed quotes, ticketed operators, free on-site assessment. Call 0431 560 908.",
         "og_desc": "Melbourne site cut specialists. Excavation to slab spec, fixed quotes, ticketed operators, free quotes.",
         "hero_para": "Site cuts done to engineer's spec, ready for slab pour. We level, batter and remove spoil across Eastern, South East and Mornington Peninsula Melbourne. Most residential cuts wrap in one to three days, with our own tipper fleet handling cartage so the build doesn't sit waiting.",
@@ -687,6 +687,7 @@ def build_page(cfg, last_mod="2026-05-15"):
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{cfg["meta_title"]}">
   <meta name="twitter:description" content="{cfg["og_desc"]}">
+  <meta name="twitter:image" content="{BASE_URL}/Assets/Site%20Preparation.jpg">
 
 {schema_block}
 
@@ -763,9 +764,11 @@ def build_page(cfg, last_mod="2026-05-15"):
 </head>
 <body class="bg-surface antialiased overflow-x-hidden">
 
+  <a href="#top" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.cssText='position:fixed;top:12px;left:12px;width:auto;height:auto;background:#0A0A0A;color:#fff;padding:8px 16px;border-radius:4px;z-index:100;text-decoration:none;font-weight:600;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Skip to content</a>
+
   <!-- Minimal Landing Nav: logo + phone only -->
   <header id="site-header" class="sticky top-0 z-50 bg-ink/95 backdrop-blur border-b border-white/5" style="transition: transform 0.3s ease;">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
+    <nav aria-label="Primary" class="max-w-6xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
       <a href="../" class="flex items-center gap-3" aria-label="Apollo Earthworks">
         <img src="../Assets/Logo-optimized.png" alt="Apollo Earthworks logo" width="160" height="44" class="h-9 sm:h-11 w-auto" decoding="async">
         <span class="hidden sm:block text-white font-display font-semibold text-lg tracking-tight">Apollo Earthworks</span>
@@ -774,7 +777,7 @@ def build_page(cfg, last_mod="2026-05-15"):
         <a href="tel:+61431560908" data-conversion="call" class="hidden sm:inline-flex items-center text-white/90 hover:text-white font-medium text-sm">0431 560 908</a>
         <a href="#quick-quote" class="btn inline-flex items-center bg-brand-darker hover:bg-brand text-white font-semibold text-sm px-4 sm:px-5 py-2.5 rounded-full shadow-cta">Get A Free Quote</a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <main id="top">
@@ -784,6 +787,11 @@ def build_page(cfg, last_mod="2026-05-15"):
       <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 pt-14 sm:pt-20 lg:pt-24 pb-16 sm:pb-24 lg:pb-28">
         <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div class="lg:col-span-7 text-white">
+            <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-white/40 mb-6">
+              <a href="../" class="hover:text-white/70">Home</a>
+              <span aria-hidden="true">/</span>
+              <span class="text-white/70">{keyword}</span>
+            </nav>
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-white/80 mb-6">
               <span class="w-2 h-2 rounded-full bg-brand-light"></span>
               Now booking - limited availability this month
@@ -1099,8 +1107,8 @@ def build_suburb_page(s, last_mod="2026-05-15"):
         "page_type": "suburb",
         "keyword": keyword,
         "h1_html": f'Earthworks &amp; Excavation<br>{suburb}.<br><span class="text-brand-light">Done Right.</span>',
-        "meta_title": f"Earthworks {suburb} | Apollo Earthworks",
-        "meta_desc": f"Earthworks and excavation in {suburb}. Site cuts, drainage, material removal, retaining walls. Fixed quotes, ticketed operators, free site assessment. Call 0431 560 908.",
+        "meta_title": f"Earthworks & Excavation {suburb} | Apollo Earthworks",
+        "meta_desc": f"Earthworks and excavation in {suburb}. Site cuts, drainage, material removal, retaining walls. Fixed quotes, ticketed operators. Call Apollo on 0431 560 908.",
         "og_desc": f"{suburb} earthworks and excavation. Site cuts, drainage, material removal. Fixed quotes, free assessments.",
         "hero_para": f"Full-service earthworks and excavation in {suburb} and across {region}. Site cuts, drainage, material cartage, retaining walls and demolition - one crew, fixed quotes, ticketed operators. {s['drive_note']}",
         "hero_image": "Site-Preparation",
