@@ -651,6 +651,14 @@ def build_page(cfg, last_mod="2026-05-15"):
     return f'''<!DOCTYPE html>
 <html lang="en-AU" style="scroll-behavior:smooth;">
 <head>
+  <!-- Google tag (gtag.js) - GA4 G-N5M5KC06C5 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5M5KC06C5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-N5M5KC06C5');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
