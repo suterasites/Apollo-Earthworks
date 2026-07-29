@@ -120,6 +120,7 @@
     ]
   }
   </script>
+  <link rel="preload" as="image" href="Assets/Site-Preparation-large.webp" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
 
   <style>
@@ -724,10 +725,10 @@
     <!-- Background - single image on mobile, side by side on desktop -->
     <div class="absolute inset-0 flex">
       <div class="w-full sm:w-1/2 h-full relative">
-        <img src="Assets/Site-Preparation-large.webp" alt="Apollo Earthworks - site preparation and excavation in Melbourne" class="w-full h-full object-cover" loading="eager" decoding="async">
+        <img src="Assets/Site-Preparation-large.webp" alt="Apollo Earthworks - site preparation and excavation in Melbourne" class="w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async">
       </div>
       <div class="hidden sm:block w-1/2 h-full relative">
-        <img src="Assets/drainage-spoil-removal-cartage.webp" alt="Apollo Earthworks - drainage, spoil removal and cartage in Melbourne" class="w-full h-full object-cover" loading="eager" decoding="async">
+        <img src="Assets/drainage-spoil-removal-cartage.webp" alt="Apollo Earthworks - drainage, spoil removal and cartage in Melbourne" class="w-full h-full object-cover" loading="lazy" decoding="async">
       </div>
       <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/30"></div>
       <div class="absolute inset-0" style="background: radial-gradient(ellipse at 20% 80%, rgba(27,143,209,0.12) 0%, transparent 50%);"></div>
@@ -826,7 +827,7 @@
             <div class="absolute inset-0 bg-brand/5 mix-blend-multiply"></div>
             <div class="relative z-10 flex flex-col justify-end h-full p-6 sm:p-8">
               <h3 class="text-lg font-display font-bold text-white mb-1.5">Haulage & Hire</h3>
-              <p class="text-white/65 text-sm mb-3" style="line-height: 1.6;">Material haulage, tipper hire, excavator and posi-track wet hire.</p>
+              <p class="text-white/65 text-sm mb-3" style="line-height: 1.6;">Wet hire, tipper hire, dump truck hire and material haulage across Melbourne.</p>
               <span class="inline-flex items-center gap-2 text-white text-[10px] font-semibold tracking-[0.2em] uppercase">
                 Learn More
                 <svg class="w-3 h-3 transition-transform duration-300 ease-spring group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
