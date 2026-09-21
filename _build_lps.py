@@ -593,7 +593,7 @@ def build_page(cfg, last_mod="2026-05-15"):
         "@type": "BreadcrumbList",
         "itemListElement": [
           {{ "@type": "ListItem", "position": 1, "name": "Home", "item": "{BASE_URL}/" }},
-          {{ "@type": "ListItem", "position": 2, "name": "Services", "item": "{BASE_URL}/services.html" }},
+          {{ "@type": "ListItem", "position": 2, "name": "Services", "item": "{BASE_URL}/services" }},
           {{ "@type": "ListItem", "position": 3, "name": {js(keyword)}, "item": {js(canonical)} }}
         ]
       }}'''
@@ -1025,9 +1025,9 @@ def build_page(cfg, last_mod="2026-05-15"):
         </div>
         <div class="flex items-center gap-4 text-xs">
           <a href="../" class="hover:text-white">Home</a>
-          <a href="../services.html" class="hover:text-white">Services</a>
-          <a href="../contact.html" class="hover:text-white">Contact</a>
-          <a href="../privacy.html" class="hover:text-white">Privacy</a>
+          <a href="/services" class="hover:text-white">Services</a>
+          <a href="/contact" class="hover:text-white">Contact</a>
+          <a href="/privacy" class="hover:text-white">Privacy</a>
         </div>
       </div>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-x-5 text-xs sm:text-sm mt-6">
