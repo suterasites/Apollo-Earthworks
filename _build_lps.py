@@ -425,6 +425,61 @@ SERVICE_PAGES = [
             ("Material Removal", "material-removal-melbourne"),
         ],
     },
+    # C9 - Bulk Excavation Melbourne. Parent of /bulk-excavation-cranbourne/ (hand-built
+    # 2026-08-28). Written around volume, load-out and the wet-hire query, which is what
+    # separates it from /earthworks-melbourne/ and /site-cuts-melbourne/.
+    {
+        "slug": "bulk-excavation-melbourne",
+        "page_type": "service",
+        "keyword": "Bulk Excavation Melbourne",
+        "h1_html": 'Bulk Excavation Melbourne.<br><span class="text-brand-light">Dig It. Cart It. One Crew.</span>',
+        "meta_title": "Bulk Excavation Melbourne | Apollo Earthworks",
+        "meta_desc": "Bulk excavation across Melbourne: basements, pools, deep site cuts, cut to fill. 20T-30T excavators and our own tippers, fixed quote or wet hire. 0431 560 908.",
+        "og_desc": "Melbourne bulk excavation: basements, pools, deep cuts and cut to fill. 20T to 30T excavators, our own tandem tippers, fixed quotes or wet hire.",
+        "hero_para": "Large-volume digs across Eastern, South East and Mornington Peninsula Melbourne: basements, pools, deep site cuts and cut to fill. We run 20T to 30T excavators alongside our own tandem tippers, so the hole and the haul are one booking on one program. Managing the dig yourself? The same machines go out on wet hire with a ticketed operator.",
+        "hero_image": "Site-Preparation",
+        "hero_caption": "Block cleared, ready for the dig",
+        "hero_chip": "Dig + cart crew",
+        "service_cards": [
+            ("Basement Excavation", 'House and commercial basements taken down to the engineer\'s levels, with the faces battered or dug in stages around the retention system. Spoil leaves as it is dug, so the pit stays workable. More on our <a href="/basements" class="text-brand-darker font-semibold hover:text-brand-deep">basement excavation</a> page.'),
+            ("Deep Cuts and Level Changes", "Split-level homes, underground garages and big falls across a block stop being a scrape and become a volume job. We cut to the surveyor's pegs and bench the faces so the next trade has a safe platform to work from."),
+            ("Pool Excavation", "Pool shells dug to the setout and depth on the drawings. Where the only way in is down the side of the house, a small machine opens up the yard and loads out to tippers waiting at the street."),
+            ("Cut to Fill", "Moving the same earth twice is where bulk budgets go. We work out what can stay on the block, place it and compact it in layers with our own compaction gear, and cart only what truly has to leave."),
+            ("Rock and Hard Ground", "Much of Melbourne's east sits on mudstone and siltstone that gets too hard for a bucket at depth. Rock breakers and attachments are part of our fleet, so hard ground is priced at the quote instead of stopping the job halfway."),
+            ("Bulk Excavation Wet Hire", 'Running your own program? Hire a 20T to 30T excavator with a ticketed operator by the day or the week, and add tandem tippers if you need the cartage covered too. See <a href="/haulage-hire" class="text-brand-darker font-semibold hover:text-brand-deep">wet hire and tipper hire</a>.'),
+        ],
+        "process_steps": [
+            ("Send the drawings", "Plans and levels, or just the address and a rough volume."),
+            ("We walk the block", "Access, truck route, ground conditions and neighbours."),
+            ("Fixed price or hire rate", "A fixed quote for the dig, or a day rate for wet hire."),
+            ("Dig, load out, trim", "Excavated to level, spoil carted, base left ready."),
+        ],
+        "gallery": [
+            ("Excavator on a cleared Melbourne block before a bulk dig", "Cleared and ready to dig", "Site-Preparation.webp"),
+            ("Material export and cartage from a Melbourne site", "Load-out and cartage", "material-export-cartage.webp"),
+            ("Compact excavator working in a tight Melbourne backyard", "Tight-access dig", "excavation-pools.webp"),
+        ],
+        "areas_intro": 'Bulk crews run out of our Mount Waverley yard. The east, the south east and the Mornington Peninsula are our daily run, which keeps travel out of your quote and the trucks cycling faster between your site and the tip. Building in the growth corridor? See <a href="../bulk-excavation-cranbourne/" class="text-brand-darker font-semibold hover:text-brand-deep">bulk excavation in Cranbourne</a>. Some of the suburbs we dig in most:',
+        "faqs": [
+            ("How much does bulk excavation cost in Melbourne?", "Three things set the price: how many cubic metres have to move, how easily trucks can get in and out, and what the soil is classified as when it reaches the tip. Disposal is often a bigger number than the digging itself. Most residential bulk digs we quote land between $8,000 and $40,000, and commercial work is priced per stage. Every quote is fixed after a free site visit."),
+            ("Can I hire a bulk excavator with an operator instead?", "Yes. Bulk excavation hire is wet hire: a 20T to 30T excavator with a ticketed operator, by the day or the week, with tandem tippers added if you want the cartage covered as well. It suits builders and civil contractors who are managing the dig themselves. If you would rather hand over the whole scope, we price it as a fixed job."),
+            ("How do you work out the volume of a bulk dig?", "From the drawings where they exist: existing levels against finished levels gives the cut in solid cubic metres. Dug soil bulks up once it is loosened, commonly by a quarter to a third, so the truck count is worked out on the loose volume and not the size of the hole. That is why two quotes for the same hole can differ, and why we show the volume we priced."),
+            ("Where does the soil go, and why does classification matter?", "In Victoria, soil leaving a site has to be classified under EPA rules before anyone can receive it. Clean fill can go to another site that needs it, which is the cheapest outcome. Anything classified as contaminated must go to a facility licensed for that category, and the tip fee climbs with each category. On older inner and middle suburb blocks it is worth having the soil tested before the dig is priced."),
+            ("Can you do a bulk dig on a tight suburban block?", "Usually, yes. Most of our work is on established streets, not open paddocks. We plan the truck route and the turnaround first, use a smaller machine (the fleet starts at 1.7T) to open up the access, then bring the larger excavator in once there is room to swing. Where trucks cannot get onto the block, load-out happens from the street and we plan that with the builder before the job starts."),
+            ("What slows a bulk excavation down?", "Trucks, almost always. An excavator can dig faster than spoil can leave, so the program is set by how many truck cycles the site, the street and the distance to the tip allow in a day. Wet weather is the second factor, because clay sites turn unworkable after heavy rain. A house basement or a pool is typically a few days. Staged commercial digs are programmed with the builder week by week."),
+            ("Do you provide SWMS and work under a builder's site rules?", "Yes. SWMS are available for every job, operators hold White Cards and machine tickets, and we regularly work for builders, developers and civil contractors under their inductions and site rules."),
+        ],
+        "schema_service": {
+            "serviceType": "Bulk Excavation",
+            "offers": ["Basement Excavation", "Deep Site Cuts and Level Changes", "Pool Excavation", "Cut to Fill", "Rock Breaking and Removal", "Bulk Excavation Wet Hire"],
+        },
+        "final_cta_para": "Send the drawings, or just the address and a rough idea of the volume. We will walk the block and come back with a fixed price for the dig, or a day rate if you want the machines on hire.",
+        "service_links": [
+            ("Site Cuts", "site-cuts-melbourne"),
+            ("Material Removal", "material-removal-melbourne"),
+            ("Retaining Walls", "retaining-walls-melbourne"),
+        ],
+    },
 ]
 
 # C8 - Suburb LPs (umbrella "earthworks-{suburb}" pages)
