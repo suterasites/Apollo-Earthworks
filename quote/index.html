@@ -269,15 +269,6 @@
     color: var(--muted);
   }
 
-  /* Footer (bottom-right page marker) */
-  .page-footer {
-    margin-top: 10mm;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 8.5pt;
-    color: var(--muted);
-  }
-
   /* Page 2: terms and conditions */
   .terms-head {
     display: flex;
@@ -438,7 +429,6 @@
       padding: 14mm 14mm 0 14mm;
     }
     .page + .page { break-before: page; }
-    .page-footer { display: none; }
     .header { margin-bottom: 12mm; }
     .parties { margin-bottom: 10mm; }
     /* Padding, not margin: a margin is dropped at the top of a new page, padding keeps the gap */
@@ -553,18 +543,12 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <div class="page-footer">
-    Quote #<span class="quote-no-mirror"></span>
-  </div>
-
 </div>
 
 <div class="page terms">
 
   <div class="terms-head">
     <span>Apollo Earthworks &nbsp;|&nbsp; ABN 26 886 956 778</span>
-    <span>Quote #<span class="quote-no-mirror"></span></span>
   </div>
 
   <h2>Terms and Conditions</h2>
@@ -667,14 +651,12 @@
     document.getElementById('total').textContent = AUD.format(total);
   }
 
-  // Values typed once and shown in more than one place
+  // The job title doubles as the Reference in the header
   function mirror() {
     var title = document.getElementById('job-title').textContent.trim();
     var ref = document.getElementById('ref-mirror');
     ref.textContent = title;
     ref.classList.toggle('mirror-empty', !title);
-    var no = document.getElementById('quote-no').textContent.trim();
-    document.querySelectorAll('.quote-no-mirror').forEach(function (el) { el.textContent = no; });
   }
 
   // Add another line item (main row + details row)
@@ -748,7 +730,7 @@
     var el = e.target.closest('[contenteditable]');
     if (!el) return;
     if (el.closest('.item-main')) recalc();
-    if (el.id === 'job-title' || el.id === 'quote-no') mirror();
+    if (el.id === 'job-title') mirror();
   });
 
   // Single-line fields: Enter finishes the field instead of adding a line
