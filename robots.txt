@@ -4,5 +4,6 @@ Disallow: /thank-you.html
 Disallow: /quote-template.html
 Disallow: /quote-template_files/
 Disallow: /invoice/
+Disallow: /quote/
 
 Sitemap: https://www.apolloearthworks.com.au/sitemap.xml

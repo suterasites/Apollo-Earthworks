@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="googlebot" content="noindex,nofollow" />
+<meta name="apple-mobile-web-app-title" content="AE Quote" />
+<title>Apollo Earthworks - Quote</title>
+<link rel="icon" href="../Assets/Logo-optimized.png" />
+<link rel="apple-touch-icon" href="../Assets/Logo-optimized.png" />
+<style>
+  :root {
+    --ink: #0a0a0a;
+    --muted: #6b7280;
+    --rule: #e5e7eb;
+    --rule-strong: #111827;
+    --brand: #1B8FD1;
+    --page-w: 210mm;
+    --page-h: 297mm;
+    --page-pad: 18mm;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #f4f4f5;
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    margin: 24px auto;
+    padding: var(--page-pad);
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.08);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header row: logo left, quote block right */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 18mm;
+  }
+
+  .logo-panel {
+    width: 40mm;
+    height: 40mm;
+    background: #0A1628;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5mm;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .doc-meta {
+    text-align: right;
+  }
+
+  .doc-meta h1 {
+    margin: 0 0 4px 0;
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--ink);
+  }
+
+  .doc-meta .meta-row {
+    font-size: 9.5pt;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+
+  .doc-meta .meta-row span.label {
+    color: var(--muted);
+  }
+
+  /* From / Quote For row */
+  .parties {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24mm;
+    margin-bottom: 12mm;
+  }
+
+  .party-label {
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .party-name {
+    font-weight: 700;
+    font-size: 11pt;
+    margin-bottom: 2px;
+  }
+
+  .party-line {
+    color: var(--ink);
+    font-size: 10pt;
+    line-height: 1.55;
+  }
+
+  .party-line span.label {
+    color: var(--muted);
+  }
+
+  /* Project details */
+  .project {
+    margin-bottom: 9mm;
+  }
+
+  .project-title {
+    font-weight: 700;
+    font-size: 13pt;
+    margin-bottom: 4px;
+  }
+
+  .project-body {
+    font-size: 10pt;
+    line-height: 1.6;
+    white-space: pre-wrap;
+  }
+
+  /* Items table */
+  table.items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 6mm;
+  }
+
+  table.items thead th {
+    text-align: left;
+    font-size: 9pt;
+    font-weight: 600;
+    color: var(--ink);
+    padding: 8px 10px;
+    background: #f3f4f6;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+
+  table.items thead th.num {
+    text-align: right;
+    width: 70px;
+  }
+  table.items thead th.price,
+  table.items thead th.amount {
+    text-align: right;
+    width: 110px;
+  }
+
+  table.items tbody td {
+    padding: 12px 10px 4px 10px;
+    vertical-align: top;
+    font-size: 10pt;
+    border-bottom: none;
+  }
+
+  table.items tbody td.num,
+  table.items tbody td.price,
+  table.items tbody td.amount {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  table.items tbody tr { break-inside: avoid; }
+
+  .item-title {
+    font-weight: 600;
+    color: var(--ink);
+    display: inline-block;
+    min-width: 60%;
+  }
+
+  /* Full selector so it outranks the generic tbody td padding above */
+  table.items tbody td.item-sub {
+    padding: 0 10px 12px 10px;
+    font-size: 9.5pt;
+    color: var(--muted);
+    line-height: 1.6;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .item-inclusions {
+    white-space: pre-wrap;
+    min-height: 1.6em;
+  }
+
+  /* Total row */
+  .totals {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .totals-table {
+    min-width: 220px;
+  }
+
+  .totals-table .total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 10px 10px;
+    font-weight: 700;
+    font-size: 11pt;
+    border-top: 1px solid var(--rule-strong);
+  }
+
+  /* Notes + sign-off, pinned to the bottom of page 1 */
+  .closing {
+    margin-top: auto;
+    padding-top: 10mm;
+  }
+
+  .notes {
+    margin-bottom: 8mm;
+  }
+
+  .notes-label {
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .notes-body {
+    font-size: 10pt;
+    color: var(--ink);
+    line-height: 1.6;
+    white-space: pre-wrap;
+  }
+
+  .sign-off {
+    padding-top: 8mm;
+    border-top: 1px solid var(--rule);
+    font-size: 10pt;
+    line-height: 1.6;
+  }
+
+  .sign-off .terms-pointer {
+    margin-top: 6px;
+    font-size: 9pt;
+    color: var(--muted);
+  }
+
+  /* Footer (bottom-right page marker) */
+  .page-footer {
+    margin-top: 10mm;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+
+  /* Page 2: terms and conditions */
+  .terms-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: var(--muted);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 8mm;
+  }
+
+  .terms h2 {
+    margin: 0 0 6mm 0;
+    font-size: 15pt;
+    font-weight: 700;
+  }
+
+  .terms section {
+    margin-bottom: 5mm;
+    break-inside: avoid;
+  }
+
+  .terms h3 {
+    margin: 0 0 4px 0;
+    font-size: 9.5pt;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .terms p,
+  .terms li {
+    font-size: 9pt;
+    line-height: 1.5;
+  }
+
+  .terms p { margin: 0 0 4px 0; }
+
+  .terms ul {
+    margin: 0 0 4px 0;
+    padding-left: 16px;
+  }
+
+  .terms li { margin-bottom: 1px; }
+
+  .terms .sub-label {
+    font-weight: 600;
+    margin-top: 6px;
+  }
+
+  .bank {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+    padding: 8px 10px;
+    background: #f3f4f6;
+    border-radius: 4px;
+    font-size: 9pt;
+  }
+
+  .bank span.label {
+    color: var(--muted);
+  }
+
+  /* Editable fields - subtle highlight on screen, invisible on print */
+  [contenteditable="true"]:focus {
+    outline: 2px solid rgba(27, 143, 209, 0.35);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Empty fields show a grey prompt on screen and print as blank */
+  [data-ph]:empty::before {
+    content: attr(data-ph);
+    color: #9ca3af;
+    font-weight: 400;
+    pointer-events: none;
+  }
+
+  /* Hint banner - screen only */
+  .hint {
+    max-width: var(--page-w);
+    margin: 16px auto 0 auto;
+    padding: 10px 14px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    font-size: 9.5pt;
+    color: #1e3a8a;
+    line-height: 1.5;
+  }
+  .hint b { color: #0f172a; }
+
+  /* Screen-only toolbar */
+  .toolbar {
+    max-width: var(--page-w);
+    margin: 16px auto 0 auto;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+  .toolbar button,
+  .add-line {
+    background: var(--ink);
+    color: #fff;
+    border: 0;
+    padding: 8px 14px;
+    font-size: 9.5pt;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .toolbar button.secondary,
+  .add-line {
+    background: #fff;
+    color: var(--ink);
+    border: 1px solid var(--rule-strong);
+  }
+  .toolbar button:hover,
+  .add-line:hover { opacity: 0.9; }
+
+  .add-line {
+    align-self: flex-start;
+    margin: -2mm 0 6mm 0;
+    padding: 6px 12px;
+    font-size: 9pt;
+  }
+
+  .row-remove {
+    float: right;
+    margin: 2px 0 0 12px;
+    background: none;
+    border: 0;
+    padding: 2px 4px;
+    font-family: inherit;
+    font-size: 8.5pt;
+    color: #b91c1c;
+    cursor: pointer;
+  }
+  .row-remove:hover { text-decoration: underline; }
+
+  @media print {
+    html, body {
+      background: #fff;
+    }
+    .hint, .toolbar, .no-print { display: none !important; }
+    [data-ph]:empty::before { content: none; }
+    [contenteditable="true"]:focus { outline: none; }
+    .notes:has(.notes-body:empty),
+    .meta-row:has(.mirror-empty),
+    .party-line:has(> [data-ph]:empty) { display: none; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      width: auto;
+      min-height: auto;
+      /* No bottom padding: it only ever pushes a full page onto a blank one */
+      padding: 14mm 14mm 0 14mm;
+    }
+    .page + .page { break-before: page; }
+    .page-footer { display: none; }
+    .header { margin-bottom: 12mm; }
+    .parties { margin-bottom: 10mm; }
+    /* Padding, not margin: a margin is dropped at the top of a new page, padding keeps the gap */
+    .closing { margin-top: 0; padding-top: 12mm; break-inside: avoid; }
+    .sign-off { padding-top: 6mm; }
+    /* An empty editable box still holds a caret line, so drop it from the printout */
+    .item-inclusions:empty { display: none; }
+    table.items tbody td.item-sub:has(.item-inclusions:empty) { padding-bottom: 10px; }
+    /* Terms must fit one A4 page: zero page margins leave no gap at the top of an overflow page */
+    .terms-head { margin-bottom: 5mm; }
+    .terms h2 { margin-bottom: 4mm; font-size: 14pt; }
+    .terms section { margin-bottom: 2.8mm; }
+    .terms p, .terms li { font-size: 8.5pt; line-height: 1.35; }
+    .terms .sub-label { margin-top: 3px; }
+    .bank { padding: 6px 10px; font-size: 8.5pt; }
+    @page {
+      size: A4;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="hint">
+  <b>How to use:</b> Tap any field on the quote to fill it in. Each line works out its own amount from Qty x Unit Price, and the total adds itself up. Add or remove line items as needed. When you're done, hit <b>Print / Save as PDF</b> and choose "Save as PDF". Grey prompts don't print. Your terms and bank details are locked in on page 2.
+</div>
+
+<div class="toolbar">
+  <button class="secondary" type="button" onclick="addLine(true)">+ Add line item</button>
+  <button type="button" onclick="printQuote()">Print / Save as PDF</button>
+</div>
+
+<div class="page first">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-panel">
+      <img class="logo" src="../Assets/Logo.png" alt="Apollo Earthworks" />
+    </div>
+    <div class="doc-meta">
+      <h1>QUOTE</h1>
+      <div class="meta-row">#<span id="quote-no" contenteditable="true" data-line data-ph="AE-000-MM-YYYY"></span></div>
+      <div class="meta-row"><span class="label">Date</span> <span id="quote-date" contenteditable="true" data-line data-ph="DD Month YYYY"></span></div>
+      <div class="meta-row"><span class="label">Reference</span> <span id="ref-mirror"></span></div>
+    </div>
+  </div>
+
+  <!-- From / Quote For -->
+  <div class="parties">
+    <div class="from">
+      <div class="party-label">From</div>
+      <div class="party-name">Apollo Earthworks</div>
+      <div class="party-line">Kosta Mastelidys</div>
+      <div class="party-line">0431 560 908</div>
+      <div class="party-line">info@apolloearthworks.com.au</div>
+      <div class="party-line">2/26 Allister Street, Mount Waverley VIC 3149</div>
+      <div class="party-line">ABN 26 886 956 778</div>
+    </div>
+    <div class="quote-for">
+      <div class="party-label">Quote For</div>
+      <div class="party-name" id="client-name" contenteditable="true" data-line data-ph="Client name"></div>
+      <div class="party-line"><span contenteditable="true" data-line data-ph="Phone" inputmode="tel"></span></div>
+      <div class="party-line"><span contenteditable="true" data-line data-ph="Email" inputmode="email"></span></div>
+      <div class="party-line"><span contenteditable="true" data-line data-ph="Street address, Suburb"></span></div>
+      <div class="party-line"><span class="label">Site:</span> <span contenteditable="true" data-line data-ph="Site address (if different)"></span></div>
+    </div>
+  </div>
+
+  <!-- Project details -->
+  <div class="project">
+    <div class="party-label">Project Details</div>
+    <div class="project-title" id="job-title" contenteditable="true" data-line data-ph="Job title, e.g. Spoil Removal"></div>
+    <div class="project-body" contenteditable="true" data-ph="Describe the job: what's being done, where, and anything the client should know."></div>
+  </div>
+
+  <!-- Items table -->
+  <table class="items">
+    <thead>
+      <tr>
+        <th class="desc">Description</th>
+        <th class="num">QTY</th>
+        <th class="price">Unit Price, AUD</th>
+        <th class="amount">Amount, AUD</th>
+      </tr>
+    </thead>
+    <tbody id="items-body"></tbody>
+  </table>
+  <button class="add-line no-print" type="button" onclick="addLine(true)">+ Add line item</button>
+
+  <!-- Totals -->
+  <div class="totals">
+    <div class="totals-table">
+      <div class="total-row">
+        <span>Total AUD</span>
+        <span id="total">$0.00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notes + sign-off travel together if the quote runs onto a second page -->
+  <div class="closing">
+    <div class="notes">
+      <div class="notes-label">Notes</div>
+      <div class="notes-body" contenteditable="true" data-ph="Optional, e.g. Labour quoted at 8 hours. Start 7am to 3:30pm with a 30 minute lunch break."></div>
+    </div>
+
+    <div class="sign-off">
+      Please call at any time to discuss further.<br />
+      Thank you, Kosta, Apollo Earthworks. 0431 560 908
+      <div class="terms-pointer">This quote is subject to the Terms and Conditions on the following page.</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="page-footer">
+    Quote #<span class="quote-no-mirror"></span>
+  </div>
+
+</div>
+
+<div class="page terms">
+
+  <div class="terms-head">
+    <span>Apollo Earthworks &nbsp;|&nbsp; ABN 26 886 956 778</span>
+    <span>Quote #<span class="quote-no-mirror"></span></span>
+  </div>
+
+  <h2>Terms and Conditions</h2>
+
+  <section>
+    <h3>1. PAYMENT TERMS</h3>
+    <ul>
+      <li>A 50% deposit is required prior to commencement of works unless otherwise agreed in writing.</li>
+      <li>A 30% progress payment is required at the halfway point of the job. Failure to make this payment may result in works stopping and machinery being removed from site.</li>
+      <li>The remaining 20% is due upon completion of works.</li>
+      <li>Final payment is due immediately upon completion.</li>
+      <li>Invoices unpaid after 7 days will incur interest at 10% per annum, calculated daily.</li>
+      <li>Work may pause if payments fall behind.</li>
+    </ul>
+    <p class="sub-label">Bank Details:</p>
+    <div class="bank">
+      <span><span class="label">Account Name:</span> Apollo Earthworks</span>
+      <span><span class="label">BSB:</span> 033-065</span>
+      <span><span class="label">Account Number:</span> 635817</span>
+    </div>
+  </section>
+
+  <section>
+    <h3>2. SCOPE OF WORK</h3>
+    <p>Apollo Earthworks agrees to provide earthmoving services including operation of plant, excavation, trenching, soil removal, and any tasks listed under Project Details.</p>
+    <p class="sub-label">Client Responsibilities:</p>
+    <ul>
+      <li>Ensure all underground utilities are clearly marked (water, power, gas, NBN, sewer).</li>
+      <li>Provide safe and unrestricted site access for machinery.</li>
+      <li>Ensure the site is prepared and clear of vehicles or obstacles.</li>
+      <li>Provide accurate information regarding soil, ground conditions, and hazards.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>3. VARIATIONS</h3>
+    <p>Work outside the agreed scope will be treated as a variation. This includes:</p>
+    <ul>
+      <li>Rock, hard clay, concrete, rubble, or obstructions requiring extra time/machinery.</li>
+      <li>Additional spoil removal above quoted amounts.</li>
+      <li>Design changes requested by the client.</li>
+      <li>Extra time required due to client-caused delays (locked gate, access issues, incorrect information).</li>
+    </ul>
+    <p>Variations will be charged at Apollo Earthworks' standard hourly or itemised rates.</p>
+  </section>
+
+  <section>
+    <h3>4. SITE CONDITIONS</h3>
+    <p>The client confirms the following before work begins:</p>
+    <ul>
+      <li>Services are marked and safe to dig around.</li>
+      <li>The ground is suitable for machinery movement.</li>
+      <li>No hidden hazards exist such as pits, unstable areas, or soft ground.</li>
+    </ul>
+    <p>Apollo Earthworks is not liable for damage caused by unmarked services or unknown conditions.</p>
+  </section>
+
+  <section>
+    <h3>5. DAMAGE &amp; LIABILITY</h3>
+    <p>Apollo Earthworks will take reasonable care to avoid property damage.</p>
+    <p class="sub-label">Not liable for:</p>
+    <ul>
+      <li>Damage to hidden or unmarked services.</li>
+      <li>Breakage caused by unstable soil, pre-existing structural issues, or poor drainage.</li>
+      <li>Weather delays, machinery failure, or supply issues outside Apollo's control.</li>
+      <li>Damage to driveways, paths, lawns, or surfaces required for machinery access.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>6. COMPLETION &amp; HANDOVER</h3>
+    <p>Work is considered complete when all listed tasks are finished and the site is left tidy to a reasonable standard.</p>
+    <p>Clients must inspect works within 24 hours. After this period, the work is deemed accepted.</p>
+  </section>
+
+  <section>
+    <h3>7. CANCELLATION POLICY</h3>
+    <p>Cancellations within 24 hours of the scheduled start may incur a mobilisation fee.</p>
+    <p>Deposits are non-refundable if equipment has already been allocated or transported and works have begun.</p>
+  </section>
+
+</div>
+
+<script>
+  var AUD = new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' });
+
+  function num(text) {
+    var n = parseFloat(String(text).replace(/[^0-9.\-]/g, ''));
+    return isFinite(n) ? n : 0;
+  }
+
+  // Each line's amount is Qty x Unit Price; the total is the sum of the lines
+  function recalc() {
+    var total = 0;
+    document.querySelectorAll('#items-body .item-main').forEach(function (row) {
+      var amt = Math.round(num(row.querySelector('.num').textContent) * num(row.querySelector('.price').textContent) * 100) / 100;
+      row.querySelector('.amount').textContent = AUD.format(amt);
+      total += amt;
+    });
+    document.getElementById('total').textContent = AUD.format(total);
+  }
+
+  // Values typed once and shown in more than one place
+  function mirror() {
+    var title = document.getElementById('job-title').textContent.trim();
+    var ref = document.getElementById('ref-mirror');
+    ref.textContent = title;
+    ref.classList.toggle('mirror-empty', !title);
+    var no = document.getElementById('quote-no').textContent.trim();
+    document.querySelectorAll('.quote-no-mirror').forEach(function (el) { el.textContent = no; });
+  }
+
+  // Add another line item (main row + details row)
+  function addLine(focus) {
+    var tbody = document.getElementById('items-body');
+
+    var main = document.createElement('tr');
+    main.className = 'item-main';
+    main.innerHTML =
+      '<td><span class="item-title" contenteditable="true" data-line data-ph="Line item, e.g. Excavator hire (per hour)"></span></td>' +
+      '<td class="num" contenteditable="true" data-line data-select inputmode="decimal">1</td>' +
+      '<td class="price" contenteditable="true" data-line data-select data-money inputmode="decimal">$0.00</td>' +
+      '<td class="amount">$0.00</td>';
+
+    var sub = document.createElement('tr');
+    sub.className = 'item-detail';
+    sub.innerHTML =
+      '<td class="item-sub" colspan="4">' +
+        '<button class="row-remove no-print" type="button">Remove</button>' +
+        '<div class="item-inclusions" contenteditable="true" data-ph="Details or inclusions (optional)"></div>' +
+      '</td>';
+
+    tbody.appendChild(main);
+    tbody.appendChild(sub);
+    recalc();
+    if (focus) main.querySelector('.item-title').focus();
+  }
+
+  function removeLine(btn) {
+    var sub = btn.closest('tr');
+    var main = sub.previousElementSibling;
+    if (document.querySelectorAll('#items-body .item-main').length === 1) {
+      // Keep one row on the page; clear it instead
+      main.querySelector('.item-title').innerHTML = '';
+      main.querySelector('.num').textContent = '1';
+      main.querySelector('.price').textContent = '$0.00';
+      sub.querySelector('.item-inclusions').innerHTML = '';
+    } else {
+      main.remove();
+      sub.remove();
+    }
+    recalc();
+  }
+
+  // Save-as-PDF names the file after the document title
+  function pdfName() {
+    var no = document.getElementById('quote-no').textContent.trim();
+    var client = document.getElementById('client-name').textContent.trim();
+    return ['Quote', no, client].filter(Boolean).join(' - ');
+  }
+
+  var baseTitle = document.title;
+  window.addEventListener('beforeprint', function () {
+    if (document.activeElement) document.activeElement.blur();
+    document.title = pdfName();
+  });
+  window.addEventListener('afterprint', function () { document.title = baseTitle; });
+
+  function printQuote() {
+    if (document.activeElement) document.activeElement.blur();
+    document.title = pdfName();
+    window.print();
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.row-remove');
+    if (btn) removeLine(btn);
+  });
+
+  document.addEventListener('input', function (e) {
+    var el = e.target.closest('[contenteditable]');
+    if (!el) return;
+    if (el.closest('.item-main')) recalc();
+    if (el.id === 'job-title' || el.id === 'quote-no') mirror();
+  });
+
+  // Single-line fields: Enter finishes the field instead of adding a line
+  document.addEventListener('keydown', function (e) {
+    var el = e.target.closest && e.target.closest('[data-line]');
+    if (el && e.key === 'Enter') {
+      e.preventDefault();
+      el.blur();
+    }
+  });
+
+  // Tapping a number field selects it, so typing replaces the old value
+  document.addEventListener('focusin', function (e) {
+    var el = e.target.closest && e.target.closest('[data-select]');
+    if (!el) return;
+    setTimeout(function () {
+      var r = document.createRange();
+      r.selectNodeContents(el);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+    }, 0);
+  });
+
+  document.addEventListener('focusout', function (e) {
+    var el = e.target.closest && e.target.closest('[contenteditable]');
+    if (!el) return;
+    // An emptied field can keep a stray <br>; clear it so the grey prompt returns
+    if (!el.textContent.trim()) el.innerHTML = '';
+    if (el.hasAttribute('data-money') && el.textContent.trim()) {
+      el.textContent = AUD.format(num(el.textContent));
+    }
+    recalc();
+    mirror();
+  });
+
+  // Paste as plain text, so text copied from an email or text message keeps the quote's formatting
+  document.addEventListener('paste', function (e) {
+    var el = e.target.closest && e.target.closest('[contenteditable]');
+    if (!el) return;
+    e.preventDefault();
+    var text = (e.clipboardData || window.clipboardData).getData('text/plain');
+    if (el.hasAttribute('data-line')) text = text.replace(/\s*\n\s*/g, ' ');
+    document.execCommand('insertText', false, text);
+  });
+
+  // Start each quote with today's date and this month's quote number pattern
+  (function init() {
+    var d = new Date();
+    document.getElementById('quote-date').textContent =
+      d.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+    var mm = String(d.getMonth() + 1).padStart(2, '0');
+    document.getElementById('quote-no').textContent = 'AE-000-' + mm + '-' + d.getFullYear();
+    addLine(false);
+    mirror();
+  })();
+</script>
+
+</body>
+</html>
