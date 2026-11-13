@@ -480,6 +480,119 @@ SERVICE_PAGES = [
             ("Retaining Walls", "retaining-walls-melbourne"),
         ],
     },
+    # C10 - Excavator Wet Hire Melbourne. Split out of /haulage-hire (2026-11-13, WP HQ move)
+    # because every hire search lands on that one four-service page at #20-40: "excavator
+    # wet hire rates melbourne", "excavator and operator hire rates melbourne", "excavator
+    # hire <suburb>". Facts from the capability statement and the hub page only: 1.7T-30T
+    # range, attachments, operator + fuel + float in the rate, wet hire only.
+    {
+        "slug": "excavator-wet-hire-melbourne",
+        "page_type": "service",
+        "keyword": "Excavator Wet Hire Melbourne",
+        "h1_html": 'Excavator Wet Hire Melbourne.<br><span class="text-brand-light">Machine and Operator. One Booking.</span>',
+        "meta_title": "Excavator Wet Hire Melbourne | Apollo Earthworks",
+        "meta_desc": "Excavator hire with a ticketed operator across Melbourne. 1.7T to 30T machines and attachments, operator, fuel and float in one rate. Call 0431 560 908.",
+        "og_desc": "Melbourne excavator wet hire: 1.7T to 30T machines, ticketed operator, fuel and float in one day or weekly rate.",
+        "hero_para": "Hire an excavator with a ticketed operator on the levers, by the day or the week. Our machines run from a 1.7T mini for tight backyards up to 30T for bulk digs, and we bring them to your site and work to your program across Eastern, South East and Mornington Peninsula Melbourne.",
+        "hero_image": "excavator-wet-hire",
+        "hero_caption": "Mini excavator coming off the trailer",
+        "hero_chip": "Operator included",
+        "service_cards": [
+            ("Mini Excavators, 1.7T to 5T", "The small end of the fleet goes where bigger gear cannot: down the side of a house, into a backyard, around a pool or an extension. Trenching for plumbers and electricians, footings for decks and pergolas, and small site cuts."),
+            ("Mid-Size Excavators, 8T to 20T", "The working range for house site cuts, driveway and car park bases, drainage runs and subdivision lots. Enough reach and breakout force to keep a tandem tipper loaded, still sized for a suburban street."),
+            ("Large Excavators, 20T to 30T", 'Bulk digs, basements and deep cuts, where volume sets the pace. Usually booked by the week and run alongside our tippers so spoil leaves as fast as it comes out. More on <a href="../bulk-excavation-melbourne/" class="text-brand-darker font-semibold hover:text-brand-deep">bulk excavation in Melbourne</a>.'),
+            ("Attachments on Request", "Rock breaker hammer, auger, ripper tooth, mud bucket or trenching bucket. Name the job when you book and the attachments it needs arrive with the machine, priced into the rate rather than found on the invoice."),
+            ("A Ticketed Operator, Every Hour", "Every machine comes with an experienced operator holding a White Card and the tickets for that machine, plus a SWMS for your site file. Your supervisor sets the work, our operator digs to your pegs and levels."),
+            ("Tippers When the Spoil Has to Go", 'Digging with nowhere to put it? Add a tandem tipper and driver to the same booking and the cartage runs beside the excavator. See <a href="../tipper-hire-melbourne/" class="text-brand-darker font-semibold hover:text-brand-deep">tipper hire in Melbourne</a>.'),
+        ],
+        "process_steps": [
+            ("Tell us the job", "Machine size, attachments, dates and the site address."),
+            ("Rate confirmed", "A day or weekly rate with operator, fuel and float."),
+            ("Machine on site", "Floated in on the start date, operator ready to dig."),
+            ("Hours signed daily", "Agreed each afternoon, so the invoice holds no surprises."),
+        ],
+        "gallery": [
+            ("Excavator on a cleared Melbourne block beside a spoil stockpile", "Working the block", "drainage-spoil-removal-cartage.webp"),
+            ("Compact excavator working in a tight Melbourne backyard", "Tight-access hire", "excavation-pools.webp"),
+            ("Excavator on a cleared Melbourne block ready for the next stage", "Cleared and level", "Site-Preparation.webp"),
+        ],
+        "areas_intro": 'Machines go out from our Mount Waverley yard, and most wet hire bookings land in the east, the south east and down the Mornington Peninsula, where the float to site stays a small part of the rate. After a posi-track or a skid steer instead? See all of our <a href="/haulage-hire" class="text-brand-darker font-semibold hover:text-brand-deep">wet hire and haulage</a>. Some of the suburbs we hire into most:',
+        "faqs": [
+            ("How much does excavator wet hire cost in Melbourne?", "It comes down to three things: the size of the machine, how long you book it, and which attachments go with it. A mini for a single day is the smallest booking and a 30T machine for a week is the largest. Every rate we give includes the operator, fuel and the float to and from site, so none of the basics turn up later as extras. Call 0431 560 908 with the machine size and dates for a rate."),
+            ("Is the operator included in excavator hire?", "Yes, on every booking. Our excavators only go out with one of our own operators, never dry hired. Your supervisor sets the work for the day and our operator runs the machine to it, so you are not paying for someone unfamiliar with the machine to find their feet on your site."),
+            ("What size excavator do I need?", "Size it to the access first and the volume second. A compact machine from 1.7T to 5T fits through side gates for backyard trenching, footings and pool digs. The 8T to 20T range handles house site cuts, civil works and commercial jobs. Machines from 20T to 30T are for bulk excavation and basements. Tell us the job and the access, and we will put the right machine on it, because a machine that is too big for the site only costs you more per hour."),
+            ("Can I hire an excavator for just one day?", "Yes. One-day bookings are common for a trench, a footing dig or a tidy-up before the next trade. The float to site and back costs the same whether the machine stays for one day or five, so if the work might stretch to two or three days it usually works out cheaper to book the days together than to bring the machine back later."),
+            ("Do you hire mini excavators for backyards and tight access?", "Yes. Our compact machines start at 1.7T, which is small enough to fit down the side of most houses and work in a backyard without taking out a fence. They suit plumbers, landscapers, pool builders and owner-builders who need a small dig done properly by someone who knows the machine."),
+            ("What do you need from me before the machine arrives?", "The site address, a spot where the machine can be unloaded, the pegs or levels it will dig to, and the location of any services you know about. Our operator arrives with a SWMS, holds a White Card and the machine tickets, and will complete your site induction if you run one."),
+            ("Can you take the spoil away as well?", "Yes. Add tandem tippers with drivers to the booking and the trucks cycle between the excavator and the tip while the machine keeps digging. Tip fees are charged at what the tip charges us, and the tip receipts come with the invoice."),
+        ],
+        "schema_service": {
+            "serviceType": "Excavator Wet Hire",
+            "offers": ["Mini Excavator Wet Hire", "Excavator Hire with Operator", "Bulk Excavator Wet Hire", "Rock Breaker and Auger Attachments", "Excavator and Tipper Hire"],
+        },
+        "final_cta_para": "Machine size, dates and the site address. That is all we need to come back with a day or weekly rate.",
+        "service_links": [
+            ("Tipper Hire", "tipper-hire-melbourne"),
+            ("Bulk Excavation", "bulk-excavation-melbourne"),
+            ("Site Cuts", "site-cuts-melbourne"),
+        ],
+    },
+    # C11 - Tipper Hire Melbourne. The other half of the /haulage-hire split: "tipper truck
+    # wet hire" (182 impressions / 90d at #38), "dump truck wet hire" (218 at #28),
+    # "tipper hire melbourne" (#25), all landing on the hub. A September form lead asked
+    # for "wet hire of a 8T tipper truck" in those words. Tandem tippers with driver only.
+    {
+        "slug": "tipper-hire-melbourne",
+        "page_type": "service",
+        "keyword": "Tipper Hire Melbourne",
+        "h1_html": 'Tipper Hire Melbourne.<br><span class="text-brand-light">Truck and Driver. Load, Run, Tip.</span>',
+        "meta_title": "Tipper Truck Hire Melbourne | Apollo Earthworks",
+        "meta_desc": "Tandem tipper hire with an experienced driver across Melbourne. Spoil, soil, rock, road base and rubble, by the hour, day or week. Call 0431 560 908.",
+        "og_desc": "Melbourne tipper truck hire with a driver: spoil cartage, material delivery and rubble runs by the hour, day or week.",
+        "hero_para": "A tandem tipper and a driver who knows earthworks, booked by the hour, the day or the week. Run spoil off a dig, bring road base and crushed rock in, or clear a stockpile between trades, anywhere across Eastern, South East and Mornington Peninsula Melbourne.",
+        "hero_image": "material-export-cartage",
+        "hero_caption": "Tandem tipper on a residential job",
+        "hero_chip": "Driver included",
+        "service_cards": [
+            ("Spoil Cartage Off the Dig", "Trucks cycle between the excavator and the tip so spoil never builds up on a tight block. Pair a tipper with one of our machines, or run it under the excavator already on your site."),
+            ("Material Delivery", "Sand, road base, scoria, crushed rock and soil brought in for driveways, slab bases, paths and landscaping. Tell us the product and the quantity and we run it in."),
+            ("Stockpile Clearing", "A pile left by another trade or the end of a landscaping job. Book a tipper with one of our excavators or skid steers to load it, and it is gone without anyone on a shovel."),
+            ("Concrete and Rubble Runs", "Broken concrete, brick and demolition rubble carted to a recycler or the right tip. Heavy loads are kept inside the truck's rated limit, because an overloaded tipper is a fine and a safety problem."),
+            ("By the Hour, Day or Week", "A short run on an hourly rate, a full day behind a dig, or a week for a longer program. The rate covers the truck, the driver and the fuel."),
+            ("Dockets and Receipts", "Tip fees passed through at cost, with the tip receipts and weighbridge dockets handed over for your build costs or council paperwork."),
+        ],
+        "process_steps": [
+            ("Tell us the run", "What is moving, how much, and from where to where."),
+            ("Rate confirmed", "Truck, driver and fuel in one rate, tip fees at cost."),
+            ("Truck on site", "Arrives on the agreed day, ready to load."),
+            ("Loads signed off", "Hours and loads agreed, receipts handed over."),
+        ],
+        "gallery": [
+            ("Tandem tipper being loaded on a Melbourne residential job", "Tipper on site", "material-export-cartage.webp"),
+            ("Spoil stockpile beside an excavator, ready for cartage", "Spoil ready to cart", "drainage-spoil-removal-cartage.webp"),
+            ("Cleared Melbourne block after spoil was carted away", "Block cleared", "Site-Preparation.webp"),
+        ],
+        "areas_intro": 'Tippers run out of our Mount Waverley yard across the east, the south east and the Mornington Peninsula. Inside that circuit, travel adds little to an hourly booking. Need a machine and operator as well? See <a href="../excavator-wet-hire-melbourne/" class="text-brand-darker font-semibold hover:text-brand-deep">excavator wet hire</a>, or all of our <a href="/haulage-hire" class="text-brand-darker font-semibold hover:text-brand-deep">wet hire and haulage</a>. Some of the suburbs our trucks run to most:',
+        "faqs": [
+            ("How much does tipper hire cost in Melbourne?", "Tipper hire is charged by the hour, the day or the week, with the driver and fuel included. What moves the number is how far away the tip or the quarry is, how long each load takes to fill, and the traffic on the run. Tip fees sit on top and are passed on at cost. Call 0431 560 908 with what is moving and where, and we will give you a rate."),
+            ("Do I need to supply a driver?", "No. Every one of our tippers comes with an experienced driver. We do not hire trucks out self-drive, so there is no licence class, insurance excess or spare driver for you to sort out before material can start moving."),
+            ("Is tipper hire the same as dump truck hire?", "Around Melbourne, mostly yes. Tipper, tip truck and dump truck all get used for the same thing: a road-registered truck with a body that tips to unload. Ours are tandem tippers, which is what most residential and commercial sites need. The large off-road articulated dump trucks used on mines and major civil projects are a different machine, and not one we run."),
+            ("How much can a tandem tipper carry?", "Weight usually runs out before space does. Wet clay, rock and concrete are heavy, so a tandem reaches its legal weight long before the body is heaped, while mulch and light material fill the body first. Tell us the material and the rough volume and we will work out how many loads it is before the truck turns up."),
+            ("Can you deliver road base, sand or crushed rock?", "Yes. We run sand, road base, scoria, crushed rock and soil in for driveways, slab bases, paths and landscaping. Tell us the product, the quantity and where it needs to be tipped, and we will price the material and the cartage together."),
+            ("Can a tipper work with my own excavator?", "Yes. Tipper hire is available on its own, and plenty of bookings come from builders and contractors running their own machine who need a truck to keep spoil moving. If you would rather have one booking for both, add one of our excavators and an operator."),
+            ("Where does the material end up?", "That depends on what is in the load. Clean excavated natural material can often go to another site as fill. Soil classified as contaminated, or mixed with building waste, has to go to a facility licensed to take it, and costs more to tip. Tell us what is in the pile and we take it to the right place, with the receipt to show for it."),
+        ],
+        "schema_service": {
+            "serviceType": "Tipper Truck Hire",
+            "offers": ["Tandem Tipper Hire with Driver", "Spoil Cartage", "Road Base, Sand and Crushed Rock Delivery", "Stockpile Removal", "Concrete and Rubble Cartage"],
+        },
+        "final_cta_para": "What is moving, how much of it, and from where to where. That is enough for us to give you a rate and a day.",
+        "service_links": [
+            ("Excavator Wet Hire", "excavator-wet-hire-melbourne"),
+            ("Material Removal", "material-removal-melbourne"),
+            ("Rubbish Removal", "rubbish-removal-melbourne"),
+        ],
+    },
 ]
 
 # C8 - Suburb LPs (umbrella "earthworks-{suburb}" pages)
